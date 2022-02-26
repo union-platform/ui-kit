@@ -31,6 +31,11 @@
         "import/extensions": 0,
         // note you must disable the base rule as it can report incorrect errors
         "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"]
+        "react/jsx-props-no-spreading": "off",
+        "no-extraneous-dependencies": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
     }
 }
