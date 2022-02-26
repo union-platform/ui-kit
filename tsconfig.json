@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "types",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +21,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "importHelpers": true,
   },
+  "exclude": ["dist"],
   "include": [
     "src"
-, "stories"  ]
+  , "src/stories"  ],
 }
