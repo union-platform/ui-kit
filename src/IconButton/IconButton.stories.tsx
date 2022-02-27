@@ -4,7 +4,7 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserIcon from '../Icons/UserIcon/UserIcon';
+import UserIcon24 from '../Icons/24pt/UserIcon24/UserIcon24';
 
 import IconButton from './IconButton';
 
@@ -21,7 +21,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof IconButton> = () => (
   <IconButton>
-    <UserIcon purposeLabel="User Icon" />
+    <UserIcon24 purposeLabel="User Icon" />
   </IconButton>
 );
 
