@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-const BrandColors: any = {
+const BrandColors: { [key: string]: string; } = {
   darkGreen: 'hsla(139, 87%, 39%, 1)',
   yellowGreen: 'hsla(79, 64%, 54%, 1)',
   gradIndicator: 'linear-gradient(180deg, #BCD73C 0%, #8BC34A 100%)',

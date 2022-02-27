@@ -47,15 +47,6 @@ export * from './SearchInput/SearchInput';
 export { default as TextInput } from './TextInput/TextInput';
 export * from './TextInput/TextInput';
 
-export { default as CheckIcon } from './Icons/CheckIcon/CheckIcon';
-export * from './Icons/CheckIcon/CheckIcon';
-
-export { default as SearchIcon } from './Icons/SearchIcon/SearchIcon';
-export * from './Icons/SearchIcon/SearchIcon';
-
-export { default as UserIcon } from './Icons/UserIcon/UserIcon';
-export * from './Icons/UserIcon/UserIcon';
-
 export { default as Layout } from './Layout/Layout';
 export * from './Layout/Layout';
 
@@ -82,3 +73,5 @@ export * from './Typography/Heading5/Heading5';
 
 export { default as Text } from './Typography/Text/Text';
 export * from './Typography/Text/Text';
+
+export * from './icons';

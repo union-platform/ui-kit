@@ -5,7 +5,8 @@
 import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import CheckIcon from '../Icons/CheckIcon/CheckIcon';
+import CheckIcon from '../Icons/14pt/CheckIcon14/CheckIcon14';
+import BrandColors from '../Colors/BrandColors/Brand';
 
 export interface CheckboxProps {
   /**
@@ -40,8 +41,8 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  '&[data-state="checked"]': { borderColor: '#A5D43D' },
-  '&:focus': { boxShadow: '0 0 0 2px #A5D43D' },
+  '&[data-state="checked"]': { borderColor: BrandColors.yellowGreen },
+  '&:focus': { boxShadow: `0 0 0 2px ${BrandColors.yellowGreen}` },
 });
 
 const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
@@ -74,7 +75,7 @@ const Checkbox = ({
       onClick={onClick}
     >
       <StyledIndicator>
-        <CheckIcon purposeLabel="Check Icon" />
+        <CheckIcon fill={BrandColors.yellowGreen} purposeLabel="Check Icon" />
       </StyledIndicator>
     </StyledCheckbox>
     {label && (

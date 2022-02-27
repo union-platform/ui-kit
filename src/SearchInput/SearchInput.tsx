@@ -6,7 +6,7 @@
 import { styled } from '@stitches/react';
 import * as LabelPrimitive from '@radix-ui/react-label';
 import { ChangeEvent, FormEvent, useState } from 'react';
-import SearchIcon from '../Icons/SearchIcon/SearchIcon';
+import SearchIcon from '../Icons/14pt/SearchIcon14/SearchIcon14';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import BrandColors from '../Colors/BrandColors/Brand';
 
@@ -153,7 +153,7 @@ const SearchInput = ({
     <Flex fullWidth={fullWidth}>
       <InputContainer error={error} fullWidth={fullWidth}>
         <IconContainer>
-          <SearchIcon />
+          <SearchIcon fill={GrayShades.navigationGray} purposeLabel="Search Icon" />
         </IconContainer>
         <Input
           id={id}

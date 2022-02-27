@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-const GrayShades: any = {
+const GrayShades: { [key: string]: string; } = {
   dark: 'hsla(0, 0%, 13%, 1)',
   mutedBlack: 'hsla(0, 0%, 24%, 1)',
   darkGreen: 'hsla(135, 2%, 38%, 1)',
