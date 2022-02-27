@@ -3,9 +3,8 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import UserIcon from '../Icons/UserIcon/UserIcon';
+import { UserIcon24 } from '..';
 
 import CellButton from './CellButton';
 
@@ -22,7 +21,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof CellButton> = (args) => (
   <CellButton {...args}>
-    <UserIcon fill="#0DBC44" />
+    <UserIcon24 fill="#0DBC44" />
   </CellButton>
 );
 

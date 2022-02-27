@@ -5,7 +5,7 @@
 import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import CheckIcon from '../Icons/CheckIcon/CheckIcon';
+import CheckIcon14 from '../Icons/14pt/CheckIcon14/CheckIcon14';
 
 export interface CheckboxProps {
   /**
@@ -74,7 +74,7 @@ const Checkbox = ({
       onClick={onClick}
     >
       <StyledIndicator>
-        <CheckIcon purposeLabel="Check Icon" />
+        <CheckIcon14 purposeLabel="Check Icon" />
       </StyledIndicator>
     </StyledCheckbox>
     {label && (
