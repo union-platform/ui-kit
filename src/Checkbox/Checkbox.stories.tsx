@@ -35,3 +35,6 @@ export const WithLabel = Template.bind({});
 WithLabel.args = {
   label: 'Button',
 };
+
+export const Default = Template.bind({});
+WithLabel.args = {};

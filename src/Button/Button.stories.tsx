@@ -13,25 +13,22 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Button</Button>;
 
 export const PrimaryButton = Template.bind({});
 PrimaryButton.args = {
   variant: 'primary',
-  label: 'Button',
   disabled: false,
 };
 
 export const TextButton = Template.bind({});
 TextButton.args = {
-  label: 'Button',
   variant: 'text',
   disabled: false,
 };
 
 export const SecondaryButton = Template.bind({});
 SecondaryButton.args = {
-  label: 'Button',
   variant: 'secondary',
   disabled: false,
 };
@@ -39,6 +36,5 @@ SecondaryButton.args = {
 export const SpecialButton = Template.bind({});
 SpecialButton.args = {
   variant: 'special',
-  label: 'Button',
   disabled: false,
 };

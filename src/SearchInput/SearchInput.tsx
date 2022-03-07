@@ -5,9 +5,9 @@
 
 import { styled } from '@stitches/react';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import GrayShades from '../Colors/GrayShades/GrayShades';
-import BrandColors from '../Colors/BrandColors/Brand';
+import BrandColors from '../Colors/BrandColors/BrandColors';
 import SearchIcon14 from '../Icons/14pt/SearchIcon14/SearchIcon14';
 
 export interface SearchInputProps {
@@ -18,11 +18,11 @@ export interface SearchInputProps {
   /**
    *  Variant of button
    */
-  errorText?: string;
+  fullWidth?: boolean;
   /**
    *  Variant of button
    */
-  fullWidth?: boolean;
+  disabled?: boolean;
   /**
    *  Variant of button
    */
@@ -30,7 +30,11 @@ export interface SearchInputProps {
   /**
    *  Variant of button
    */
-   id: string;
+   id?: string;
+  /**
+   *  Variant of button
+   */
+   value?: string;
   /**
    *  Variant of button
    */
@@ -89,6 +93,12 @@ const Input = styled('input', {
         width: '100%',
       },
     },
+    disabled: {
+      true: {
+        cursor: 'inherit',
+        opacity: 0.6,
+      },
+    },
   },
 });
 
@@ -140,7 +150,8 @@ const IconContainer = styled('div', {
  * Primary UI component for user interaction
  */
 const SearchInput = ({
-  error, label, id, defaultValue, placeholder, onChange, fullWidth, errorText,
+  error, label, id, defaultValue, placeholder, onChange,
+  fullWidth, value, disabled, ...props
 }:SearchInputProps) => {
   const [currentValue, setCurrentValue] = useState('');
 
@@ -156,13 +167,16 @@ const SearchInput = ({
           <SearchIcon14 />
         </IconContainer>
         <Input
+          disabled={disabled}
+          value={value}
           id={id}
           fullWidth={fullWidth}
-          onChange={handleInputChange}
+          onChange={disabled ? undefined : handleInputChange}
           error={error}
           placeholder={placeholder}
           type="search"
           defaultValue={defaultValue}
+          {...props}
         />
       </InputContainer>
       {label && (
@@ -177,10 +191,12 @@ const SearchInput = ({
 SearchInput.defaultProps = {
   error: false,
   fullWidth: false,
+  disabled: false,
   label: null,
-  defaultValue: null,
+  defaultValue: undefined,
+  value: undefined,
+  id: undefined,
   placeholder: 'Your Text...',
-  errorText: '',
 };
 
 export default SearchInput;

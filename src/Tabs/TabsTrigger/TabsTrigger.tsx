@@ -46,7 +46,6 @@ export interface TabsTriggerProps {
  * Primary UI component for user interaction
  */
 const TabsTrigger = ({
-  // eslint-disable-next-line no-unused-vars
   children, value,
 }: TabsTriggerProps) => (
   <StyledTrigger value={value}>

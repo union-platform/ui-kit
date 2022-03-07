@@ -5,7 +5,9 @@
 
 import { styled } from '@stitches/react';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import {
+  ChangeEvent, FormEvent, useEffect, useState,
+} from 'react';
 
 export interface TextInputProps {
   /**
@@ -31,7 +33,11 @@ export interface TextInputProps {
   /**
    *  Variant of button
    */
-   id: string;
+   value?: string;
+  /**
+   *  Variant of button
+   */
+   id?: string;
   /**
    *  Variant of button
    */
@@ -43,11 +49,19 @@ export interface TextInputProps {
   /**
    *  Variant of button
    */
+   disabled?: boolean;
+  /**
+   *  Variant of button
+   */
    type: 'number' | 'text' | 'search' | 'phone';
   /**
    *  Variant of button
    */
    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  /**
+   *  Variant of button
+   */
+   onError?: () => void;
 }
 
 const StyledLabel = styled(LabelPrimitive.Root, {
@@ -87,6 +101,11 @@ const Input = styled('input', {
     fullWidth: {
       true: {
         width: '100%',
+      },
+    },
+    disabled: {
+      true: {
+        opacity: 0.5,
       },
     },
   },
@@ -138,16 +157,34 @@ const Counter = styled('span', {
  * Primary UI component for user interaction
  */
 const TextInput = ({
-  error, maxSymbols, label, id, defaultValue, placeholder, type, onChange, fullWidth, errorText,
+  error, maxSymbols, label, id, defaultValue,
+  placeholder, type, onChange, fullWidth, errorText, disabled,
+  onError, value, ...props
 }:TextInputProps) => {
   const [currentValue, setCurrentValue] = useState('');
+  const [isValueAboveMax, setIsValueAboveMax] = useState(false);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.currentTarget.value);
     onChange(e);
   };
 
-  const isValueAboveMax = maxSymbols ? currentValue.length > maxSymbols : false;
+  useEffect(() => {
+    if (value) {
+      setCurrentValue(value);
+    }
+  }, [value]);
+
+  useEffect(() => {
+    if (maxSymbols && currentValue.length > maxSymbols) {
+      if (onError) {
+        onError();
+      }
+      setIsValueAboveMax(true);
+    } else {
+      setIsValueAboveMax(false);
+    }
+  }, [currentValue]);
 
   return (
     <Flex css={{ padding: '0 20px', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -155,15 +192,18 @@ const TextInput = ({
         <Input
           id={id}
           fullWidth={fullWidth}
-          onChange={handleInputChange}
+          onChange={disabled ? undefined : handleInputChange}
           error={error || isValueAboveMax}
+          disabled={disabled}
           placeholder={placeholder}
           type={type}
+          value={value}
           defaultValue={defaultValue}
+          {...props}
         />
         <InputBottomContainer>
-          <ErrorText>{errorText}</ErrorText>
-          <Counter error={error || isValueAboveMax}>{maxSymbols ? `${currentValue.length} / ${maxSymbols}` : ''}</Counter>
+          <ErrorText data-testid="error-text">{error && errorText ? errorText : ''}</ErrorText>
+          <Counter data-testid="counter" error={error || isValueAboveMax}>{maxSymbols ? `${currentValue.length} / ${maxSymbols}` : ''}</Counter>
         </InputBottomContainer>
       </InputContainer>
       {label && (
@@ -180,9 +220,13 @@ TextInput.defaultProps = {
   fullWidth: false,
   maxSymbols: null,
   label: null,
-  defaultValue: null,
+  defaultValue: undefined,
+  value: undefined,
+  onError: null,
+  disabled: false,
   placeholder: 'Your Text...',
   errorText: '',
+  id: undefined,
 };
 
 export default TextInput;

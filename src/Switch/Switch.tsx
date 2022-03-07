@@ -10,11 +10,11 @@ export interface SwitchProps {
   /**
    *  The progress value.
    */
-   label: string;
+   label?: string;
   /**
    *  The controlled state of the switch.
    */
-   checked: boolean;
+   checked?: boolean;
   /**
    *  The controlled state of the switch.
    */
@@ -22,7 +22,11 @@ export interface SwitchProps {
   /**
    *  The controlled state of the switch.
    */
-   id: string;
+   id?: string;
+  /**
+   *  The controlled state of the switch.
+   */
+   onCheckedChange?: () => {};
 }
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
@@ -63,10 +67,18 @@ const Label = styled(LabelPrimitive.Root, {
  * Primary UI component for user interaction
  */
 const Switch = ({
-  label, checked, disabled, id,
+  label, checked, disabled, id, onCheckedChange, ...props
 }: SwitchProps) => (
   <Flex css={{ alignItems: 'center' }}>
-    <StyledSwitch disabled={disabled} checked={checked} defaultChecked id={id}>
+    <StyledSwitch
+      aria-label="Switch"
+      onCheckedChange={onCheckedChange}
+      disabled={disabled}
+      checked={checked}
+      defaultChecked
+      id={id}
+      {...props}
+    >
       <StyledThumb />
     </StyledSwitch>
     {label && (
@@ -79,6 +91,10 @@ const Switch = ({
 
 Switch.defaultProps = {
   disabled: false,
+  id: undefined,
+  onCheckedChange: undefined,
+  checked: undefined,
+  label: undefined,
 };
 
 export default Switch;

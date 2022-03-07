@@ -14,7 +14,19 @@ export interface ToogleButtonProps {
   /**
    * Button contents
    */
-   ariaLabel: string;
+   disabled?: boolean;
+  /**
+   * Button contents
+   */
+   pressed?: boolean;
+  /**
+   * Button contents
+   */
+   onPressedChange?: () => {};
+  /**
+   * Button contents
+   */
+   defaultPressed?: boolean;
 }
 
 const StyledToggle = styled(TogglePrimitive.Root, {
@@ -33,18 +45,48 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   lineHeight: 1,
   alignItems: 'center',
   justifyContent: 'center',
-  // '&:hover': { backgroundColor: '#0DBC44', color: '#FFFFFF' },
   '&[data-state=on]': { backgroundColor: '#0DBC44', color: '#FFFFFF' },
-  // '&:focus': { boxShadow: '0 0 0 2px black' },
+  '&:focus': { boxShadow: '0 0 0 2px #A5D43D' },
+  '&:hover': {
+    opacity: 0.8,
+  },
+
+  variants: {
+    disabledStyles: {
+      true: {
+        opacity: 0.4,
+        cursor: 'auto',
+        '&:hover': {
+          opacity: 0.4,
+        },
+      },
+    },
+  },
 });
 
 /**
  * Primary UI component for user interaction
  */
-const ToogleButton = ({ children, ariaLabel }: ToogleButtonProps) => (
-  <StyledToggle aria-label={ariaLabel}>
+const ToogleButton = ({
+  children, onPressedChange, defaultPressed, disabled, pressed, ...props
+}: ToogleButtonProps) => (
+  <StyledToggle
+    disabled={disabled}
+    disabledStyles={disabled}
+    pressed={pressed}
+    defaultPressed={defaultPressed}
+    onPressedChange={disabled ? undefined : onPressedChange}
+    {...props}
+  >
     {children}
   </StyledToggle>
 );
+
+ToogleButton.defaultProps = {
+  disabled: undefined,
+  onPressedChange: undefined,
+  pressed: undefined,
+  defaultPressed: undefined,
+};
 
 export default ToogleButton;

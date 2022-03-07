@@ -3,7 +3,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { keyframes, styled } from '@stitches/react';
-import BrandColors from '../Colors/BrandColors/Brand';
+import { ReactNode } from 'react';
+import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 
 export interface ButtonProps {
@@ -18,7 +19,7 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  children: ReactNode;
   /**
    * Button contents
    */
@@ -139,16 +140,18 @@ const StyledButton = styled('button', {
  * Primary UI component for user interaction
  */
 const Button = ({
-  fullWidth, label, variant, disabled, ...props
+  fullWidth, children, variant, onClick, disabled, ...props
 }: ButtonProps) => (
   <StyledButton
     disabled={disabled}
     type="button"
     fullWidth={fullWidth}
+    role="button"
     variant={variant}
+    onClick={disabled ? undefined : onClick}
     {...props}
   >
-    {label}
+    {children}
   </StyledButton>
 );
 

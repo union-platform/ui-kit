@@ -5,11 +5,19 @@
 import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 
-export interface IconButtontProps {
+export interface IconButtonProps {
   /**
    * Button contents
    */
   children: ReactNode;
+  /**
+   * Button contents
+   */
+  disabled?: boolean;
+  /**
+   * Button contents
+   */
+  onClick?: () => void;
 }
 
 const StyledButton = styled('button', {
@@ -25,15 +33,34 @@ const StyledButton = styled('button', {
   '&:hover': {
     opacity: 0.8,
   },
+
+  variants: {
+    disabled: {
+      true: {
+        opacity: 0.4,
+        cursor: 'auto',
+        '&:hover': {
+          opacity: 0.4,
+        },
+      },
+    },
+  },
 });
 
 /**
  * Primary UI component for user interaction
  */
-const IconButton = ({ children }: IconButtontProps) => (
-  <StyledButton>
+const IconButton = ({
+  children, disabled, onClick, ...props
+}: IconButtonProps) => (
+  <StyledButton disabled={disabled} {...props} onClick={disabled ? undefined : onClick}>
     {children}
   </StyledButton>
 );
+
+IconButton.defaultProps = {
+  disabled: undefined,
+  onClick: undefined,
+};
 
 export default IconButton;

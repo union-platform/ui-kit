@@ -13,4 +13,5 @@ const GrayShades: any = {
   whiteGreen: 'hsla(120, 67%, 98%, 1)',
   white: 'hsla(0, 0%, 100%, 1)',
 };
+
 export default GrayShades;

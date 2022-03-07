@@ -12,4 +12,5 @@ const BrandColors: any = {
   transparentGreen1: 'rgba(13, 188, 68, 0.08)',
   red: 'hsla(11, 73%, 51%, 1)',
 };
+
 export default BrandColors;
