@@ -83,6 +83,7 @@ export function SingleOTPInputComponent(props: SingleOTPInputProps) {
 
   return (
     <StyledInput
+      aria-label="Input of SMS-code"
       error={error}
       filled={!!(value && value.length > 0)}
       onBlur={onBlur}

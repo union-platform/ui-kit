@@ -39,7 +39,7 @@ const StyledIndicator = styled(ProgressPrimitive.Indicator, {
  * Primary UI component for user interaction
  */
 const LinearProgress = ({ value, progress, max }: LinearProgressProps) => (
-  <StyledProgress max={max} value={value}>
+  <StyledProgress aria-label={`Progress ${progress}%`} max={max} value={value}>
     <StyledIndicator style={{ width: `${progress}%` }} />
   </StyledProgress>
 );

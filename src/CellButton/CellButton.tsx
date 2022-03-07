@@ -10,19 +10,23 @@ export interface CellButtonProps {
   /**
    *  Variant of button
    */
-   label: string;
+  label: string;
   /**
    *  Variant of button
    */
-   disabled?: boolean;
+  disabled?: boolean;
   /**
    *  Variant of button
    */
-   iconRight?: boolean;
+  iconRight?: boolean;
     /**
    * Button contents
    */
-     children: ReactNode;
+  children: ReactNode;
+    /**
+   * Button contents
+   */
+  onClick?: () => void;
 }
 
 const CellButtonContainer = styled('div',
@@ -34,6 +38,7 @@ const CellButtonContainer = styled('div',
       disabled: {
         true: {
           opacity: '0.4',
+          cursor: 'auto',
         },
       },
     },
@@ -44,25 +49,26 @@ const CellButtonContainer = styled('div',
  */
 const CellButton = ({
   // eslint-disable-next-line no-unused-vars
-  label, children, iconRight, disabled,
+  label, children, iconRight, disabled, onClick, ...props
 }: CellButtonProps) => (
   iconRight
     ? (
-      <CellButtonContainer disabled={disabled}>
-        <Button variant="text" label={label} />
+      <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
+        <Button disabled={disabled} variant="text">{label}</Button>
         {children}
       </CellButtonContainer>
     )
     : (
-      <CellButtonContainer disabled={disabled}>
+      <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
         {children}
-        <Button variant="text" label={label} />
+        <Button disabled={disabled} variant="text">{label}</Button>
       </CellButtonContainer>
     ));
 
 CellButton.defaultProps = {
   iconRight: false,
   disabled: false,
+  onClick: undefined,
 };
 
 export default CellButton;

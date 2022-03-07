@@ -14,8 +14,8 @@ export * from './IconButton/IconButton';
 export { default as ToogleButton } from './ToogleButton/ToogleButton';
 export * from './ToogleButton/ToogleButton';
 
-export { default as BrandColors } from './Colors/BrandColors/Brand';
-export * from './Colors/BrandColors/Brand';
+export { default as BrandColors } from './Colors/BrandColors/BrandColors';
+export * from './Colors/BrandColors/BrandColors';
 
 export { default as GrayShades } from './Colors/GrayShades/GrayShades';
 export * from './Colors/GrayShades/GrayShades';

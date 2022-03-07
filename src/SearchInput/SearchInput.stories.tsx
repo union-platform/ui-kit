@@ -19,7 +19,6 @@ export const Error = Template.bind({});
 Error.args = {
   error: true,
   defaultValue: 'Some error text',
-  errorText: 'Something bad happened',
 };
 
 export const WithLabel = Template.bind({});

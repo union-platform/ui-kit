@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -24,6 +25,9 @@
     },
     "plugins": [
         "react",
+        "jest",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-cypress",
         "@typescript-eslint"
     ],
     "rules": {
@@ -31,9 +35,10 @@
         "import/extensions": 0,
         // note you must disable the base rule as it can report incorrect errors
         "no-use-before-define": "off",
+        "class-methods-use-this": "off",
         "react/jsx-props-no-spreading": "off",
         "no-extraneous-dependencies": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/no-use-before-define": "off",
         "import/no-extraneous-dependencies": "off",
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off"

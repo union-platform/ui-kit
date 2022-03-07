@@ -6,7 +6,7 @@
 import { styled } from '@stitches/react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Heading4 from '../../Typography/Heading4/Heading4';
-import BrandColors from './Brand';
+import BrandColors from './BrandColors';
 
 const Box = styled('div', {
   width: '50px',

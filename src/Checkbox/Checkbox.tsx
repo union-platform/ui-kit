@@ -4,30 +4,46 @@
 
 import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import * as LabelPrimitive from '@radix-ui/react-label';
 import CheckIcon14 from '../Icons/14pt/CheckIcon14/CheckIcon14';
+import { BrandColors } from '..';
 
 export interface CheckboxProps {
   /**
    *  Variant of button
    */
-  defaultChecked: boolean;
+  defaultChecked?: boolean;
   /**
    *  Variant of button
    */
-  checked: boolean;
+  checked?: boolean;
+  /**
+   *  Variant of button
+   */
+  checkboxAreaLabel?: string;
+  /**
+   *  Variant of button
+   */
+  indicatorAreaLabel?: string;
+  /**
+   *  Variant of button
+   */
+  disabled?: boolean;
   /**
    * Button contents
    */
-  label: string;
+  label?: string;
   /**
    * Button contents
    */
-  id: string;
+  id?: string;
   /**
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Optional click handler
+   */
+  onCheckedChange?: () => void;
 }
 
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
@@ -51,7 +67,7 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
 
 const Flex = styled('div', { display: 'flex', alignItems: 'center' });
 
-const Label = styled(LabelPrimitive.Root, {
+const Label = styled('div', {
   color: 'black',
   fontSize: 14,
   lineHeight: 1,
@@ -63,22 +79,25 @@ const Label = styled(LabelPrimitive.Root, {
  * Primary UI component for user interaction
  */
 const Checkbox = ({
-  // eslint-disable-next-line no-unused-vars
-  label, defaultChecked, id, checked, onClick,
+  label, defaultChecked, id, checked, onClick, disabled,
+  onCheckedChange, checkboxAreaLabel, indicatorAreaLabel,
 }: CheckboxProps) => (
   <Flex>
     <StyledCheckbox
       defaultChecked={defaultChecked}
       id={id}
+      aria-label={checkboxAreaLabel}
+      disabled={disabled}
+      onCheckedChange={onCheckedChange}
       checked={checked}
       onClick={onClick}
     >
-      <StyledIndicator>
-        <CheckIcon14 purposeLabel="Check Icon" />
+      <StyledIndicator data-testid={indicatorAreaLabel}>
+        <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel="Check Icon" />
       </StyledIndicator>
     </StyledCheckbox>
     {label && (
-    <Label css={{ paddingLeft: 15 }} htmlFor={id}>
+    <Label css={{ paddingLeft: 15 }}>
       {label}
     </Label>
     )}
@@ -86,7 +105,15 @@ const Checkbox = ({
 );
 
 Checkbox.defaultProps = {
-  onClick: () => {},
+  onClick: null,
+  onCheckedChange: null,
+  disabled: null,
+  label: null,
+  checkboxAreaLabel: null,
+  indicatorAreaLabel: null,
+  id: null,
+  defaultChecked: false,
+  checked: undefined,
 };
 
 export default Checkbox;

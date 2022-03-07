@@ -27,5 +27,9 @@ const Template: ComponentStory<typeof ToogleButton> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  ariaLabel: 'Selection Button',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
 };

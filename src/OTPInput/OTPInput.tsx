@@ -170,6 +170,8 @@ export function OTPInputComponent(props: OTPInputProps) {
         .fill('')
         .map((_, index) => (
           <SingleInput
+            // eslint-disable-next-line react/no-array-index-key
+            key={`OTPInput-${index}`}
             error={error}
             defaultValue={defaultValue}
             focus={activeInput === index}
