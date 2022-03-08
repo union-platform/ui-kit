@@ -7,11 +7,11 @@ import { ReactNode } from 'react';
 
 export interface Heading5Props {
   /**
-   *  The progress value.
+   *  The font weight of the heading.
    */
    weight?: 'regular' | 'bold';
-     /**
-   * Button contents
+  /**
+   *  Heading contents
    */
   children: ReactNode;
 }
@@ -34,7 +34,7 @@ const StyledHeading = styled('h5', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Very small heading, 12pt. Used rarely.
  */
 const Heading5 = ({ weight, children }: Heading5Props) => (
   <StyledHeading weight={weight}>

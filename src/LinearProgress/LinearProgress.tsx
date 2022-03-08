@@ -11,7 +11,7 @@ export interface LinearProgressProps {
    */
    value: number;
   /**
-   *  Variant of button
+   *  Value of progress indicator
    */
    progress: number;
   /**
@@ -36,7 +36,7 @@ const StyledIndicator = styled(ProgressPrimitive.Indicator, {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Progress indicator of any task, so that user knows that system is processing.
  */
 const LinearProgress = ({ value, progress, max }: LinearProgressProps) => (
   <StyledProgress aria-label={`Progress ${progress}%`} max={max} value={value}>

@@ -9,39 +9,33 @@ import { BrandColors } from '..';
 
 export interface CheckboxProps {
   /**
-   *  Variant of button
+   *  The checked state of the checkbox when it is initially rendered.
+   *  Use when you do not need to control its checked state.
    */
   defaultChecked?: boolean;
   /**
-   *  Variant of button
+   *  The controlled checked state of the checkbox.
+   *  Must be used in conjunction with onCheckedChange.
    */
   checked?: boolean;
   /**
-   *  Variant of button
-   */
-  checkboxAreaLabel?: string;
-  /**
-   *  Variant of button
+   *  Area label for indicator of the checkbox. Used by screenreaders.
    */
   indicatorAreaLabel?: string;
   /**
-   *  Variant of button
+   *  When true, prevents the user from interacting with the checkbox.
    */
   disabled?: boolean;
   /**
-   * Button contents
+   *  Label, which be placed next to checkbox.
    */
   label?: string;
   /**
-   * Button contents
-   */
-  id?: string;
-  /**
-   * Optional click handler
+   *  Optional click handler
    */
   onClick?: () => void;
   /**
-   * Optional click handler
+   *  Optional check handler
    */
   onCheckedChange?: () => void;
 }
@@ -76,23 +70,24 @@ const Label = styled('div', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Form component, every checkbox in group can be checked, but in group of radio buttons only one.
  */
 const Checkbox = ({
-  label, defaultChecked, id, checked, onClick, disabled,
-  onCheckedChange, checkboxAreaLabel, indicatorAreaLabel,
+  label, defaultChecked, checked, onClick, disabled,
+  onCheckedChange, indicatorAreaLabel,
+  ...props
 }: CheckboxProps) => (
   <Flex>
     <StyledCheckbox
       defaultChecked={defaultChecked}
-      id={id}
-      aria-label={checkboxAreaLabel}
       disabled={disabled}
       onCheckedChange={onCheckedChange}
       checked={checked}
       onClick={onClick}
+      aria-label={label}
+      {...props}
     >
-      <StyledIndicator data-testid={indicatorAreaLabel}>
+      <StyledIndicator data-testid="checkbox-indicator">
         <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel="Check Icon" />
       </StyledIndicator>
     </StyledCheckbox>
@@ -107,11 +102,9 @@ const Checkbox = ({
 Checkbox.defaultProps = {
   onClick: null,
   onCheckedChange: null,
-  disabled: null,
+  disabled: undefined,
   label: null,
-  checkboxAreaLabel: null,
   indicatorAreaLabel: null,
-  id: null,
   defaultChecked: false,
   checked: undefined,
 };

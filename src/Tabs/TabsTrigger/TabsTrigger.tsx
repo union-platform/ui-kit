@@ -32,18 +32,18 @@ const StyledTrigger = styled(TabsPrimitive, {
 
 export interface TabsTriggerProps {
   /**
-   * Button contents
+   *  Value of the trigger
    */
   value: string;
   /**
-   * Button contents
+   *  Trigger contents
    */
    children: ReactNode;
 
 }
 
 /**
- * Primary UI component for user interaction
+ *  Trigger to navigate between tabs.
  */
 const TabsTrigger = ({
   children, value,

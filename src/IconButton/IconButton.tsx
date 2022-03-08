@@ -11,11 +11,11 @@ export interface IconButtonProps {
    */
   children: ReactNode;
   /**
-   * Button contents
+   *  When true, prevents the user from interacting with the IconButton.
    */
   disabled?: boolean;
   /**
-   * Button contents
+   *  Optional click handler
    */
   onClick?: () => void;
 }
@@ -48,7 +48,7 @@ const StyledButton = styled('button', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Button without text, only icon.
  */
 const IconButton = ({
   children, disabled, onClick, ...props

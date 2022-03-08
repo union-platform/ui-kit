@@ -3,24 +3,16 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import Tabs from './Tabs';
 import TabsList from './TabsList/TabsList';
 import TabsTrigger from './TabsTrigger/TabsTrigger';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Union-UI/Controlls/Tabs',
   component: Tabs,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Tabs>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Tabs> = (args) => (
   <Tabs {...args}>
     <TabsList ariaLabel="Manage your account">

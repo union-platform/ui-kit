@@ -8,23 +8,25 @@ import { ReactNode } from 'react';
 
 export interface ToogleButtonProps {
   /**
-   * Button contents
+   *  Button contents
    */
    children: ReactNode;
   /**
-   * Button contents
+   *  When true, prevents the user from interacting with the switch.
    */
    disabled?: boolean;
   /**
-   * Button contents
+   *  The controlled checked state of the toogle button.
+   *  Must be used in conjunction with `defaultPressed`.
    */
    pressed?: boolean;
   /**
-   * Button contents
+   *  Toogle press handler.
    */
    onPressedChange?: () => {};
   /**
-   * Button contents
+   *  The checked state of the toogle button when it is initially rendered.
+   *  Use when you do not need to control its pressed state.
    */
    defaultPressed?: boolean;
 }
@@ -65,7 +67,7 @@ const StyledToggle = styled(TogglePrimitive.Root, {
 });
 
 /**
- * Primary UI component for user interaction
+ *  A two-state button that can be either on or off.
  */
 const ToogleButton = ({
   children, onPressedChange, defaultPressed, disabled, pressed, ...props

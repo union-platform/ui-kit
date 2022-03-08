@@ -7,11 +7,11 @@ import { ReactNode } from 'react';
 
 export interface Heading4Props {
   /**
-   *  The progress value.
+   *  The font weight of the heading.
    */
    weight?: 'regular' | 'bold' | 'semibold';
-     /**
-   * Button contents
+  /**
+   *  Heading contents
    */
   children: ReactNode;
 }
@@ -37,7 +37,7 @@ const StyledHeading = styled('h4', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  One of the smallest headings. Used in tabs, inputs, cells and so on.
  */
 const Heading4 = ({ weight, children }: Heading4Props) => (
   <StyledHeading weight={weight}>

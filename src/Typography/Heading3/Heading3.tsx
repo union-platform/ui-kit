@@ -7,11 +7,11 @@ import { ReactNode } from 'react';
 
 export interface Heading3Props {
   /**
-   *  The progress value.
+   *  The font weight of the heading.
    */
    weight?: 'regular' | 'bold';
-     /**
-   * Button contents
+  /**
+   *  Heading contents
    */
   children: ReactNode;
 }
@@ -34,7 +34,7 @@ const StyledHeading = styled('h3', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Primary heading for mobile UI. Used in headers, modals, buttons and so on.
  */
 const Heading3 = ({ weight, children }: Heading3Props) => (
   <StyledHeading weight={weight}>

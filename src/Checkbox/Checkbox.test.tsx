@@ -33,7 +33,7 @@ describe('given a default Checkbox', () => {
   let indicator: HTMLElement | null;
 
   beforeEach(() => {
-    rendered = render(<CheckboxTest />);
+    rendered = render(<CheckboxTest label="Checkbox" />);
     checkbox = rendered.getByRole(CHECKBOX_ROLE);
     indicator = rendered.queryByTestId(INDICATOR_LABEL);
   });
@@ -141,7 +141,7 @@ function CheckboxTest(props: React.ComponentProps<typeof Checkbox>) {
   }, []);
   return (
     <div ref={containerRef}>
-      <Checkbox indicatorAreaLabel={INDICATOR_LABEL} checkboxAreaLabel="basic checkbox" {...props} />
+      <Checkbox data-testid="basic checkbox" {...props} />
     </div>
   );
 }

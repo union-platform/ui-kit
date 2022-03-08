@@ -8,23 +8,24 @@ import * as LabelPrimitive from '@radix-ui/react-label';
 
 export interface SwitchProps {
   /**
-   *  The progress value.
+   *  Label, which be placed next to the input.
    */
    label?: string;
-  /**
-   *  The controlled state of the switch.
+ /**
+   *  The controlled checked state of the switch.
+   *  Must be used in conjunction with onCheckedChange.
    */
    checked?: boolean;
   /**
-   *  The controlled state of the switch.
+   *  When true, prevents the user from interacting with the switch.
    */
    disabled?: boolean;
   /**
-   *  The controlled state of the switch.
+   *  The id attribute of the switch.
    */
    id?: string;
   /**
-   *  The controlled state of the switch.
+   *  Optional check handler
    */
    onCheckedChange?: () => {};
 }
@@ -64,7 +65,7 @@ const Label = styled(LabelPrimitive.Root, {
 });
 
 /**
- * Primary UI component for user interaction
+ *  UI component to toggle between checked and not checked.
  */
 const Switch = ({
   label, checked, disabled, id, onCheckedChange, ...props

@@ -14,17 +14,17 @@ const StyledList = styled(TabsPrimitive, {
 
 export interface TabsListProps {
   /**
-   * Button contents
+   *  Aria label of the list of tabs
    */
   ariaLabel: string;
   /**
-   * Button contents
+   *  Contents of the tabs (triggers)
    */
   children: ReactNode;
 }
 
 /**
- * Primary UI component for user interaction
+ *  List of buttons in tabs.
  */
 const TabsList = ({
   // eslint-disable-next-line no-unused-vars

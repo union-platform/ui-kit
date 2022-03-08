@@ -14,17 +14,17 @@ const StyledTabs = styled(TabsPrimitive.Root, {
 
 export interface TabsProps {
   /**
-   * Button contents
+   *  Tabs contents
    */
    children: ReactNode;
   /**
-   * Button contents
+   *  Value that be shown on first render.
    */
   defaultValue?: string;
 }
 
 /**
- * Primary UI component for user interaction
+ *  UI component for switching between screens.
  */
 const Tabs = ({
   // eslint-disable-next-line no-unused-vars
