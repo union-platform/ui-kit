@@ -51,7 +51,7 @@
     "cypress:ci": "start-server-and-test storybook http://localhost:9009 cypress:run",
     "test": "jest",
     "coverage": "jest --coverage",
-    "test:ci": "jest --ci && yarn cypress:ci",
+    "test:ci": "jest --ci",
     "cypress:run": "cypress run",
     "cypress:dev": "cypress open"
   },

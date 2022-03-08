@@ -2,6 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+/* eslint-disable no-unused-vars */
 import { styled } from '@stitches/react';
 import React, {
   memo, useState, useCallback, CSSProperties,
@@ -9,12 +10,30 @@ import React, {
 import SingleInput from './OTPSingleInput';
 
 export interface OTPInputProps {
+  /**
+   *  The number of inputs for OTP.
+   */
   length: number;
-  // eslint-disable-next-line no-unused-vars
-  onChangeOTP: (otp: string) => any;
-  disabled?: boolean;
-  defaultValue?: string;
-  error?: boolean;
+  /**
+   *  Input change handler.
+  */
+ onChangeOTP: (otp: string) => any;
+  /**
+   *  When true, prevents the user from interacting with the input.
+  */
+ disabled?: boolean;
+  /**
+   *  The default state of the input when it is initially rendered.
+   *  Use when you do not need to control its state.
+  */
+ defaultValue?: string;
+  /**
+  *  When true, input visually indicates that user made an error.
+  */
+ error?: boolean;
+ /**
+ *   CSS styles for input
+ */
   style?: CSSProperties;
 }
 
@@ -195,5 +214,9 @@ OTPInputComponent.defaultProps = {
   style: null,
 };
 
+/**
+ *  Input for entering the OTP (one-time-password). Can be any length what you want by
+ *  manipulating with `length` prop.
+ */
 const OTPInput = memo(OTPInputComponent);
 export default OTPInput;

@@ -11,55 +11,55 @@ import {
 
 export interface TextInputProps {
   /**
-   *  Variant of button
+   *  When true, input visually indicates that user made an error.
    */
   error?: boolean;
   /**
-   *  Variant of button
+   *  The text that be showns when `error` prop is true or `maxSymbols` is exceeds.
    */
   errorText?: string;
   /**
-   *  Variant of button
+   *  When true, the input takes full width of a container.
    */
   fullWidth?: boolean;
   /**
-   *  Variant of button
+   *  Maximum symbols for the input. Shows user counter, how much symbols remains.
    */
   maxSymbols?: number;
   /**
-   *  Variant of button
+   *  Label, which be placed next to the input.
    */
    label?: string;
   /**
-   *  Variant of button
+   *  Value of the input.
    */
    value?: string;
   /**
-   *  Variant of button
+   *  Id attribute of the input.
    */
    id?: string;
   /**
-   *  Variant of button
+   *  Shows this value on first render.
    */
    defaultValue?: string;
   /**
-   *  Variant of button
+   *  Text to help users understand clearly what they need to enter.
    */
    placeholder?: string;
   /**
-   *  Variant of button
+   *  When true, prevents the user from interacting with the switch.
    */
    disabled?: boolean;
   /**
-   *  Variant of button
+   *  Type of the input
    */
    type: 'number' | 'text' | 'search' | 'phone';
   /**
-   *  Variant of button
+   *  Input change handler.
    */
    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   /**
-   *  Variant of button
+   *  Function that been called on error.
    */
    onError?: () => void;
 }
@@ -154,7 +154,7 @@ const Counter = styled('span', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  A UI component for inputting text into the app via a keyboard
  */
 const TextInput = ({
   error, maxSymbols, label, id, defaultValue,

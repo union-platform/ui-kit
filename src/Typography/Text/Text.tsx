@@ -7,11 +7,11 @@ import { ReactNode } from 'react';
 
 export interface TextProps {
   /**
-   *  The progress value.
+   *  The font weight of the text.
    */
    weight?: 'regular' | 'bold' | 'light';
-     /**
-   * Button contents
+  /**
+   *  Heading contents
    */
   children: ReactNode;
 }
@@ -37,7 +37,7 @@ const StyledHeading = styled('p', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Regular text. Used primary for paragraphs.
  */
 const Text = ({ weight, children }: TextProps) => (
   <StyledHeading weight={weight}>

@@ -12,39 +12,39 @@ import SearchIcon14 from '../Icons/14pt/SearchIcon14/SearchIcon14';
 
 export interface SearchInputProps {
   /**
-   *  Variant of button
+   *  When true, input visually indicates that user made an error.
    */
   error?: boolean;
   /**
-   *  Variant of button
+   *  When true, the input takes full width of a container.
    */
   fullWidth?: boolean;
   /**
-   *  Variant of button
+   *  When true, prevents the user from interacting with the input.
    */
   disabled?: boolean;
   /**
-   *  Variant of button
+   *  Label, which be placed next to the input.
    */
    label?: string;
   /**
-   *  Variant of button
+   *  Id attribute of input
    */
    id?: string;
   /**
-   *  Variant of button
+   *  Value of the input. Makes the input controlled.
    */
    value?: string;
   /**
-   *  Variant of button
+   *  Default value of the input, shows that value on render. Makes the input controlled.
    */
    defaultValue?: string;
   /**
-   *  Variant of button
+   *  Placeholder for the input, helps users to understand what they need to enter to this field.
    */
    placeholder?: string;
   /**
-   *  Variant of button
+   *  Input change handler.
    */
    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
@@ -147,7 +147,7 @@ const IconContainer = styled('div', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  UI component for searching certain value.
  */
 const SearchInput = ({
   error, label, id, defaultValue, placeholder, onChange,

@@ -6,10 +6,10 @@ import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 
 export interface LayoutProps {
-   /**
-   * Button contents
+  /**
+   *  Content of Layout
    */
-    children: ReactNode;
+  children: ReactNode;
 }
 
 const LayoutContainer = styled('div', {
@@ -17,7 +17,7 @@ const LayoutContainer = styled('div', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Foundation of any screen. Every UI building block should be placed inside the Layout.
  */
 const Layout = ({ children }: LayoutProps) => (
   <LayoutContainer>

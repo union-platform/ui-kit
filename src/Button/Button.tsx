@@ -13,19 +13,19 @@ export interface ButtonProps {
    */
   variant: 'special' | 'primary' | 'secondary' | 'text';
   /**
-   * How large should the button be?
+   *  When true, the button takes full width of a container.
    */
-   fullWidth?: boolean;
+  fullWidth?: boolean;
   /**
-   * Button contents
+   *  Button contents.
    */
   children: ReactNode;
   /**
-   * Button contents
+   *  When true, prevents the user from interacting with the button.
    */
   disabled?: boolean;
   /**
-   * Optional click handler
+   *  Optional click handler.
    */
   onClick?: () => void;
 }
@@ -137,7 +137,7 @@ const StyledButton = styled('button', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Main UI-component for user interaction
  */
 const Button = ({
   fullWidth, children, variant, onClick, disabled, ...props

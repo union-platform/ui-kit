@@ -6,8 +6,8 @@ import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 
 export interface ExtraSmallTextProps {
-     /**
-   * Button contents
+  /**
+   *  Text contents
    */
   children: ReactNode;
 }
@@ -21,7 +21,7 @@ const StyledHeading = styled('span', {
 });
 
 /**
- * Primary UI component for user interaction
+ *  Very small text. Use rarely.
  */
 const ExtraSmallText = ({ children }: ExtraSmallTextProps) => (
   <StyledHeading>

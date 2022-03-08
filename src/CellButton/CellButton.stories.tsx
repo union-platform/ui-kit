@@ -8,17 +8,11 @@ import { UserIcon24 } from '..';
 
 import CellButton from './CellButton';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Union-UI/Buttons/CellButton',
   component: CellButton,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof CellButton>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof CellButton> = (args) => (
   <CellButton {...args}>
     <UserIcon24 fill="#0DBC44" />

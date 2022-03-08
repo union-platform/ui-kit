@@ -3,22 +3,12 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon';
-
-export interface LoginIcon24Props {
-  /**
-   *  Variant of button
-   */
-  fill?: string;
-  /**
-   *  Variant of button
-   */
-  purposeLabel?: string;
-}
+import { IconProps } from '../../IconType';
 
 /**
- * Primary UI component for user interaction
+ *  Icon from Union's Figma UI-kit.
  */
-const LoginIcon24 = ({ fill, purposeLabel }:LoginIcon24Props) => (
+const LoginIcon24 = ({ fill, purposeLabel }:IconProps) => (
   <AccessibleIcon.Root
     label={purposeLabel || 'Login Icon'}
   >

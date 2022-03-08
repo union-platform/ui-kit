@@ -2,7 +2,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-/* eslint-disable import/no-extraneous-dependencies */
 import { styled } from '@stitches/react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Heading4 from '../../Typography/Heading4/Heading4';
@@ -24,17 +23,11 @@ const Flex = styled('div', {
   alignItems: 'center',
 });
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Colors/GrayShades',
   component: Box,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Box>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Box> = () => (
   <Container>
     {Object.keys(GrayShades)

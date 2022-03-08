@@ -8,23 +8,23 @@ import Button from '../Button/Button';
 
 export interface CellButtonProps {
   /**
-   *  Variant of button
+   *  String, which will be placed near an icon.
    */
   label: string;
   /**
-   *  Variant of button
+   *  When true, prevents the user from interacting with the cell button.
    */
   disabled?: boolean;
   /**
-   *  Variant of button
+   *  When true, icon from children will placed at right from the label.
    */
   iconRight?: boolean;
-    /**
-   * Button contents
+  /**
+   *  Icon, which be placed near the label.
    */
   children: ReactNode;
-    /**
-   * Button contents
+  /**
+   *  Optional click handler.
    */
   onClick?: () => void;
 }
@@ -45,7 +45,7 @@ const CellButtonContainer = styled('div',
   });
 
 /**
- * Primary UI component for user interaction
+ *  Text button with icon.
  */
 const CellButton = ({
   // eslint-disable-next-line no-unused-vars

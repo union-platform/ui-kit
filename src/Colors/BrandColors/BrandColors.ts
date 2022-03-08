@@ -2,6 +2,9 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+/**
+ *  Brand colors of Union project. As defined in Union's Figma.
+ */
 const BrandColors: any = {
   darkGreen: 'hsla(139, 87%, 39%, 1)',
   yellowGreen: 'hsla(79, 64%, 54%, 1)',

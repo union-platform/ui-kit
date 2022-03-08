@@ -2,6 +2,9 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+/**
+ *  Shades of gray that we use in our UI-kit. Came from Union's Figma UI-kit.
+ */
 const GrayShades: any = {
   dark: 'hsla(0, 0%, 13%, 1)',
   mutedBlack: 'hsla(0, 0%, 24%, 1)',
