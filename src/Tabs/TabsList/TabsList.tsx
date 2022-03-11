@@ -9,7 +9,6 @@ import { ReactNode } from 'react';
 const StyledList = styled(TabsPrimitive, {
   flexShrink: 0,
   display: 'flex',
-  borderBottom: '1px solid mauve',
 });
 
 export interface TabsListProps {

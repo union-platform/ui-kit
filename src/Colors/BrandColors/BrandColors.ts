@@ -5,7 +5,7 @@
 /**
  *  Brand colors of Union project. As defined in Union's Figma.
  */
-const BrandColors: any = {
+const BrandColors = {
   darkGreen: 'hsla(139, 87%, 39%, 1)',
   yellowGreen: 'hsla(79, 64%, 54%, 1)',
   gradIndicator: 'linear-gradient(180deg, #BCD73C 0%, #8BC34A 100%)',

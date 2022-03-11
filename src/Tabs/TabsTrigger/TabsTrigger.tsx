@@ -5,11 +5,13 @@
 import { styled } from '@stitches/react';
 import { Trigger as TabsPrimitive } from '@radix-ui/react-tabs';
 import { ReactNode } from 'react';
+import GrayShades from '../../Colors/GrayShades/GrayShades';
+import BrandColors from '../../Colors/BrandColors/BrandColors';
 
 const StyledTrigger = styled(TabsPrimitive, {
   all: 'unset',
   fontFamily: 'Open Sans, sans-serif',
-  backgroundColor: 'white',
+  backgroundColor: GrayShades.white,
   padding: '0 20px',
   height: 45,
   flex: 1,
@@ -18,16 +20,16 @@ const StyledTrigger = styled(TabsPrimitive, {
   justifyContent: 'center',
   fontSize: 16,
   lineHeight: 1,
-  color: '#B3B3B3',
+  color: GrayShades.navigationGray,
   userSelect: 'none',
   '&:first-child': { borderTopLeftRadius: 6 },
   '&:last-child': { borderTopRightRadius: 6 },
-  '&:hover': { color: '#0DBC44' },
+  '&:hover': { color: BrandColors.darkGreen },
   '&[data-state="active"]': {
-    color: '#0DBC44',
+    color: BrandColors.darkGreen,
     boxShadow: 'inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor',
   },
-  '&:focus': { position: 'relative', backgroundColor: '#0DBC4433' },
+  '&:focus': { position: 'relative', backgroundColor: BrandColors.transparentGreen1 },
 });
 
 export interface TabsTriggerProps {

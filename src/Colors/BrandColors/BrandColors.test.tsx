@@ -28,7 +28,11 @@ describe('given the brand colors', () => {
     const array = Object.keys(BrandColors);
 
     for (let i = 0; i < array.length; i += 1) {
-      const { container } = render(<ColorTest style={{ background: BrandColors[array[i]] }} />);
+      const { container } = render(
+        <ColorTest
+          style={{ background: BrandColors[array[i] as keyof typeof BrandColors] }}
+        />,
+      );
 
       it('should have no accessibility violations', async () => {
         expect(await axe(container)).toHaveNoViolations();
@@ -41,7 +45,7 @@ describe('given the brand colors', () => {
 
     for (let i = 0; i < array.length; i += 1) {
       const { container } = render(<ColorTestWithText
-        style={{ background: BrandColors[array[i]] }}
+        style={{ background: BrandColors[array[i] as keyof typeof BrandColors] }}
       />);
 
       it('should have no accessibility violations', async () => {

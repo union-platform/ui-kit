@@ -6,6 +6,7 @@ import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import CheckIcon14 from '../Icons/14pt/CheckIcon14/CheckIcon14';
 import { BrandColors } from '..';
+import GrayShades from '../Colors/GrayShades/GrayShades';
 
 export interface CheckboxProps {
   /**
@@ -43,26 +44,25 @@ export interface CheckboxProps {
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   all: 'unset',
   backgroundColor: 'transparent',
-  border: '1.5px solid #959595',
+  border: `1.5px solid ${GrayShades.darkGray}`,
   width: 17,
   height: 17,
   borderRadius: 2,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  '&[data-state="checked"]': { borderColor: '#A5D43D' },
-  '&:focus': { boxShadow: '0 0 0 2px #A5D43D' },
+  '&[data-state="checked"]': { borderColor: BrandColors.yellowGreen },
+  '&:focus': { boxShadow: `'0 0 0 2px ${BrandColors.transparentGreen1}'` },
 });
 
 const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
-  color: 'green',
   display: 'flex',
 });
 
 const Flex = styled('div', { display: 'flex', alignItems: 'center' });
 
 const Label = styled('div', {
-  color: 'black',
+  color: GrayShades.dark,
   fontSize: 14,
   lineHeight: 1,
   fontFamily: 'Open Sans, sans-serif',

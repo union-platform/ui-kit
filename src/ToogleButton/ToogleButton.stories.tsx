@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ToogleButton from './ToogleButton';
 
 export default {
-  title: 'Union-UI/Buttons/ToogleButton',
+  title: 'Union-UI/ToogleButton',
   component: ToogleButton,
 } as ComponentMeta<typeof ToogleButton>;
 

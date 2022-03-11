@@ -38,8 +38,8 @@ describe('given a default OTPInput', () => {
   let enzymeComponent: ReactWrapper;
 
   beforeEach(() => {
-    rendered = render(<OTPInputTest defaultValue="12" onChangeOTP={onChangeOTP} length={4} />);
-    enzymeComponent = Enzyme.mount(<SingleOTPInputTest value="12" defaultValue="1" onChange={onChangeOTP} />);
+    rendered = render(<OTPInputTest onChangeOTP={onChangeOTP} length={4} />);
+    enzymeComponent = Enzyme.mount(<SingleOTPInputTest value="12" onChange={onChangeOTP} />);
   });
 
   it('should have no accessibility violations', async () => {

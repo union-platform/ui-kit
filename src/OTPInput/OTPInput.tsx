@@ -208,10 +208,10 @@ export function OTPInputComponent(props: OTPInputProps) {
 }
 
 OTPInputComponent.defaultProps = {
-  disabled: null,
-  defaultValue: null,
-  error: null,
-  style: null,
+  disabled: undefined,
+  defaultValue: undefined,
+  error: undefined,
+  style: undefined,
 };
 
 /**

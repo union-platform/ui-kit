@@ -9,7 +9,7 @@ import TabsList from './TabsList/TabsList';
 import TabsTrigger from './TabsTrigger/TabsTrigger';
 
 export default {
-  title: 'Union-UI/Controlls/Tabs',
+  title: 'Union-UI/Tabs',
   component: Tabs,
 } as ComponentMeta<typeof Tabs>;
 
