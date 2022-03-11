@@ -7,7 +7,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import OTPInput from './OTPInput';
 
 export default {
-  title: 'Union-UI/Fields/OTPInput',
+  title: 'Union-UI/OTPInput',
   component: OTPInput,
 } as ComponentMeta<typeof OTPInput>;
 

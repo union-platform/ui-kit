@@ -5,6 +5,8 @@
 import { styled } from '@stitches/react';
 import * as TogglePrimitive from '@radix-ui/react-toggle';
 import { ReactNode } from 'react';
+import BrandColors from '../Colors/BrandColors/BrandColors';
+import GrayShades from '../Colors/GrayShades/GrayShades';
 
 export interface ToogleButtonProps {
   /**
@@ -33,8 +35,8 @@ export interface ToogleButtonProps {
 
 const StyledToggle = styled(TogglePrimitive.Root, {
   all: 'unset',
-  backgroundColor: '#F5FDF5',
-  color: '#3E3E3E',
+  backgroundColor: GrayShades.whiteGreen,
+  color: GrayShades.mutedBlack,
   height: 35,
   border: 0,
   borderRadius: 4,
@@ -47,8 +49,8 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   lineHeight: 1,
   alignItems: 'center',
   justifyContent: 'center',
-  '&[data-state=on]': { backgroundColor: '#0DBC44', color: '#FFFFFF' },
-  '&:focus': { boxShadow: '0 0 0 2px #A5D43D' },
+  '&[data-state=on]': { backgroundColor: BrandColors.darkGreen, color: GrayShades.white },
+  '&:focus': { boxShadow: `0 0 0 2px ${BrandColors.transparentGreen2}` },
   '&:hover': {
     opacity: 0.8,
   },

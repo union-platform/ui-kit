@@ -5,6 +5,8 @@
 import { styled } from '@stitches/react';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
 import * as LabelPrimitive from '@radix-ui/react-label';
+import BrandColors from '../Colors/BrandColors/BrandColors';
+import GrayShades from '../Colors/GrayShades/GrayShades';
 
 export interface SwitchProps {
   /**
@@ -34,30 +36,30 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   all: 'unset',
   width: 35,
   height: 17,
-  backgroundColor: '#DCDCDC',
+  backgroundColor: GrayShades.lightGray,
   borderRadius: '9999px',
   position: 'relative',
   WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-  '&:focus': { boxShadow: '0 0 0 2px #A5D43D' },
-  '&[data-state="checked"]': { backgroundColor: '#3ADB6D82' },
+  '&:focus': { boxShadow: `0 0 0 2px ${BrandColors.transparentGreen1}` },
+  '&[data-state="checked"]': { backgroundColor: BrandColors.transparentGreen2 },
 });
 
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
   display: 'block',
   width: 17,
   height: 17,
-  backgroundColor: '#959595',
+  backgroundColor: GrayShades.darkGray,
   borderRadius: '9999px',
   boxShadow: 'box-shadow: 0px 1px 2px 0px #0000001C; box-shadow: 0px 0px 2px 0px #0000001F;',
   transition: 'transform 100ms',
   transform: 'translateX(1px)',
   willChange: 'transform',
-  '&[data-state="checked"]': { transform: 'translateX(19px)', backgroundColor: '#0DBC44' },
+  '&[data-state="checked"]': { transform: 'translateX(19px)', backgroundColor: BrandColors.darkGreen },
 });
 
 const Flex = styled('div', { display: 'flex' });
 const Label = styled(LabelPrimitive.Root, {
-  color: 'black',
+  color: GrayShades.dark,
   fontSize: 14,
   lineHeight: 1,
   fontFamily: 'Open Sans, sans-serif',

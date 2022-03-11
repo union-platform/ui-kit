@@ -35,7 +35,7 @@ const Template: ComponentStory<typeof Box> = () => (
         <Flex>
           <Box
             id={val}
-            style={{ background: BrandColors[val] }}
+            style={{ background: BrandColors[val as keyof typeof BrandColors] }}
           />
           <Heading4>{val}</Heading4>
         </Flex>

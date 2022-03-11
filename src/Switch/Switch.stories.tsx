@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Switch from './Switch';
 
 export default {
-  title: 'Union-UI/Controlls/Switch',
+  title: 'Union-UI/Switch',
   component: Switch,
 } as ComponentMeta<typeof Switch>;
 

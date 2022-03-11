@@ -8,6 +8,8 @@ import * as LabelPrimitive from '@radix-ui/react-label';
 import {
   ChangeEvent, FormEvent, useEffect, useState,
 } from 'react';
+import GrayShades from '../Colors/GrayShades/GrayShades';
+import BrandColors from '../Colors/BrandColors/BrandColors';
 
 export interface TextInputProps {
   /**
@@ -84,18 +86,18 @@ const Input = styled('input', {
   fontFamily: 'Open Sans, sans-serif',
   fontWeight: 400,
   lineHeight: 1,
-  color: '#222222',
-  caretColor: '#0DBC44',
+  color: GrayShades.dark,
+  caretColor: BrandColors.darkGreen,
   backgroundColor: 'transparent',
-  borderBottom: '3px solid #222222',
-  '&:focus': { position: 'relative', borderColor: '#0DBC44' },
+  borderBottom: `3px solid ${GrayShades.dark}`,
+  '&:focus': { position: 'relative', borderColor: BrandColors.darkGreen },
 
   variants: {
     error: {
       true: {
-        borderColor: '#DD4A29',
-        color: '#DD4A29',
-        '&:focus': { position: 'relative', borderColor: '#DD4A29' },
+        borderColor: BrandColors.red,
+        color: BrandColors.red,
+        '&:focus': { position: 'relative', borderColor: BrandColors.red },
       },
     },
     fullWidth: {
@@ -136,18 +138,18 @@ const ErrorText = styled('span', {
   display: 'flex',
   fontSize: '12px',
   fontFamily: 'Open Sans, sans-serif',
-  color: '#DD4A29',
+  color: BrandColors.red,
 });
 
 const Counter = styled('span', {
   fontSize: '12px',
   fontFamily: 'Open Sans, sans-serif',
   flexDirection: 'column',
-  color: '#959595',
+  color: GrayShades.darkGray,
   variants: {
     error: {
       true: {
-        color: '#DD4A29',
+        color: BrandColors.red,
       },
     },
   },

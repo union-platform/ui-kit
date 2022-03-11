@@ -50,7 +50,7 @@ export interface SearchInputProps {
 }
 
 const StyledLabel = styled(LabelPrimitive.Root, {
-  color: 'black',
+  color: GrayShades.dark,
   fontSize: 14,
   lineHeight: 1,
   fontFamily: 'Open Sans, sans-serif',
@@ -69,8 +69,8 @@ const Input = styled('input', {
   fontFamily: 'Open Sans, sans-serif',
   fontWeight: 400,
   lineHeight: 1,
-  color: '#222222',
-  caretColor: '#0DBC44',
+  color: GrayShades.dark,
+  caretColor: BrandColors.darkGreen,
   backgroundColor: 'transparent',
   '&::-webkit-search-cancel-button': {
     cursor: 'pointer',
@@ -78,14 +78,14 @@ const Input = styled('input', {
   },
   '&:focus': {
     position: 'relative',
-    borderColor: '#0DBC44',
+    borderColor: BrandColors.darkGreen,
   },
   variants: {
     error: {
       true: {
-        borderColor: '#DD4A29',
-        color: '#DD4A29',
-        '&:focus': { position: 'relative', borderColor: '#DD4A29' },
+        borderColor: BrandColors.red,
+        color: BrandColors.red,
+        '&:focus': { position: 'relative', borderColor: BrandColors.red },
       },
     },
     fullWidth: {
@@ -120,7 +120,7 @@ const InputContainer = styled('div', {
   borderRadius: '3px',
   '&:focus-within': {
     position: 'relative',
-    borderColor: '#0DBC44',
+    borderColor: BrandColors.darkGreen,
   },
   variants: {
     error: {
@@ -164,7 +164,7 @@ const SearchInput = ({
     <Flex fullWidth={fullWidth}>
       <InputContainer error={error} fullWidth={fullWidth}>
         <IconContainer>
-          <SearchIcon14 />
+          <SearchIcon14 fill={GrayShades.navigationGray} />
         </IconContainer>
         <Input
           disabled={disabled}

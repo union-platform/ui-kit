@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import TextInput from './TextInput';
 
 export default {
-  title: 'Union-UI/Fields/TextInput',
+  title: 'Union-UI/TextInput',
   component: TextInput,
 } as ComponentMeta<typeof TextInput>;
 

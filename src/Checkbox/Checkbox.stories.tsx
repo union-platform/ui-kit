@@ -8,7 +8,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Checkbox from './Checkbox';
 
 export default {
-  title: 'Union-UI/Controlls/Checkbox',
+  title: 'Union-UI/Checkbox',
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>;
 
@@ -30,4 +30,4 @@ WithLabel.args = {
 };
 
 export const Default = Template.bind({});
-WithLabel.args = {};
+Default.args = {};

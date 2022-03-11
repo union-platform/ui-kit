@@ -7,7 +7,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import SearchInput from './SearchInput';
 
 export default {
-  title: 'Union-UI/Fields/SearchInput',
+  title: 'Union-UI/SearchInput',
   component: SearchInput,
 } as ComponentMeta<typeof SearchInput>;
 

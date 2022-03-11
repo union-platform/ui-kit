@@ -4,6 +4,7 @@
 
 import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
+import BrandColors from '../Colors/BrandColors/BrandColors';
 
 export interface IconButtonProps {
   /**
@@ -26,7 +27,7 @@ const StyledButton = styled('button', {
   height: 36,
   borderRadius: 5,
   border: 0,
-  backgroundColor: '#0DBC44',
+  backgroundColor: BrandColors.darkGreen,
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',

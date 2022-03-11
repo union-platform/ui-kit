@@ -7,7 +7,7 @@ import UserIcon24 from '../Icons/24pt/UserIcon24/UserIcon24';
 import IconButton from './IconButton';
 
 export default {
-  title: 'Union-UI/Buttons/IconButton',
+  title: 'Union-UI/IconButton',
   component: IconButton,
 } as ComponentMeta<typeof IconButton>;
 

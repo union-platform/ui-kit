@@ -9,7 +9,7 @@ import { UserIcon24 } from '..';
 import CellButton from './CellButton';
 
 export default {
-  title: 'Union-UI/Buttons/CellButton',
+  title: 'Union-UI/CellButton',
   component: CellButton,
 } as ComponentMeta<typeof CellButton>;
 
