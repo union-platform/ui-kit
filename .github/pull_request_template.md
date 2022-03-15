@@ -44,7 +44,8 @@ you must be able to justify that.
 - Documentation
   - [ ] I checked whether I should update the docs and did so if necessary:
     - [README](../tree/master/README.md)
-    - Haddock
+  - [ ] I checked whether I should update/add links to the figma UI-kit and did so if necessary:
+    - [FIGMA UI-KIT](https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4687%3A34299)
 
 - Public contracts
   - [ ] My changes doesn't break any Licenses.
