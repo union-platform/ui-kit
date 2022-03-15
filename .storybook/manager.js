@@ -4,6 +4,7 @@
 
 import { addons } from '@storybook/addons';
 import unionTheme from './unionTheme';
+import './titleAddon';
 
 addons.setConfig({
   theme: unionTheme,
