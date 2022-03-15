@@ -40,5 +40,5 @@ describe('given a primary LinearProgress', () => {
 });
 
 const LinearProgressTest = (props: React.ComponentProps<typeof LinearProgress>) => (
-  <LinearProgress {...props} />
+  <LinearProgress aria-label={`Progress ${10}%`} {...props} />
 );

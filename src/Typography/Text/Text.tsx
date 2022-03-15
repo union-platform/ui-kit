@@ -39,8 +39,8 @@ const StyledHeading = styled('p', {
 /**
  *  Regular text. Used primary for paragraphs.
  */
-const Text = ({ weight, children }: TextProps) => (
-  <StyledHeading weight={weight}>
+const Text = ({ weight, children, ...props }: TextProps) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

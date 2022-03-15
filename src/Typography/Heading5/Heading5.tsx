@@ -36,8 +36,8 @@ const StyledHeading = styled('h5', {
 /**
  *  Very small heading, 12pt. Used rarely.
  */
-const Heading5 = ({ weight, children }: Heading5Props) => (
-  <StyledHeading weight={weight}>
+const Heading5 = ({ weight, children, ...props }: Heading5Props) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

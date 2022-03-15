@@ -39,8 +39,8 @@ const StyledHeading = styled('h4', {
 /**
  *  One of the smallest headings. Used in tabs, inputs, cells and so on.
  */
-const Heading4 = ({ weight, children }: Heading4Props) => (
-  <StyledHeading weight={weight}>
+const Heading4 = ({ weight, children, ...props }: Heading4Props) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

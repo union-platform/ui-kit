@@ -8,9 +8,10 @@ import { IconProps } from '../../IconType';
 /**
  *  Icon from Union's Figma UI-kit.
  */
-const TelegramIcon14 = ({ fill, purposeLabel }:IconProps) => (
+const TelegramIcon14 = ({ fill, purposeLabel, ...props }:IconProps) => (
   <AccessibleIcon.Root
     label={purposeLabel || 'Telegram Icon'}
+    {...props}
   >
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fillRule="evenodd" clipRule="evenodd" d="M2.59259 1.03704H11.4074C12.2665 1.03704 12.963 1.73348 12.963 2.59259V11.4074C12.963 12.2665 12.2665 12.963 11.4074 12.963H2.59259C1.73348 12.963 1.03704 12.2665 1.03704 11.4074V2.59259C1.03704 1.73348 1.73348 1.03704 2.59259 1.03704ZM0 2.59259C0 1.16074 1.16074 0 2.59259 0H11.4074C12.8393 0 14 1.16074 14 2.59259V11.4074C14 12.8393 12.8393 14 11.4074 14H2.59259C1.16074 14 0 12.8393 0 11.4074V2.59259Z" fill={fill} />

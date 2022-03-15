@@ -65,10 +65,10 @@ const StyledInput = styled('input', {
   },
 });
 
-export function SingleOTPInputComponent(props: SingleOTPInputProps) {
-  const {
-    focus, value, disabled, onFocus, onBlur, onChange, onKeyDown, onPaste, error, defaultValue,
-  } = props;
+export function SingleOTPInputComponent({
+  focus, value, disabled, onFocus, onBlur, onChange,
+  onKeyDown, onPaste, error, defaultValue, ...props
+}: SingleOTPInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const prevFocus = usePrevious(!!focus);
   useLayoutEffect(() => {
@@ -85,7 +85,6 @@ export function SingleOTPInputComponent(props: SingleOTPInputProps) {
 
   return (
     <StyledInput
-      aria-label="Input of SMS-code"
       error={error}
       filled={!!(value && value.length > 0)}
       onBlur={onBlur}
@@ -97,6 +96,7 @@ export function SingleOTPInputComponent(props: SingleOTPInputProps) {
       disabled={disabled}
       value={value}
       ref={inputRef}
+      {...props}
     />
   );
 }

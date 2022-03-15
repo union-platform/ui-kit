@@ -33,7 +33,7 @@ describe('given a default Checkbox', () => {
   let indicator: HTMLElement | null;
 
   beforeEach(() => {
-    rendered = render(<CheckboxTest label="Checkbox" />);
+    rendered = render(<CheckboxTest aria-label="basic checkbox" label="Checkbox" />);
     checkbox = rendered.getByRole(CHECKBOX_ROLE);
     indicator = rendered.queryByTestId(INDICATOR_LABEL);
   });
@@ -68,7 +68,7 @@ describe('given a disabled Checkbox', () => {
   let rendered: RenderResult;
 
   beforeEach(() => {
-    rendered = render(<CheckboxTest label="Checkbox" disabled />);
+    rendered = render(<CheckboxTest aria-label="basic checkbox" label="Checkbox" disabled />);
   });
 
   it('should have no accessibility violations', async () => {
@@ -83,7 +83,7 @@ describe('given an uncontrolled `checked` Checkbox', () => {
   const onCheckedChange = jest.fn();
 
   beforeEach(() => {
-    rendered = render(<CheckboxTest defaultChecked onCheckedChange={onCheckedChange} />);
+    rendered = render(<CheckboxTest aria-label="basic checkbox" defaultChecked onCheckedChange={onCheckedChange} />);
     checkbox = rendered.getByRole(CHECKBOX_ROLE);
     indicator = rendered.queryByTestId(INDICATOR_LABEL);
   });
@@ -113,7 +113,7 @@ describe('given a controlled `checked` Checkbox', () => {
   const onCheckedChange = jest.fn();
 
   beforeEach(() => {
-    rendered = render(<CheckboxTest checked onCheckedChange={onCheckedChange} />);
+    rendered = render(<CheckboxTest aria-label="basic checkbox" checked onCheckedChange={onCheckedChange} />);
     checkbox = rendered.getByRole(CHECKBOX_ROLE);
   });
 
@@ -141,7 +141,11 @@ function CheckboxTest(props: React.ComponentProps<typeof Checkbox>) {
   }, []);
   return (
     <div ref={containerRef}>
-      <Checkbox data-testid="basic checkbox" {...props} />
+      <Checkbox
+        aria-label="basic checkbox"
+        data-testid="basic checkbox"
+        {...props}
+      />
     </div>
   );
 }

@@ -19,8 +19,8 @@ const LayoutContainer = styled('div', {
 /**
  *  Foundation of any screen. Every UI building block should be placed inside the Layout.
  */
-const Layout = ({ children }: LayoutProps) => (
-  <LayoutContainer>
+const Layout = ({ children, ...props }: LayoutProps) => (
+  <LayoutContainer {...props}>
     {children}
   </LayoutContainer>
 );
