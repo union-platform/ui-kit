@@ -36,8 +36,8 @@ const StyledHeading = styled('h2', {
 /**
  *  Secondary heading.
  */
-const Heading2 = ({ weight, children }: Heading2Props) => (
-  <StyledHeading weight={weight}>
+const Heading2 = ({ weight, children, ...props }: Heading2Props) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

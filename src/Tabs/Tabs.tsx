@@ -28,9 +28,9 @@ export interface TabsProps {
  */
 const Tabs = ({
   // eslint-disable-next-line no-unused-vars
-  children, defaultValue,
+  children, defaultValue, ...props
 }: TabsProps) => (
-  <StyledTabs defaultValue={defaultValue}>
+  <StyledTabs {...props} defaultValue={defaultValue}>
     {children}
   </StyledTabs>
 );

@@ -28,6 +28,10 @@ export interface OTPInputProps {
   */
  defaultValue?: string;
   /**
+  *  I18y, label for single input, will look like this — <label>-<index>
+  */
+ singleInputAriaLabel?: string;
+  /**
   *  When true, input visually indicates that user made an error.
   */
  error?: boolean;
@@ -48,6 +52,7 @@ export function OTPInputComponent(props: OTPInputProps) {
     disabled,
     onChangeOTP,
     defaultValue,
+    singleInputAriaLabel,
     ...rest
   } = props;
 
@@ -192,6 +197,7 @@ export function OTPInputComponent(props: OTPInputProps) {
             // eslint-disable-next-line react/no-array-index-key
             key={`OTPInput-${index}`}
             error={error}
+            aria-label={`${singleInputAriaLabel}-${index}`}
             defaultValue={defaultValue}
             focus={activeInput === index}
             value={otpValues && otpValues[index]}
@@ -212,6 +218,7 @@ OTPInputComponent.defaultProps = {
   defaultValue: undefined,
   error: undefined,
   style: undefined,
+  singleInputAriaLabel: 'Single input of OTP',
 };
 
 /**

@@ -84,5 +84,5 @@ describe('given a disabled Switch', () => {
 });
 
 const SwitchTest = (props: React.ComponentProps<typeof Switch>) => (
-  <Switch {...props} />
+  <Switch {...props} aria-label="Switch" />
 );

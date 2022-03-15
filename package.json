@@ -1,6 +1,6 @@
 {
   "name": "@union-platform/ui",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "private": false,
   "main": "index.js",
   "module": "index.mjs",
@@ -46,7 +46,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "yarn && rm -rf dist/ && rollup -c",
+    "build": "yarn && yarn test && rm -rf dist/ && rollup -c && yarn build:copy-files",
     "build:copy-files": "cp package.json dist/ && cp LICENSE dist/ && cp README.md dist/",
     "cypress:ci": "start-server-and-test storybook http://localhost:9009 cypress:run",
     "test": "jest",

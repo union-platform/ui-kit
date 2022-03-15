@@ -36,8 +36,8 @@ const StyledHeading = styled('h1', {
 /**
  *  Biggest heading. Should be used only once on page.
  */
-const Heading1 = ({ weight, children }: Heading1Props) => (
-  <StyledHeading weight={weight}>
+const Heading1 = ({ weight, children, ...props }: Heading1Props) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

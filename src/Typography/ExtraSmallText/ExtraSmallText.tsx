@@ -23,8 +23,8 @@ const StyledHeading = styled('span', {
 /**
  *  Very small text. Use rarely.
  */
-const ExtraSmallText = ({ children }: ExtraSmallTextProps) => (
-  <StyledHeading>
+const ExtraSmallText = ({ children, ...props }: ExtraSmallTextProps) => (
+  <StyledHeading {...props}>
     {children}
   </StyledHeading>
 );

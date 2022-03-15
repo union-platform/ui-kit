@@ -32,6 +32,10 @@ export interface CheckboxProps {
    */
   label?: string;
   /**
+   *  I18y, label for check icon. Default — "Check Icon"
+   */
+  checkIconPurposeLabel?: string;
+  /**
    *  Optional click handler
    */
   onClick?: () => void;
@@ -74,7 +78,7 @@ const Label = styled('div', {
  */
 const Checkbox = ({
   label, defaultChecked, checked, onClick, disabled,
-  onCheckedChange, indicatorAreaLabel,
+  onCheckedChange, indicatorAreaLabel, checkIconPurposeLabel,
   ...props
 }: CheckboxProps) => (
   <Flex>
@@ -84,11 +88,10 @@ const Checkbox = ({
       onCheckedChange={onCheckedChange}
       checked={checked}
       onClick={onClick}
-      aria-label={label}
       {...props}
     >
       <StyledIndicator data-testid="checkbox-indicator">
-        <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel="Check Icon" />
+        <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel={checkIconPurposeLabel} />
       </StyledIndicator>
     </StyledCheckbox>
     {label && (
@@ -105,6 +108,7 @@ Checkbox.defaultProps = {
   disabled: undefined,
   label: null,
   indicatorAreaLabel: null,
+  checkIconPurposeLabel: 'Check Icon',
   defaultChecked: false,
   checked: undefined,
 };

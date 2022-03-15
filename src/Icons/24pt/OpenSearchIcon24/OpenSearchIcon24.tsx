@@ -8,9 +8,10 @@ import { IconProps } from '../../IconType';
 /**
  *  Icon from Union's Figma UI-kit.
  */
-const OpenSearchIcon24 = ({ fill, purposeLabel }:IconProps) => (
+const OpenSearchIcon24 = ({ fill, purposeLabel, ...props }:IconProps) => (
   <AccessibleIcon.Root
     label={purposeLabel || 'Search Icon'}
+    {...props}
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.6429 15.9201L14.6603 12.9375C14.2159 13.6286 13.6278 14.2164 12.9366 14.6608L15.9195 17.6434C16.3957 18.1195 17.1677 18.1195 17.6429 17.6434C18.1191 17.1682 18.1191 16.3962 17.6429 15.9201Z" fill={fill} />

@@ -36,8 +36,8 @@ const StyledHeading = styled('h3', {
 /**
  *  Primary heading for mobile UI. Used in headers, modals, buttons and so on.
  */
-const Heading3 = ({ weight, children }: Heading3Props) => (
-  <StyledHeading weight={weight}>
+const Heading3 = ({ weight, children, ...props }: Heading3Props) => (
+  <StyledHeading {...props} weight={weight}>
     {children}
   </StyledHeading>
 );

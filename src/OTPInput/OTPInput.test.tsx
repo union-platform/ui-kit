@@ -58,9 +58,15 @@ describe('given a default OTPInput', () => {
 });
 
 const OTPInputTest = (props: React.ComponentProps<typeof OTPInput>) => (
-  <OTPInput {...props} />
+  <OTPInput
+    aria-label="Input of SMS-code"
+    {...props}
+  />
 );
 
 const SingleOTPInputTest = (props: React.ComponentProps<typeof SingleOTPInput>) => (
-  <SingleOTPInput {...props} />
+  <SingleOTPInput
+    aria-label="Input of SMS-code"
+    {...props}
+  />
 );

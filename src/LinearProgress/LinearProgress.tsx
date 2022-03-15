@@ -40,8 +40,10 @@ const StyledIndicator = styled(ProgressPrimitive.Indicator, {
 /**
  *  Progress indicator of any task, so that user knows that system is processing.
  */
-const LinearProgress = ({ value, progress, max }: LinearProgressProps) => (
-  <StyledProgress aria-label={`Progress ${progress}%`} max={max} value={value}>
+const LinearProgress = ({
+  value, progress, max, ...props
+}: LinearProgressProps) => (
+  <StyledProgress {...props} max={max} value={value}>
     <StyledIndicator style={{ width: `${progress}%` }} />
   </StyledProgress>
 );
