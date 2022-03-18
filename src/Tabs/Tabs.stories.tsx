@@ -11,6 +11,12 @@ import TabsTrigger from './TabsTrigger/TabsTrigger';
 export default {
   title: 'Union-UI/Tabs',
   component: Tabs,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4729%3A34961',
+    },
+  },
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => (

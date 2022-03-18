@@ -8,6 +8,12 @@ import TextInput from './TextInput';
 export default {
   title: 'Union-UI/TextInput',
   component: TextInput,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4732%3A35098',
+    },
+  },
 } as ComponentMeta<typeof TextInput>;
 
 const Template: ComponentStory<typeof TextInput> = (args) => <TextInput {...args} />;

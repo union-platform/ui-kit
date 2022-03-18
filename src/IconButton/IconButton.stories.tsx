@@ -9,6 +9,12 @@ import IconButton from './IconButton';
 export default {
   title: 'Union-UI/IconButton',
   component: IconButton,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4687%3A34346',
+    },
+  },
 } as ComponentMeta<typeof IconButton>;
 
 const Template: ComponentStory<typeof IconButton> = () => (

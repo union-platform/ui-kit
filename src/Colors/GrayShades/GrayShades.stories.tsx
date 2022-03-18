@@ -26,6 +26,12 @@ const Flex = styled('div', {
 export default {
   title: 'Colors/GrayShades',
   component: Box,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4723%3A34861',
+    },
+  },
 } as ComponentMeta<typeof Box>;
 
 const Template: ComponentStory<typeof Box> = () => (
