@@ -11,6 +11,12 @@ import CellButton from './CellButton';
 export default {
   title: 'Union-UI/CellButton',
   component: CellButton,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4734%3A584',
+    },
+  },
 } as ComponentMeta<typeof CellButton>;
 
 const Template: ComponentStory<typeof CellButton> = (args) => (

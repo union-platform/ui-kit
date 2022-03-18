@@ -9,6 +9,12 @@ import Avatar from './Avatar';
 export default {
   title: 'Union-UI/Avatar',
   component: Avatar,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=6322%3A38048',
+    },
+  },
 } as ComponentMeta<typeof Avatar>;
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;

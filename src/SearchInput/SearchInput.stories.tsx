@@ -9,6 +9,12 @@ import SearchInput from './SearchInput';
 export default {
   title: 'Union-UI/SearchInput',
   component: SearchInput,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4729%3A34872',
+    },
+  },
 } as ComponentMeta<typeof SearchInput>;
 
 const Template: ComponentStory<typeof SearchInput> = (args) => <SearchInput {...args} />;

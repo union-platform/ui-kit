@@ -8,6 +8,12 @@ import ToogleButton from './ToogleButton';
 export default {
   title: 'Union-UI/ToogleButton',
   component: ToogleButton,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4840%3A36630',
+    },
+  },
 } as ComponentMeta<typeof ToogleButton>;
 
 const Template: ComponentStory<typeof ToogleButton> = (args) => (

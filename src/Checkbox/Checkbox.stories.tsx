@@ -10,6 +10,12 @@ import Checkbox from './Checkbox';
 export default {
   title: 'Union-UI/Checkbox',
   component: Checkbox,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4732%3A34892',
+    },
+  },
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;

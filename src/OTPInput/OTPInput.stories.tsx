@@ -9,6 +9,12 @@ import OTPInput from './OTPInput';
 export default {
   title: 'Union-UI/OTPInput',
   component: OTPInput,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/2St3zSul4fHnLffqy3WK7P/%5B-union-%5D-mobile?node-id=4732%3A35098',
+    },
+  },
 } as ComponentMeta<typeof OTPInput>;
 
 const Template: ComponentStory<typeof OTPInput> = (args) => <OTPInput {...args} />;
