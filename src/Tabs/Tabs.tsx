@@ -9,7 +9,7 @@ import { ReactNode } from 'react';
 const StyledTabs = styled(TabsPrimitive.Root, {
   display: 'flex',
   flexDirection: 'column',
-  width: 300,
+  width: '100%',
 });
 
 export interface TabsProps {

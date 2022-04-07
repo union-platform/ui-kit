@@ -46,7 +46,7 @@ export interface SearchInputProps {
   /**
    *  Input change handler.
    */
-   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const StyledLabel = styled(LabelPrimitive.Root, {
@@ -71,7 +71,7 @@ const Input = styled('input', {
   lineHeight: 1,
   color: GrayShades.dark,
   caretColor: BrandColors.darkGreen,
-  backgroundColor: 'transparent',
+  backgroundColor: GrayShades.white,
   '&::-webkit-search-cancel-button': {
     cursor: 'pointer',
     marginRight: 10,
@@ -142,6 +142,7 @@ const IconContainer = styled('div', {
   display: 'flex',
   height: 35,
   width: 35,
+  backgroundColor: GrayShades.white,
   justifyContent: 'center',
   alignItems: 'center',
 });
@@ -157,7 +158,10 @@ const SearchInput = ({
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.currentTarget.value);
-    onChange(e);
+
+    if (onChange) {
+      onChange(e);
+    }
   };
 
   return (
@@ -193,6 +197,7 @@ SearchInput.defaultProps = {
   fullWidth: false,
   disabled: false,
   label: null,
+  onChange: undefined,
   defaultValue: undefined,
   value: undefined,
   id: undefined,
