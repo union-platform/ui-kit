@@ -14,6 +14,7 @@ export interface LayoutProps {
 
 const LayoutContainer = styled('div', {
   margin: '0 16px 0 16px',
+  height: '100%',
 });
 
 /**

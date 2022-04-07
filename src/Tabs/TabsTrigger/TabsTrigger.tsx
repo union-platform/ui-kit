@@ -22,6 +22,7 @@ const StyledTrigger = styled(TabsPrimitive, {
   lineHeight: 1,
   color: GrayShades.navigationGray,
   userSelect: 'none',
+  cursor: 'pointer',
   '&:first-child': { borderTopLeftRadius: 6 },
   '&:last-child': { borderTopRightRadius: 6 },
   '&:hover': { color: BrandColors.darkGreen },
