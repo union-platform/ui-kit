@@ -2,8 +2,8 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
+import { styled } from '../stitches.config';
 
 export interface LayoutProps {
   /**
@@ -13,15 +13,35 @@ export interface LayoutProps {
 }
 
 const LayoutContainer = styled('div', {
-  margin: '0 16px 0 16px',
   height: '100%',
+  variants: {
+    sideMargin: {
+      '16pt': {
+        margin: '0 16px',
+      },
+      '40pt': {
+        margin: '0 40px',
+      },
+      '80pt': {
+        margin: '0 80px',
+
+      },
+    },
+  },
 });
 
 /**
  *  Foundation of any screen. Every UI building block should be placed inside the Layout.
  */
 const Layout = ({ children, ...props }: LayoutProps) => (
-  <LayoutContainer {...props}>
+  <LayoutContainer
+    sideMargin={{
+      '@initial': '16pt',
+      '@bp1': '40pt',
+      '@bp2': '80pt',
+    }}
+    {...props}
+  >
     {children}
   </LayoutContainer>
 );
