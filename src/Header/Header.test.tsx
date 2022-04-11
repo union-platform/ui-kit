@@ -116,11 +116,7 @@ describe('given Header with additional control', () => {
     additionalButton = rendered.getByTestId(ADDITIONAL_ICON_TEST_ID);
   });
 
-  it('should have no accessibility violations', async () => {
-    expect(await axe(rendered.container)).toHaveNoViolations();
-  });
-
-  it('should show tabs', async () => {
+  it('should show additional button', async () => {
     expect(additionalButton).toBeInTheDocument();
   });
 });
@@ -136,10 +132,6 @@ describe('given Header with back link', () => {
   beforeEach(() => {
     rendered = render(<HeaderTest backLink="/" />);
     backLinkButton = rendered.getByTestId(BACK_LINK_BUTTON_TEST_ID);
-  });
-
-  it('should have no accessibility violations', async () => {
-    expect(await axe(rendered.container)).toHaveNoViolations();
   });
 
   it('should show tabs', async () => {
