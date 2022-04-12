@@ -23,8 +23,26 @@ export * from './Colors/GrayShades/GrayShades';
 export { default as Checkbox } from './Checkbox/Checkbox';
 export * from './Checkbox/Checkbox';
 
+export { default as Avatar } from './Avatar/Avatar';
+export * from './Avatar/Avatar';
+
 export { default as Switch } from './Switch/Switch';
 export * from './Switch/Switch';
+
+export { default as Header } from './Header/Header';
+export * from './Header/Header';
+
+export { default as Dropdown } from './Dropdown/Dropdown';
+export * from './Dropdown/Dropdown';
+
+export { default as DropdownTrigger } from './Dropdown/DropdownTrigger/DropdownTrigger';
+export * from './Dropdown/DropdownTrigger/DropdownTrigger';
+
+export { default as DropdownContent } from './Dropdown/DropdownContent/DropdownContent';
+export * from './Dropdown/DropdownContent/DropdownContent';
+
+export { default as DropdownItem } from './Dropdown/DropdownItem/DropdownItem';
+export * from './Dropdown/DropdownItem/DropdownItem';
 
 export { default as Tabs } from './Tabs/Tabs';
 export * from './Tabs/Tabs';
