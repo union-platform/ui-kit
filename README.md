@@ -8,6 +8,7 @@
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue.svg)](https://opensource.org/licenses/AGPL-3.0)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6556450e-ee39-4b49-8ff4-8f7180b3fa27/deploy-status)](https://app.netlify.com/sites/unionui/deploys)
+[![Test](https://github.com/union-platform/ui-kit/actions/workflows/test.yml/badge.svg)](https://github.com/union-platform/ui-kit/actions/workflows/test.yml)
 [![NPM](https://img.shields.io/npm/v/@union-platform/ui)](https://www.npmjs.com/package/@union-platform/ui)
 [![bundle size](https://img.shields.io/bundlephobia/min/@union-platform/ui)](https://www.npmjs.com/package/@union-platform/ui)
 [![bundle size](https://img.shields.io/badge/storybook-link-brightgreen)](https://ui.unionapp.cc/)
