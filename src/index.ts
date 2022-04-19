@@ -32,6 +32,48 @@ export * from './Switch/Switch';
 export { default as Header } from './Header/Header';
 export * from './Header/Header';
 
+export { default as Alert } from './Alert/Alert';
+export * from './Alert/Alert';
+
+export { default as AlertAction } from './Alert/AlertAction/AlertAction';
+export * from './Alert/AlertAction/AlertAction';
+
+export { default as AlertCancel } from './Alert/AlertCancel/AlertCancel';
+export * from './Alert/AlertCancel/AlertCancel';
+
+export { default as AlertContent } from './Alert/AlertContent/AlertContent';
+export * from './Alert/AlertContent/AlertContent';
+
+export { default as AlertDescription } from './Alert/AlertDescription/AlertDescription';
+export * from './Alert/AlertDescription/AlertDescription';
+
+export { default as AlertTitle } from './Alert/AlertTitle/AlertTitle';
+export * from './Alert/AlertTitle/AlertTitle';
+
+export { default as AlertTrigger } from './Alert/AlertTrigger/AlertTrigger';
+export * from './Alert/AlertTrigger/AlertTrigger';
+
+export { default as Modal } from './Modal/Modal';
+export * from './Modal/Modal';
+
+export { default as ModalClose } from './Modal/ModalClose/ModalClose';
+export * from './Modal/ModalClose/ModalClose';
+
+export { default as ModalContent } from './Modal/ModalContent/ModalContent';
+export * from './Modal/ModalContent/ModalContent';
+
+export { default as ModalDescription } from './Modal/ModalDescription/ModalDescription';
+export * from './Modal/ModalDescription/ModalDescription';
+
+export { default as ModalOverlay } from './Modal/ModalOverlay/ModalOverlay';
+export * from './Modal/ModalOverlay/ModalOverlay';
+
+export { default as ModalTitle } from './Modal/ModalTitle/ModalTitle';
+export * from './Modal/ModalTitle/ModalTitle';
+
+export { default as ModalTrigger } from './Modal/ModalTrigger/ModalTrigger';
+export * from './Modal/ModalTrigger/ModalTrigger';
+
 export { default as Dropdown } from './Dropdown/Dropdown';
 export * from './Dropdown/Dropdown';
 
