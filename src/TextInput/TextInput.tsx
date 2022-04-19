@@ -59,7 +59,7 @@ export interface TextInputProps {
   /**
    *  Input change handler.
    */
-   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   /**
    *  Function that been called on error.
    */
@@ -168,7 +168,10 @@ const TextInput = ({
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.currentTarget.value);
-    onChange(e);
+
+    if (onChange) {
+      onChange(e);
+    }
   };
 
   useEffect(() => {
@@ -189,7 +192,7 @@ const TextInput = ({
   }, [currentValue]);
 
   return (
-    <Flex css={{ padding: '0 20px', flexWrap: 'wrap', alignItems: 'center' }}>
+    <Flex css={{ flexWrap: 'wrap', alignItems: 'center' }}>
       <InputContainer fullWidth={fullWidth}>
         <Input
           id={id}
@@ -224,6 +227,7 @@ TextInput.defaultProps = {
   label: null,
   defaultValue: undefined,
   value: undefined,
+  onChange: undefined,
   onError: null,
   disabled: false,
   placeholder: 'Your Text...',

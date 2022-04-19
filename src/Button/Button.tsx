@@ -47,7 +47,7 @@ const StyledButton = styled('button', {
         fontWeight: 600,
         fontSize: '14px',
         border: 0,
-        width: '94px',
+        minWidth: '94px',
         height: '36px',
         borderRadius: '5px',
         color: GrayShades.white,
