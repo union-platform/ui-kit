@@ -32,6 +32,9 @@ export * from './Switch/Switch';
 export { default as Header } from './Header/Header';
 export * from './Header/Header';
 
+export { default as Dot } from './Dot/Dot';
+export * from './Dot/Dot';
+
 export { default as Alert } from './Alert/Alert';
 export * from './Alert/Alert';
 
