@@ -7,6 +7,7 @@ import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import Heading4 from '../Typography/Heading4/Heading4';
+import Dot from '../Dot/Dot';
 
 export interface AvatarProps {
   /**
@@ -70,15 +71,13 @@ const StyledFallback = styled(AvatarPrimitive.Fallback, {
   fontWeight: 500,
 });
 
-const ActiveBadge = styled('span', {
+const ActiveBadge = styled(Dot, {
   position: 'absolute',
   right: 0,
   bottom: 0,
   width: 12,
   height: 12,
-  borderRadius: '100%',
   border: `solid 1px ${GrayShades.white}`,
-  background: BrandColors.darkGreen,
 });
 
 /**
@@ -99,11 +98,7 @@ const Avatar = ({
       alt={alt}
     />
     {active && (
-    <ActiveBadge css={{
-      width: activeBadgeSize,
-      height: activeBadgeSize,
-    }}
-    />
+    <ActiveBadge variant="positive" size={activeBadgeSize} />
     )}
     <StyledFallback delayMs={delayMs}>
       <Heading4 weight="bold">{fallbackValue}</Heading4>
