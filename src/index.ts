@@ -14,6 +14,9 @@ export * from './IconButton/IconButton';
 export { default as ToogleButton } from './ToogleButton/ToogleButton';
 export * from './ToogleButton/ToogleButton';
 
+export { default as Counter } from './Counter/Counter';
+export * from './Counter/Counter';
+
 export { default as BrandColors } from './Colors/BrandColors/BrandColors';
 export * from './Colors/BrandColors/BrandColors';
 

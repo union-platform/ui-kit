@@ -1,10 +1,11 @@
 {
   "name": "@union-platform/ui",
   "description": "UI-library of Union — a platform where you can find your labor of love, join a team, create something important or crazy; this is a place where you can be yourself.",
-  "version": "0.1.20",
+  "version": "0.1.23",
   "private": false,
   "main": "index.js",
   "module": "index.mjs",
+  "license" : "AGPL-3.0-or-later",
   "bugs": {
     "url" : "https://github.com/union-platform/ui-kit/issues"
   },
@@ -12,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/union-platform/ui-kit.git"
   },
-  "homepage": "http://unionapp.cc/",
+  "homepage": "http://unionapp.cc",
   "contributors": [
     "Artyom Alekseev <contact@artyomalekseev.com>"
   ],
