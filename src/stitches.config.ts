@@ -6,7 +6,8 @@ import { createStitches } from '@stitches/react';
 
 export const { styled, css } = createStitches({
   media: {
-    bp1: '(min-width: 600px)',
-    bp2: '(min-width: 1200px)',
+    min600: '(min-width: 600px)',
+    min900: '(min-width: 900px)',
+    min1200: '(min-width: 1200px)',
   },
 });
