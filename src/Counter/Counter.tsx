@@ -25,7 +25,7 @@ export interface CounterProps {
 const StyledCounter = styled('span', {
   height: 24,
   display: 'inline-block',
-  padding: '0 8px 0 8px',
+  padding: '0 6px 0 6px',
   borderRadius: 100,
   background: BrandColors.darkGreen,
 

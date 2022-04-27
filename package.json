@@ -1,7 +1,7 @@
 {
   "name": "@union-platform/ui",
   "description": "UI-library of Union — a platform where you can find your labor of love, join a team, create something important or crazy; this is a place where you can be yourself.",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": false,
   "main": "index.js",
   "module": "index.mjs",
