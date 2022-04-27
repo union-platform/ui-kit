@@ -16,15 +16,17 @@ const LayoutContainer = styled('div', {
   height: '100%',
   variants: {
     sideMargin: {
-      '16pt': {
+      initial: {
         margin: '0 16px',
       },
-      '40pt': {
+      from600: {
         margin: '0 40px',
       },
-      '80pt': {
-        margin: '0 80px',
-
+      from900: {
+        margin: '0 auto',
+        maxWidth: '1140px',
+        minWidth: '900px',
+        width: '100%',
       },
     },
   },
@@ -36,9 +38,9 @@ const LayoutContainer = styled('div', {
 const Layout = ({ children, ...props }: LayoutProps) => (
   <LayoutContainer
     sideMargin={{
-      '@initial': '16pt',
-      '@bp1': '40pt',
-      '@bp2': '80pt',
+      '@initial': 'initial',
+      '@min600': 'from600',
+      '@min900': 'from900',
     }}
     {...props}
   >

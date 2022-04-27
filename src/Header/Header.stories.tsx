@@ -10,6 +10,14 @@ import Tabs from '../Tabs/Tabs';
 import TabsList from '../Tabs/TabsList/TabsList';
 import TabsTrigger from '../Tabs/TabsTrigger/TabsTrigger';
 import EllipsisIcon18 from '../Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+import Dropdown from '../Dropdown/Dropdown';
+import DropdownTrigger from '../Dropdown/DropdownTrigger/DropdownTrigger';
+import DropdownContent from '../Dropdown/DropdownContent/DropdownContent';
+import DropdownItem from '../Dropdown/DropdownItem/DropdownItem';
+import Switch from '../Switch/Switch';
+import DeleteIcon24 from '../Icons/24pt/DeleteIcon24/DeleteIcon24';
+import BrandColors from '../Colors/BrandColors/BrandColors';
+import AddIcon24 from '../Icons/24pt/AddIcon24/AddIcon24';
 
 const styles = {
   height: '100000px',
@@ -32,6 +40,31 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
+const MenuButton = () => (
+  <Dropdown>
+    <DropdownTrigger>
+      <EllipsisIcon18 />
+    </DropdownTrigger>
+
+    <DropdownContent sideOffset={5}>
+      <DropdownItem iconComponent={<AddIcon24 />}>
+        New Tab
+      </DropdownItem>
+      <DropdownItem>New Window</DropdownItem>
+      <DropdownItem
+        controlComponent={<Switch />}
+      >
+        Item with control
+
+      </DropdownItem>
+      <DropdownItem disabled>New Private Window</DropdownItem>
+      <DropdownItem negative iconComponent={<DeleteIcon24 fill={BrandColors.red} />}>
+        New Tab
+      </DropdownItem>
+    </DropdownContent>
+  </Dropdown>
+);
+
 const Template: ComponentStory<typeof Header> = (args) => (
   <Layout>
     <Header
@@ -46,7 +79,7 @@ const Template: ComponentStory<typeof Header> = (args) => (
           </TabsList>
         </Tabs>
 )}
-      iconComponent={<EllipsisIcon18 />}
+      iconComponent={<MenuButton />}
       backLink="/"
       searchProps={{ placeholder: 'Placeholder...' }}
       {...args}
