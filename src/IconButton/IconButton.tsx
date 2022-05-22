@@ -31,8 +31,17 @@ const StyledButton = styled('button', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  backgroundPosition: 'center',
+  transition: 'background 0.8s',
+
   '&:hover': {
-    opacity: 0.8,
+    background: `${BrandColors.darkGreen} radial-gradient(circle, transparent 1%, ${BrandColors.darkGreen} 1%) center/15000%`,
+  },
+
+  '&:active': {
+    backgroundColor: 'rgb(15 210 77)',
+    backgroundSize: '100%',
+    transition: 'background 0s',
   },
 
   variants: {

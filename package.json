@@ -1,13 +1,13 @@
 {
   "name": "@union-platform/ui",
   "description": "UI-library of Union — a platform where you can find your labor of love, join a team, create something important or crazy; this is a place where you can be yourself.",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "private": false,
   "main": "index.js",
   "module": "index.mjs",
-  "license" : "AGPL-3.0-or-later",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url" : "https://github.com/union-platform/ui-kit/issues"
+    "url": "https://github.com/union-platform/ui-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -51,9 +51,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.13",
+    "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "typescript": "^4.1.2"
   },
   "scripts": {
@@ -123,9 +124,11 @@
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.22",
     "@storybook/addon-links": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/node-logger": "^6.4.19",
-    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
     "@testing-library/cypress": "^8.0.2",

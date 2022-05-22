@@ -4,6 +4,7 @@
 
 import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { AnimatePresence, motion } from 'framer-motion';
 import CheckIcon14 from '../Icons/14pt/CheckIcon14/CheckIcon14';
 import { BrandColors } from '..';
 import GrayShades from '../Colors/GrayShades/GrayShades';
@@ -63,7 +64,7 @@ const StyledIndicator = styled(CheckboxPrimitive.Indicator, {
   display: 'flex',
 });
 
-const Flex = styled('div', { display: 'flex', alignItems: 'center' });
+const Flex = styled(motion.div, { display: 'flex', alignItems: 'center' });
 
 const Label = styled('div', {
   color: GrayShades.dark,
@@ -81,25 +82,40 @@ const Checkbox = ({
   onCheckedChange, indicatorAreaLabel, checkIconPurposeLabel,
   ...props
 }: CheckboxProps) => (
-  <Flex>
-    <StyledCheckbox
-      defaultChecked={defaultChecked}
-      disabled={disabled}
-      onCheckedChange={onCheckedChange}
-      checked={checked}
-      onClick={onClick}
-      {...props}
+  <AnimatePresence>
+    <Flex
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <StyledIndicator data-testid="checkbox-indicator">
-        <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel={checkIconPurposeLabel} />
-      </StyledIndicator>
-    </StyledCheckbox>
-    {label && (
-    <Label css={{ paddingLeft: 15 }}>
-      {label}
-    </Label>
-    )}
-  </Flex>
+      <StyledCheckbox
+        defaultChecked={defaultChecked}
+        disabled={disabled}
+        onCheckedChange={onCheckedChange}
+        checked={checked}
+        onClick={onClick}
+        {...props}
+      >
+        <StyledIndicator data-testid="checkbox-indicator">
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0 }}
+              style={{ display: 'flex' }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel={checkIconPurposeLabel} />
+            </motion.div>
+          </AnimatePresence>
+        </StyledIndicator>
+      </StyledCheckbox>
+      {label && (
+      <Label css={{ paddingLeft: 15 }}>
+        {label}
+      </Label>
+      )}
+    </Flex>
+  </AnimatePresence>
 );
 
 Checkbox.defaultProps = {

@@ -19,6 +19,7 @@ const StyledTrigger = styled(TabsPrimitive, {
   alignItems: 'center',
   justifyContent: 'center',
   fontSize: 16,
+  transition: 'box-shadow 600ms ease, color 600ms ease, background-color 600ms ease',
   lineHeight: 1,
   color: GrayShades.navigationGray,
   userSelect: 'none',

@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { styled } from '@stitches/react';
+import { AnimatePresence, motion } from 'framer-motion';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 
 export interface DotProps {
@@ -20,9 +21,10 @@ export interface DotProps {
    fill?: string;
 }
 
-const StyledDot = styled('span', {
+const StyledDot = styled(motion.span, {
   borderRadius: '100%',
   display: 'block',
+  alignSelf: 'center',
 
   variants: {
     variant: {
@@ -42,7 +44,21 @@ const StyledDot = styled('span', {
 const Dot = ({
   size, variant, fill, ...props
 }: DotProps) => (
-  <StyledDot variant={variant} css={{ width: size, height: size, background: fill }} {...props} />
+  <AnimatePresence>
+    <StyledDot
+      variant={variant}
+      initial={{
+        opacity: 0, width: 0, height: 0, y: 4,
+      }}
+      animate={{
+        opacity: 1, width: size, height: size, y: 0,
+      }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, y: -4 }}
+      css={{ width: size, height: size, background: fill }}
+      {...props}
+    />
+  </AnimatePresence>
 );
 
 Dot.defaultProps = {

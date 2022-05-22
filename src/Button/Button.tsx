@@ -39,6 +39,7 @@ const specialButtonAnimationGradient = keyframes({
 const StyledButton = styled('button', {
   cursor: 'pointer',
   fontFamily: 'Open Sans, sans-serif',
+  userSelect: 'none',
 
   variants: {
     variant: {
@@ -51,8 +52,17 @@ const StyledButton = styled('button', {
         height: '36px',
         borderRadius: '5px',
         color: GrayShades.white,
+        backgroundPosition: 'center',
+        transition: 'background 0.8s',
+
         '&:hover': {
-          opacity: 0.8,
+          background: `${BrandColors.darkGreen} radial-gradient(circle, transparent 1%, ${BrandColors.darkGreen} 1%) center/15000%`,
+        },
+
+        '&:active': {
+          backgroundColor: 'rgb(15 210 77)',
+          backgroundSize: '100%',
+          transition: 'background 0s',
         },
       },
       secondary: {
@@ -63,9 +73,6 @@ const StyledButton = styled('button', {
         border: `3px solid ${GrayShades.dark}`,
         color: GrayShades.dark,
         height: '48px',
-        '&:hover': {
-          opacity: 0.8,
-        },
       },
       text: {
         backgroundColor: 'transparent',
@@ -73,9 +80,19 @@ const StyledButton = styled('button', {
         color: BrandColors.darkGreen,
         fontWeight: 600,
         border: 0,
-        height: '48px',
+        borderRadius: 4,
+        height: '32px',
+        backgroundPosition: 'center',
+        transition: 'background 0.8s',
+
         '&:hover': {
-          opacity: 0.8,
+          background: `${BrandColors.transparentGreen1} radial-gradient(circle, transparent 1%, ${BrandColors.transparentGreen1} 1%) center/15000%`,
+        },
+
+        '&:active': {
+          backgroundColor: BrandColors.transparentGreen2,
+          backgroundSize: '100%',
+          transition: 'background 0s',
         },
       },
       special: {
@@ -87,6 +104,13 @@ const StyledButton = styled('button', {
         border: 0,
         lineHeight: '21,79px',
         position: 'relative',
+
+        '&:hover': {
+          '&:before': {
+            animationFillMode: 'forwards',
+          },
+        },
+
         '&:after': {
           top: '4px',
           left: 0,
@@ -113,9 +137,6 @@ const StyledButton = styled('button', {
           height: '40px',
           borderRadius: '5px',
           background: BrandColors.unionGradient,
-        },
-        '&:hover': {
-          opacity: 0.8,
         },
       },
     },
