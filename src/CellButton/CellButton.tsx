@@ -5,6 +5,7 @@
 import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 import Button from '../Button/Button';
+import BrandColors from '../Colors/BrandColors/BrandColors';
 
 export interface CellButtonProps {
   /**
@@ -31,9 +32,13 @@ export interface CellButtonProps {
 
 const CellButtonContainer = styled('div',
   {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
+    borderRadius: 4,
     cursor: 'pointer',
+    backgroundPosition: 'center',
+    transition: 'background 0.8s',
+
     variants: {
       disabled: {
         true: {
@@ -42,7 +47,23 @@ const CellButtonContainer = styled('div',
         },
       },
     },
+
+    '&:hover': {
+      background: `${BrandColors.transparentGreen1} radial-gradient(circle, transparent 1%, ${BrandColors.transparentGreen1} 1%) center/15000%`,
+    },
+
+    '&:active': {
+      backgroundColor: BrandColors.transparentGreen2,
+      backgroundSize: '100%',
+      transition: 'background 0s',
+    },
   });
+
+const IconContainer = styled('div', {
+  paddingLeft: 6,
+  display: 'flex',
+  alignItems: 'center',
+});
 
 /**
  *  Text button with icon.
@@ -54,14 +75,50 @@ const CellButton = ({
   iconRight
     ? (
       <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
-        <Button disabled={disabled} variant="text">{label}</Button>
-        {children}
+        <Button
+          css={{
+            '&:hover': {
+              background: 'transparent',
+            },
+
+            '&:active': {
+              backgroundColor: 'transparent',
+              transition: 'none',
+            },
+          }}
+          disabled={disabled}
+          variant="text"
+        >
+          {label}
+
+        </Button>
+        <IconContainer>
+          {children}
+        </IconContainer>
       </CellButtonContainer>
     )
     : (
       <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
-        {children}
-        <Button disabled={disabled} variant="text">{label}</Button>
+        <IconContainer>
+          {children}
+        </IconContainer>
+        <Button
+          css={{
+            '&:hover': {
+              background: 'transparent',
+            },
+
+            '&:active': {
+              backgroundColor: 'trasparent',
+              transition: 'none',
+            },
+          }}
+          disabled={disabled}
+          variant="text"
+        >
+          {label}
+
+        </Button>
       </CellButtonContainer>
     ));
 

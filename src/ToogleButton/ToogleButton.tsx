@@ -43,16 +43,26 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   display: 'flex',
   fontSize: 14,
   cursor: 'pointer',
+  userSelect: 'none',
   fontWeight: 600,
   padding: '0px 10px 0px 10px',
   fontFamily: 'Open Sans, sans-serif',
   lineHeight: 1,
+  transition: 'background-color 500ms ease',
   alignItems: 'center',
   justifyContent: 'center',
-  '&[data-state=on]': { backgroundColor: BrandColors.darkGreen, color: GrayShades.white },
-  '&:focus': { boxShadow: `0 0 0 2px ${BrandColors.transparentGreen2}` },
+  '&[data-state=on]': {
+    backgroundColor: BrandColors.darkGreen,
+    color: GrayShades.white,
+    '&:hover': {
+      backgroundColor: BrandColors.darkGreen,
+    },
+  },
+  '&:focus': {
+    boxShadow: `0 0 0 2px ${BrandColors.transparentGreen2}`,
+  },
   '&:hover': {
-    opacity: 0.8,
+    backgroundColor: BrandColors.transparentGreen1,
   },
 
   variants: {

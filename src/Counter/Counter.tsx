@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { styled } from '@stitches/react';
+import { useEffect, useState } from 'react';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import Heading5 from '../Typography/Heading5/Heading5';
@@ -25,6 +26,7 @@ export interface CounterProps {
 const StyledCounter = styled('span', {
   height: 24,
   display: 'inline-block',
+  userSelect: 'none',
   padding: '0 6px 0 6px',
   borderRadius: 100,
   background: BrandColors.darkGreen,
@@ -49,17 +51,35 @@ const StyledHeading = styled(Heading5, {
  */
 const Counter = ({
   value, negative, showZero, ...props
-}: CounterProps) => (
-  ((typeof value === 'number' && value !== 0)
+}: CounterProps) => {
+  const [animatedNumber, setAnimatedNumber] = useState(0);
+
+  useEffect(() => {
+    if (typeof value === 'number' && value !== 0) {
+      setTimer(0, value);
+    }
+  }, []);
+
+  const setTimer = (minimum: number, maximum: number) => {
+    for (let count = minimum; count <= maximum; count += 1) {
+      setTimeout(() => {
+        setAnimatedNumber(count);
+      }, 1000);
+    }
+  };
+
+  return (
+    ((typeof value === 'number' && value !== 0)
   || ((typeof value === 'number' && value >= 0) && showZero))
-    ? (
-      <StyledCounter negative={negative} {...props}>
-        <StyledHeading>
-          {value}
-        </StyledHeading>
-      </StyledCounter>
-    ) : <div />
-);
+      ? (
+        <StyledCounter negative={negative} {...props}>
+          <StyledHeading>
+            {animatedNumber}
+          </StyledHeading>
+        </StyledCounter>
+      ) : <div />
+  );
+};
 Counter.defaultProps = {
   showZero: false,
   negative: undefined,

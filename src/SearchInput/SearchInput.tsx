@@ -5,10 +5,13 @@
 
 import { styled } from '@stitches/react';
 import * as LabelPrimitive from '@radix-ui/react-label';
-import { ChangeEvent, useState } from 'react';
+import {
+  ChangeEvent, useRef, useState, useEffect,
+} from 'react';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import SearchIcon14 from '../Icons/14pt/SearchIcon14/SearchIcon14';
+import CloseIcon18 from '../Icons/18pt/CloseIcon18/CloseIcon18';
 
 export interface SearchInputProps {
   /**
@@ -72,9 +75,12 @@ const Input = styled('input', {
   color: GrayShades.dark,
   caretColor: BrandColors.darkGreen,
   backgroundColor: GrayShades.white,
+  '&::placeholder': {
+    color: GrayShades.darkGray,
+  },
   '&::-webkit-search-cancel-button': {
-    cursor: 'pointer',
-    marginRight: 10,
+    '-webkit-appearance': 'none',
+    display: 'none',
   },
   '&:focus': {
     position: 'relative',
@@ -85,7 +91,12 @@ const Input = styled('input', {
       true: {
         borderColor: BrandColors.red,
         color: BrandColors.red,
+        caretColor: BrandColors.red,
         '&:focus': { position: 'relative', borderColor: BrandColors.red },
+        '&::placeholder': {
+          color: BrandColors.red,
+          opacity: 0.6,
+        },
       },
     },
     fullWidth: {
@@ -115,6 +126,7 @@ const Flex = styled('div', {
 
 const InputContainer = styled('div', {
   display: 'flex',
+  position: 'relative',
   border: `2px solid ${GrayShades.navigationGray}`,
   alignItems: 'center',
   borderRadius: '3px',
@@ -128,6 +140,10 @@ const InputContainer = styled('div', {
         borderColor: BrandColors.red,
         color: BrandColors.red,
         '&:focus': { position: 'relative', borderColor: BrandColors.red },
+        '&:focus-within': {
+          position: 'relative',
+          borderColor: BrandColors.red,
+        },
       },
     },
     fullWidth: {
@@ -147,6 +163,18 @@ const IconContainer = styled('div', {
   alignItems: 'center',
 });
 
+const ClearIconContainer = styled('div', {
+  display: 'flex',
+  position: 'absolute',
+  right: 0,
+  cursor: 'pointer',
+  height: 35,
+  width: 35,
+  backgroundColor: GrayShades.white,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
 /**
  *  UI component for searching certain value.
  */
@@ -155,6 +183,7 @@ const SearchInput = ({
   fullWidth, value, disabled, ...props
 }:SearchInputProps) => {
   const [currentValue, setCurrentValue] = useState('');
+  const refContainer = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrentValue(e.currentTarget.value);
@@ -164,15 +193,29 @@ const SearchInput = ({
     }
   };
 
+  useEffect(() => {
+    if (defaultValue) {
+      setCurrentValue(defaultValue);
+    }
+  }, [defaultValue]);
+
+  const handleInputClean = () => {
+    if (refContainer && refContainer.current) {
+      refContainer.current.value = '';
+    }
+    setCurrentValue('');
+  };
+
   return (
     <Flex fullWidth={fullWidth}>
       <InputContainer error={error} fullWidth={fullWidth}>
         <IconContainer>
-          <SearchIcon14 fill={GrayShades.navigationGray} />
+          <SearchIcon14 fill={error ? BrandColors.red : GrayShades.navigationGray} />
         </IconContainer>
         <Input
           disabled={disabled}
           value={value}
+          ref={refContainer}
           id={id}
           fullWidth={fullWidth}
           onChange={disabled ? undefined : handleInputChange}
@@ -182,6 +225,13 @@ const SearchInput = ({
           defaultValue={defaultValue}
           {...props}
         />
+        {((currentValue && currentValue.length > 0) || ((value && value.length > 0)
+        ))
+        && (
+        <ClearIconContainer onClick={handleInputClean}>
+          <CloseIcon18 fill={error ? BrandColors.red : GrayShades.navigationGray} />
+        </ClearIconContainer>
+        )}
       </InputContainer>
       {label && (
       <StyledLabel css={{ paddingLeft: 15 }} htmlFor={id}>

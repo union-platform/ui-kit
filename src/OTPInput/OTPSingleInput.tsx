@@ -5,8 +5,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
 import { styled } from '@stitches/react';
+import { motion } from 'framer-motion';
 import React, {
-  memo, useRef, useLayoutEffect, useEffect,
+  memo, useRef, useLayoutEffect, useEffect, useState,
 } from 'react';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
@@ -36,13 +37,16 @@ function usePrevious<T>(value?: T) {
   return ref.current;
 }
 
-const StyledInput = styled('input', {
+const StyledInput = styled(motion.input, {
   width: '32px',
   height: '41px',
   marginRight: '15px',
   fontSize: '24px',
+  fontWeight: '500',
+  fontFamily: 'Fira Code',
   textAlign: 'center',
   border: 0,
+  caretColor: BrandColors.darkGreen,
   borderRadius: 10,
   backgroundColor: GrayShades.extraLightGray,
   '&:focus': { position: 'relative', backgroundColor: BrandColors.transparentGreen1 },
@@ -70,21 +74,46 @@ export function SingleOTPInputComponent({
   onKeyDown, onPaste, error, defaultValue, ...props
 }: SingleOTPInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [focused, setFocused] = useState(false);
   const prevFocus = usePrevious(!!focus);
+
   useLayoutEffect(() => {
     if (inputRef.current) {
       if (focus) {
+        setFocused(true);
         inputRef.current.focus();
       }
       if (focus && focus !== prevFocus) {
+        setFocused(true);
         inputRef.current.focus();
         inputRef.current.select();
+      }
+      if (!focus) {
+        setFocused(false);
       }
     }
   }, [focus, prevFocus]);
 
+  const animationVariants = {
+    selected: { backgroundColor: BrandColors.darkGreen },
+    focused: { backgroundColor: BrandColors.transparentGreen1 },
+    unselected: { backgroundColor: GrayShades.extraLightGray },
+  };
+
+  const getAnimate = () => {
+    if (value && value.length > 0) {
+      return 'selected';
+    } if (focused) {
+      return 'focused';
+    }
+    return 'unselected';
+  };
+
   return (
     <StyledInput
+      initial={{ backgroundColor: GrayShades.extraLightGray }}
+      animate={getAnimate()}
+      variants={animationVariants}
       error={error}
       filled={!!(value && value.length > 0)}
       onBlur={onBlur}

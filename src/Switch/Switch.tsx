@@ -35,6 +35,7 @@ export interface SwitchProps {
 const StyledSwitch = styled(SwitchPrimitive.Root, {
   all: 'unset',
   width: 35,
+  cursor: 'pointer',
   height: 17,
   backgroundColor: GrayShades.lightGray,
   borderRadius: '9999px',
@@ -42,6 +43,9 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
   '&:focus': { boxShadow: `0 0 0 2px ${BrandColors.transparentGreen1}` },
   '&[data-state="checked"]': { backgroundColor: BrandColors.transparentGreen2 },
+  '&[data-disabled]': {
+    cursor: 'initial',
+  },
 });
 
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
@@ -51,7 +55,7 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
   backgroundColor: GrayShades.darkGray,
   borderRadius: '9999px',
   boxShadow: 'box-shadow: 0px 1px 2px 0px #0000001C; box-shadow: 0px 0px 2px 0px #0000001F;',
-  transition: 'transform 100ms',
+  transition: 'transform 300ms',
   transform: 'translateX(1px)',
   willChange: 'transform',
   '&[data-state="checked"]': { transform: 'translateX(19px)', backgroundColor: BrandColors.darkGreen },

@@ -89,15 +89,24 @@ const Input = styled('input', {
   color: GrayShades.dark,
   caretColor: BrandColors.darkGreen,
   backgroundColor: 'transparent',
+  transition: 'border-color 600ms ease, color 600ms ease',
   borderBottom: `3px solid ${GrayShades.dark}`,
   '&:focus': { position: 'relative', borderColor: BrandColors.darkGreen },
+  '&::placeholder': {
+    color: GrayShades.darkGray,
+  },
 
   variants: {
     error: {
       true: {
+        caretColor: BrandColors.red,
         borderColor: BrandColors.red,
         color: BrandColors.red,
         '&:focus': { position: 'relative', borderColor: BrandColors.red },
+        '&::placeholder': {
+          color: BrandColors.red,
+          opacity: 0.6,
+        },
       },
     },
     fullWidth: {
@@ -132,6 +141,7 @@ const InputBottomContainer = styled('div', {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  marginTop: '4px',
 });
 
 const ErrorText = styled('span', {
@@ -145,6 +155,7 @@ const Counter = styled('span', {
   fontSize: '12px',
   fontFamily: 'Open Sans, sans-serif',
   flexDirection: 'column',
+  transition: 'color 600ms ease',
   color: GrayShades.darkGray,
   variants: {
     error: {
