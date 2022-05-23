@@ -4,9 +4,10 @@
 
 import addons from '@storybook/addons'
 import { STORY_RENDERED } from '@storybook/core-events'
+import Meta from '../package.json';
 
 addons.register('TitleAddon', api => {
-  const customTitle = 'Union UI'; // Define your customTitle title
+  const customTitle = `Union UI ${Meta.version}`; // Define your customTitle title
   let interval = null;
   const setTitle = () => {
     clearTimeout(interval);
