@@ -8,3 +8,239 @@ import {version} from '../package.json'
 import { Meta } from '@storybook/addon-docs';
 
 <Meta title={`Version ${version}`} />
+
+Changelog
+=========
+
+------------
+
+### 31 May, 2022
+- [#60] Add FAB Button. [Artyom Alekseev]
+
+### Other
+- [#60] Show Library Version in Storybook. [Artyom Alekseev]
+
+  Problem:
+  It's convenient to see the library version in storybook
+
+  Solution:
+  The version now shows in the title and side-panel
+
+
+- [#58] Add Better Animations. [Artyom Alekseev]
+
+  Problem:
+  To look and feel modern we need to add beautiful animations. Also, we need to restrict selection on certain buttons and fix padding on TextInput.
+
+  Solution:
+  Animations using framer motions and CSS animations have been added, and styles have also been fixed.
+
+
+- [#54] Smarter Layout Component. [Artyom Alekseev]
+
+  Problem:
+  The layout looks scratched on big sizes.
+
+  Problem:
+  A Smarter Layout component has been added.
+
+
+- [#46] Add Counter Badges. [Artyom Alekseev]
+
+  Problem:
+  We need the component to show a number of messages, notifications and
+  a number of projects which the user created.
+
+  Solution:
+  The component has been added to our UI library.
+
+
+- [#45] Add Dot Badges. [Artyom Alekseev]
+
+  Problem:
+  Dot badges are often used in our UI kit, in components like statuses and
+  indicators.
+
+  Solution:
+  A dot badge component has been added. Also in the Avatar component, a local component has been replaced by the new dot component.
+
+
+- [#8] Add Alert and Modal Components. [Artyom Alekseev]
+
+  Problem:
+  We need Alert and Modal Components
+
+  Solution:
+  Alert and Modal Components been added
+
+
+- [#40] Add Test Workflow Badge. [Artyom Alekseev]
+
+  Problem:
+  We want to let users and contributors easily see if all tests
+  are passing
+
+  Solution:
+  A badge for the test has been added
+
+
+- [#10] Add Dropdown Component. [Artyom Alekseev]
+
+  Problem:
+  We need a dropdown component as we use in Figma
+
+  Solution:
+  The dropdown component has been added
+
+
+- [#28] Make Layout Component Responsive. [Artyom Alekseev]
+
+  Problem:
+  Our app will be responsive so the Layout component needs to be responsive too
+
+  Solution:
+  Been added a config file for Stitches which defines common breakpoints and
+  in the Layout component have been added responsive side margins.
+
+
+- Add Header Component (#36) [Artyom Alekseev]
+
+  Problem:
+  We need the Header Component which is one of the most important navigation
+  components.
+
+  Solution:
+  The header is been built. Some related components like Layout and
+  SearchInput also been updated.
+
+
+- Add Links to Figma from Storybook Docs (#35) [Artyom Alekseev]
+
+  Problem:
+  All the designs need to be consistent across all the implementations.
+
+  Solution:
+  Links to Figma been added to all existed components and plugin for
+  displaying Figma designs.
+
+
+- Add Avatar Component (#33) [Artyom Alekseev]
+
+  Problem:
+  We need an avatar component from Figma UI-kit for future development.
+
+  Solution:
+  Been added the component with tests and storybook.
+
+
+- Add Favicon and Change Title in storybook (#32) [Artyom Alekseev]
+
+  Problem:
+  Favicon and title doesn't show out branding
+
+  Solution:
+  Favicon and title being added to storybook
+
+
+- Make components easy for internalization i18n (#31) [Artyom Alekseev]
+
+  Problem:
+  Our app is international, so library need to be easy to change language
+
+  Solution:
+  Been added changeable aria-labels, and made it easy to pass all the needed props
+
+
+- Fix github metafiles (#30) [Artyom Alekseev]
+
+  Problem:
+  Tests not starting on pull requests and in pull request template there
+  is no Figma change checkbox.
+
+  Solution:
+  test.yml and pull_request_template.md being changed and fixed.
+
+
+- Make all components use colors from definitions (#25) [Artyom
+  Alekseev]
+
+  Problem:
+  To increase consistency across all the components we need to Make sure,
+  that all components use same colors from the same definition.
+
+  Solution:
+  Been checked all components and imported colors from definition.
+
+
+- Add link to storybook in README (#24) [Artyom Alekseev]
+
+  Problem:
+  Link to production storybook should be easy accessible for users and
+  contributors.
+
+  Solution:
+  Shield been added to README
+
+
+- [FIX] Links in README (#23) [Artyom Alekseev]
+
+  Problem:
+  Wrong links on badges in README
+
+  Solution:
+  Links are fixed
+
+
+- Fix comments-jsdoc for components (#21) [Artyom Alekseev]
+
+  Problem:
+  To easely see documentation via IDE or from source code we need to
+  add meaningful comments.
+
+  Solutions:
+  Been added and edited comments for every component.
+
+
+- Add basic tests for components (#20) [Artyom Alekseev]
+
+  Problem:
+  We need to make sure that components and functions have no side effects
+  and check for a11y
+
+  Solution:
+  Been added basic test for most components with jest, testing library and
+  axe. Also been added a workflow for running tests.
+
+
+- Add icons from UI-kit in Figma (#18) [Artyom Alekseev]
+
+  Problem:
+  To start developing the app we need all the icons from the Figma UI kit.
+
+  Solution:
+  Been added all icons from UI-kit in three sizes: 14pt, 18pt, and 24pt.
+
+
+- Add basic components and setup development (#7) [Artyom Alekseev]
+
+  Problem:
+  To start developing the app we need basic components, like UI elements
+  colors and Typography.
+
+  Solution:
+  Been added most important components and development environment for
+  our library.
+
+
+- Prepare repo for development (#2) [Artyom Alekseev]
+
+  * Prepare repo for development
+
+  Problem: to start development we need to prepare repository
+
+  Solution: We added licenses, templates and required dependencies to
+  start developing the UI-kit
+
+
+- Init. [rxln]
+
