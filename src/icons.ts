@@ -206,6 +206,9 @@ export * from './Icons/24pt/ReportIcon24/ReportIcon24';
 export { default as SearchIcon24 } from './Icons/24pt/SearchIcon24/SearchIcon24';
 export * from './Icons/24pt/SearchIcon24/SearchIcon24';
 
+export { default as CloseIcon24 } from './Icons/24pt/CloseIcon24/CloseIcon24';
+export * from './Icons/24pt/CloseIcon24/CloseIcon24';
+
 export { default as ShareIcon24 } from './Icons/24pt/ShareIcon24/ShareIcon24';
 export * from './Icons/24pt/ShareIcon24/ShareIcon24';
 

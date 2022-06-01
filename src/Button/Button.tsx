@@ -40,6 +40,7 @@ const StyledButton = styled('button', {
   cursor: 'pointer',
   fontFamily: 'Open Sans, sans-serif',
   userSelect: 'none',
+  whiteSpace: 'nowrap',
 
   variants: {
     variant: {
@@ -47,6 +48,7 @@ const StyledButton = styled('button', {
         backgroundColor: BrandColors.darkGreen,
         fontWeight: 600,
         fontSize: '14px',
+        padding: '0 20px 0 20px',
         border: 0,
         minWidth: '94px',
         height: '36px',

@@ -11,6 +11,12 @@ export * from './CellButton/CellButton';
 export { default as IconButton } from './IconButton/IconButton';
 export * from './IconButton/IconButton';
 
+export { default as FAB } from './FAB/FAB';
+export * from './FAB/FAB';
+
+export { default as FABSubButton } from './FAB/FABSubButton/FABSubButton';
+export * from './FAB/FABSubButton/FABSubButton';
+
 export { default as ToogleButton } from './ToogleButton/ToogleButton';
 export * from './ToogleButton/ToogleButton';
 
