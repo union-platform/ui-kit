@@ -6,8 +6,9 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { useState } from 'react';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
-import { AddIcon24, DeleteIcon24 } from '../icons';
-import EllipsisIcon18 from '../Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+import DeleteIcon from '../Icons/DeleteIcon/DeleteIcon';
+import EllipsisIcon from '../Icons/EllipsisIcon/EllipsisIcon';
+import PlusIcon from '../Icons/PlusIcon/PlusIcon';
 import Switch from '../Switch/Switch';
 import Dropdown from './Dropdown';
 import DropdownContent from './DropdownContent/DropdownContent';
@@ -38,11 +39,11 @@ const Template: ComponentStory<typeof Dropdown> = (args) => {
   return (
     <Dropdown {...args}>
       <DropdownTrigger>
-        <EllipsisIcon18 fill={GrayShades.navigationGray} />
+        <EllipsisIcon size="18px" fill={GrayShades.navigationGray} />
       </DropdownTrigger>
 
       <DropdownContent sideOffset={5}>
-        <DropdownItem iconComponent={<AddIcon24 />}>
+        <DropdownItem iconComponent={<PlusIcon size="24px" />}>
           New Tab
         </DropdownItem>
         <DropdownItem>New Window</DropdownItem>
@@ -54,7 +55,7 @@ const Template: ComponentStory<typeof Dropdown> = (args) => {
 
         </DropdownItem>
         <DropdownItem disabled>New Private Window</DropdownItem>
-        <DropdownItem negative iconComponent={<DeleteIcon24 fill={BrandColors.red} />}>
+        <DropdownItem negative iconComponent={<DeleteIcon size="24px" fill={BrandColors.red} />}>
           New Tab
         </DropdownItem>
       </DropdownContent>

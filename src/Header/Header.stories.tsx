@@ -9,15 +9,15 @@ import Header from './Header';
 import Tabs from '../Tabs/Tabs';
 import TabsList from '../Tabs/TabsList/TabsList';
 import TabsTrigger from '../Tabs/TabsTrigger/TabsTrigger';
-import EllipsisIcon18 from '../Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+import EllipsisIcon from '../Icons/EllipsisIcon/EllipsisIcon';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownTrigger from '../Dropdown/DropdownTrigger/DropdownTrigger';
 import DropdownContent from '../Dropdown/DropdownContent/DropdownContent';
 import DropdownItem from '../Dropdown/DropdownItem/DropdownItem';
 import Switch from '../Switch/Switch';
-import DeleteIcon24 from '../Icons/24pt/DeleteIcon24/DeleteIcon24';
+import DeleteIcon from '../Icons/DeleteIcon/DeleteIcon';
 import BrandColors from '../Colors/BrandColors/BrandColors';
-import AddIcon24 from '../Icons/24pt/AddIcon24/AddIcon24';
+import AddIcon from '../Icons/PlusIcon/PlusIcon';
 
 const styles = {
   height: '100000px',
@@ -43,11 +43,11 @@ export default {
 const MenuButton = () => (
   <Dropdown>
     <DropdownTrigger>
-      <EllipsisIcon18 />
+      <EllipsisIcon size="18px" />
     </DropdownTrigger>
 
     <DropdownContent sideOffset={5}>
-      <DropdownItem iconComponent={<AddIcon24 />}>
+      <DropdownItem iconComponent={<AddIcon size="24px" />}>
         New Tab
       </DropdownItem>
       <DropdownItem>New Window</DropdownItem>
@@ -58,7 +58,7 @@ const MenuButton = () => (
 
       </DropdownItem>
       <DropdownItem disabled>New Private Window</DropdownItem>
-      <DropdownItem negative iconComponent={<DeleteIcon24 fill={BrandColors.red} />}>
+      <DropdownItem negative iconComponent={<DeleteIcon size="24px" fill={BrandColors.red} />}>
         New Tab
       </DropdownItem>
     </DropdownContent>

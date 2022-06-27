@@ -6,7 +6,7 @@ import * as React from 'react';
 import { axe } from 'jest-axe';
 import { fireEvent, RenderResult, render } from '@testing-library/react';
 import CellButton from './CellButton';
-import UserIcon24 from '../Icons/24pt/UserIcon24/UserIcon24';
+import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon';
 
 const TEST_ID = 'test-cellButton';
 
@@ -42,7 +42,7 @@ describe('given a primary CellButton', () => {
         onClick={onClick}
         label="Test Button"
       >
-        <UserIcon24 fill="#0DBC44" />
+        <UserPlusIcon size="24px" fill="#0DBC44" />
       </CellButton>,
     );
     cellButton = rendered.getByTestId(TEST_ID);
@@ -76,7 +76,7 @@ describe('given a disabled primary CellButton', () => {
         disabled
         label="Test Button"
       >
-        <UserIcon24 fill="#0DBC44" />
+        <UserPlusIcon size="24px" fill="#0DBC44" />
       </CellButton>,
     );
     cellButton = rendered.getByTestId(TEST_ID);

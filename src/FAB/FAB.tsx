@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ReactNode, useState } from 'react';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import GrayShades from '../Colors/GrayShades/GrayShades';
-import AddIcon24 from '../Icons/24pt/AddIcon24/AddIcon24';
+import AddIcon from '../Icons/PlusIcon/PlusIcon';
 
 export const FAB_BUTTON_SIZE = 56;
 
@@ -131,7 +131,7 @@ const FAB = ({
             {!customIcon
               ? (
                 <FabIcon opened={fabOpened}>
-                  <AddIcon24 fill={GrayShades.white} />
+                  <AddIcon size="24px" fill={GrayShades.white} />
                 </FabIcon>
               )
               : customIcon}

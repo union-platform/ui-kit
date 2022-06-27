@@ -5,13 +5,13 @@
 import * as ToolbarPrimitive from '@radix-ui/react-toolbar';
 import { styled } from '@stitches/react';
 import { ReactNode, useState } from 'react';
-import ArrowBackIcon24 from '../Icons/24pt/ArrowBackIcon24/ArrowBackIcon24';
+import ArrowBackIcon from '../Icons/ArrowBackIcon/ArrowBackIcon';
 import Heading3 from '../Typography/Heading3/Heading3';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import BrandColors from '../Colors/BrandColors/BrandColors';
 import SearchInput, { SearchInputProps } from '../SearchInput/SearchInput';
-import { SearchIcon24 } from '../icons';
 import Layout from '../Layout/Layout';
+import SearchIcon from '../Icons/SearchIcon/SearchIcon';
 
 export interface HeaderProps {
   /**
@@ -141,7 +141,7 @@ const Header = ({
         <StyledToolbar>
           {backLink ? (
             <StyledLink data-testid="test-header-link-button" href={backLink}>
-              <ArrowBackIcon24 fill={BrandColors.darkGreen} />
+              <ArrowBackIcon size="24px" fill={BrandColors.darkGreen} />
               <StyledHeading hideMargin={false} weight="bold">{title}</StyledHeading>
             </StyledLink>
           ) : (
@@ -152,7 +152,7 @@ const Header = ({
           <StyledToggleGroup onValueChange={(e) => setToogleValue(e)} type="multiple">
             {withSearch && (
             <StyledToggleItem data-testid="test-header-search-button" value="search">
-              <SearchIcon24 fill={searchOpened ? BrandColors.darkGreen : GrayShades.dark} />
+              <SearchIcon size="24px" fill={searchOpened ? BrandColors.darkGreen : GrayShades.dark} />
             </StyledToggleItem>
             )}
             {iconComponent && (

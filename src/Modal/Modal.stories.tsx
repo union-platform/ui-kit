@@ -5,7 +5,7 @@
 import { styled } from '@stitches/react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '../Button/Button';
-import CloseIcon18 from '../Icons/18pt/CloseIcon18/CloseIcon18';
+import CloseIcon from '../Icons/CloseIcon/CloseIcon';
 import TextInput from '../TextInput/TextInput';
 
 import Modal from './Modal';
@@ -46,7 +46,7 @@ const Template: ComponentStory<typeof Modal> = (args) => (
         <TextInput fullWidth type="text" placeholder="Your name" />
       </TextInputContainer>
       <Button variant="primary" fullWidth>Save changes</Button>
-      <ModalClose><CloseIcon18 /></ModalClose>
+      <ModalClose><CloseIcon size="18px" /></ModalClose>
     </ModalContent>
   </Modal>
 );
