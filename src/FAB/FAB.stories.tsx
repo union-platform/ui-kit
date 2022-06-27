@@ -4,8 +4,10 @@
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import GrayShades from '../Colors/GrayShades/GrayShades';
-import { AddToProjectIcon24, ClipIcon24, ProfileIcon24 } from '../icons';
-import AddToTeamIcon24 from '../Icons/24pt/AddToTeamIcon24/AddToTeamIcon24';
+import AddToProjectIcon from '../Icons/AddToProjectIcon/AddToProjectIcon';
+import AddToTeamIcon from '../Icons/AddToTeamIcon/AddToTeamIcon';
+import ClipIcon from '../Icons/ClipIcon/ClipIcon';
+import ProfileIcon from '../Icons/ProfileIcon/ProfileIcon';
 
 import FAB from './FAB';
 import FABSubButton from './FABSubButton/FABSubButton';
@@ -24,9 +26,9 @@ export default {
 const Template: ComponentStory<typeof FAB> = (args) => (
   <div>
     <FAB {...args}>
-      <FABSubButton label="Add to Team" icon={<AddToTeamIcon24 fill={GrayShades.white} />} />
-      <FABSubButton label="Add to Project" icon={<AddToProjectIcon24 fill={GrayShades.white} />} />
-      <FABSubButton icon={<ClipIcon24 fill={GrayShades.white} />} />
+      <FABSubButton label="Add to Team" icon={<AddToTeamIcon size="24px" fill={GrayShades.white} />} />
+      <FABSubButton label="Add to Project" icon={<AddToProjectIcon size="24px" fill={GrayShades.white} />} />
+      <FABSubButton icon={<ClipIcon size="24px" fill={GrayShades.white} />} />
       <FABSubButton label="Something" />
     </FAB>
   </div>
@@ -38,10 +40,10 @@ Primary.args = {
 
 export const CustomIcon: ComponentStory<typeof FAB> = (args) => (
   <div>
-    <FAB data-testid="fab" {...args} customIcon={<ProfileIcon24 fill="#ffffff" />}>
-      <FABSubButton label="Add to Team" icon={<AddToTeamIcon24 fill={GrayShades.white} />} />
-      <FABSubButton label="Add to Project" icon={<AddToProjectIcon24 fill={GrayShades.white} />} />
-      <FABSubButton icon={<ClipIcon24 fill={GrayShades.white} />} />
+    <FAB data-testid="fab" {...args} customIcon={<ProfileIcon size="24px" fill="#ffffff" />}>
+      <FABSubButton label="Add to Team" icon={<AddToTeamIcon size="24px" fill={GrayShades.white} />} />
+      <FABSubButton label="Add to Project" icon={<AddToProjectIcon size="24px" fill={GrayShades.white} />} />
+      <FABSubButton icon={<ClipIcon size="24px" fill={GrayShades.white} />} />
       <FABSubButton label="Something" />
     </FAB>
   </div>
@@ -51,7 +53,7 @@ CustomIcon.args = {
 
 export const NotExpandingOnClick: ComponentStory<typeof FAB> = (args) => (
   <div>
-    <FAB {...args} customIcon={<ProfileIcon24 fill="#ffffff" />} />
+    <FAB {...args} customIcon={<ProfileIcon size="24px" fill="#ffffff" />} />
   </div>
 );
 CustomIcon.args = {

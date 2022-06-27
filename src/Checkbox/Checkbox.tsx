@@ -5,7 +5,7 @@
 import { styled } from '@stitches/react';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { AnimatePresence, motion } from 'framer-motion';
-import CheckIcon14 from '../Icons/14pt/CheckIcon14/CheckIcon14';
+import CheckIcon from '../Icons/CheckIcon/CheckIcon';
 import { BrandColors } from '..';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 
@@ -104,7 +104,7 @@ const Checkbox = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <CheckIcon14 fill={BrandColors.yellowGreen} purposeLabel={checkIconPurposeLabel} />
+              <CheckIcon size="14px" fill={BrandColors.yellowGreen} purposeLabel={checkIconPurposeLabel} />
             </motion.div>
           </AnimatePresence>
         </StyledIndicator>

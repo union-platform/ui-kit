@@ -7,7 +7,7 @@ import { axe } from 'jest-axe';
 import { RenderResult, render, fireEvent } from '@testing-library/react';
 import FAB from './FAB';
 import FABSubButton from './FABSubButton/FABSubButton';
-import AddToTeamIcon24 from '../Icons/24pt/AddToTeamIcon24/AddToTeamIcon24';
+import AddToTeamIcon from '../Icons/AddToTeamIcon/AddToTeamIcon';
 
 const FAB_ID = 'fab';
 const FAB_OPTIONS_ID = 'fab-options';
@@ -71,9 +71,9 @@ describe('given a primary FAB', () => {
 
 const FABTest = (props: React.ComponentProps<typeof FAB>) => (
   <FAB {...props}>
-    <FABSubButton label="Add to Team" icon={<AddToTeamIcon24 />} />
-    <FABSubButton label="Add to Project" icon={<AddToTeamIcon24 />} />
-    <FABSubButton icon={<AddToTeamIcon24 />} />
+    <FABSubButton label="Add to Team" icon={<AddToTeamIcon size="24px" />} />
+    <FABSubButton label="Add to Project" icon={<AddToTeamIcon size="24px" />} />
+    <FABSubButton icon={<AddToTeamIcon size="24px" />} />
     <FABSubButton label="Something" />
   </FAB>
 );

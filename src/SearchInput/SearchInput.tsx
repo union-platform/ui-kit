@@ -10,8 +10,8 @@ import {
 } from 'react';
 import GrayShades from '../Colors/GrayShades/GrayShades';
 import BrandColors from '../Colors/BrandColors/BrandColors';
-import SearchIcon14 from '../Icons/14pt/SearchIcon14/SearchIcon14';
-import CloseIcon18 from '../Icons/18pt/CloseIcon18/CloseIcon18';
+import SearchIcon from '../Icons/SearchIcon/SearchIcon';
+import CloseIcon from '../Icons/CloseIcon/CloseIcon';
 
 export interface SearchInputProps {
   /**
@@ -210,7 +210,7 @@ const SearchInput = ({
     <Flex fullWidth={fullWidth}>
       <InputContainer error={error} fullWidth={fullWidth}>
         <IconContainer>
-          <SearchIcon14 fill={error ? BrandColors.red : GrayShades.navigationGray} />
+          <SearchIcon size="18px" fill={error ? BrandColors.red : GrayShades.navigationGray} />
         </IconContainer>
         <Input
           disabled={disabled}
@@ -229,7 +229,7 @@ const SearchInput = ({
         ))
         && (
         <ClearIconContainer onClick={handleInputClean}>
-          <CloseIcon18 fill={error ? BrandColors.red : GrayShades.navigationGray} />
+          <CloseIcon size="24px" fill={error ? BrandColors.red : GrayShades.navigationGray} />
         </ClearIconContainer>
         )}
       </InputContainer>

@@ -6,7 +6,7 @@ import * as React from 'react';
 import { axe } from 'jest-axe';
 import { fireEvent, RenderResult, render } from '@testing-library/react';
 import IconButton from './IconButton';
-import UserIcon24 from '../Icons/24pt/UserIcon24/UserIcon24';
+import UserPlusIcon from '../Icons/UserPlusIcon/UserPlusIcon';
 
 const TEST_ID = 'test-iconButton';
 
@@ -41,7 +41,7 @@ describe('given a primary IconButton', () => {
         data-testid={TEST_ID}
         onClick={onClick}
       >
-        <UserIcon24 fill="#ffffff" />
+        <UserPlusIcon fill="#ffffff" />
       </IconButtonTest>,
     );
     iconButton = rendered.getByTestId(TEST_ID);
@@ -74,7 +74,7 @@ describe('given a disabled primary IconButton', () => {
         onClick={onClick}
         disabled
       >
-        <UserIcon24 fill="#ffffff" />
+        <UserPlusIcon fill="#ffffff" />
       </IconButtonTest>,
     );
     iconButton = rendered.getByTestId(TEST_ID);

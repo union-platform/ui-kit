@@ -11,7 +11,7 @@ import Header from './Header';
 import Tabs from '../Tabs/Tabs';
 import TabsList from '../Tabs/TabsList/TabsList';
 import TabsTrigger from '../Tabs/TabsTrigger/TabsTrigger';
-import EllipsisIcon18 from '../Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+import EllipsisIcon from '../Icons/EllipsisIcon/EllipsisIcon';
 
 const SEARCH_ICON_TEST_ID = 'test-header-search-button';
 const SEARCH_COMPONENT_TEST_ID = 'test-header-search-component';
@@ -91,7 +91,7 @@ describe('given Header with tabs', () => {
 
   beforeEach(() => {
     rendered = render(<HeaderTest showTabs />);
-    tabsComponent = rendered.getByTestId(SEARCH_ICON_TEST_ID);
+    tabsComponent = rendered.getByTestId(TABS_COMPONENT_TEST_ID);
   });
 
   it('should have no accessibility violations', async () => {
@@ -99,7 +99,7 @@ describe('given Header with tabs', () => {
   });
 
   it('should show tabs', async () => {
-    expect(tabsComponent).toBeInTheDocument();
+    waitFor(() => expect(tabsComponent).toBeInTheDocument());
   });
 });
 
@@ -112,7 +112,7 @@ describe('given Header with additional control', () => {
   let additionalButton: HTMLElement;
 
   beforeEach(() => {
-    rendered = render(<HeaderTest iconComponent={<EllipsisIcon18 />} />);
+    rendered = render(<HeaderTest iconComponent={<EllipsisIcon />} />);
     additionalButton = rendered.getByTestId(ADDITIONAL_ICON_TEST_ID);
   });
 
@@ -151,7 +151,7 @@ const HeaderTest = (props: React.ComponentProps<typeof Header>) => (
         </TabsList>
       </Tabs>
 )}
-    iconComponent={<EllipsisIcon18 />}
+    iconComponent={<EllipsisIcon size="18px" />}
     {...props}
   />
 );

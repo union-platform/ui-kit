@@ -2,230 +2,182 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-/**
- *  Icons 14pt
- */
+export { default as SearchIcon } from './Icons/SearchIcon/SearchIcon';
+export * from './Icons/SearchIcon/SearchIcon';
 
-export { default as SearchIcon } from './Icons/14pt/SearchIcon14/SearchIcon14';
-export * from './Icons/14pt/SearchIcon14/SearchIcon14';
+export { default as CheckIcon } from './Icons/CheckIcon/CheckIcon';
+export * from './Icons/CheckIcon/CheckIcon';
 
-export { default as CheckIcon } from './Icons/14pt/CheckIcon14/CheckIcon14';
-export * from './Icons/14pt/CheckIcon14/CheckIcon14';
+export { default as ChevronIcon } from './Icons/ChevronIcon/ChevronIcon';
+export * from './Icons/ChevronIcon/ChevronIcon';
 
-export { default as ChevronIcon } from './Icons/14pt/ChevronIcon14/ChevronIcon14';
-export * from './Icons/14pt/ChevronIcon14/ChevronIcon14';
+export { default as EmailIcon } from './Icons/EmailIcon/EmailIcon';
+export * from './Icons/EmailIcon/EmailIcon';
 
-export { default as EmailIcon } from './Icons/14pt/EmailIcon14/EmailIcon14';
-export * from './Icons/14pt/EmailIcon14/EmailIcon14';
+export { default as FacebookIcon } from './Icons/FacebookIcon/FacebookIcon';
+export * from './Icons/FacebookIcon/FacebookIcon';
 
-export { default as FacebookIcon } from './Icons/14pt/FacebookIcon14/FacebookIcon14';
-export * from './Icons/14pt/FacebookIcon14/FacebookIcon14';
+export { default as FilterIcon } from './Icons/FilterIcon/FilterIcon';
+export * from './Icons/FilterIcon/FilterIcon';
 
-export { default as FilterIcon } from './Icons/14pt/FilterIcon14/FilterIcon14';
-export * from './Icons/14pt/FilterIcon14/FilterIcon14';
+export { default as InstagramIcon } from './Icons/InstagramIcon/InstagramIcon';
+export * from './Icons/InstagramIcon/InstagramIcon';
 
-export { default as InstagramIcon } from './Icons/14pt/InstagramIcon14/InstagramIcon14';
-export * from './Icons/14pt/InstagramIcon14/InstagramIcon14';
+export { default as PlusIcon } from './Icons/PlusIcon/PlusIcon';
+export * from './Icons/PlusIcon/PlusIcon';
 
-export { default as LocationIcon } from './Icons/14pt/LocationIcon14/LocationIcon14';
-export * from './Icons/14pt/LocationIcon14/LocationIcon14';
+export { default as ReadIcon } from './Icons/DoubleCheckIcon/DoubleCheckIcon';
+export * from './Icons/DoubleCheckIcon/DoubleCheckIcon';
 
-export { default as PinnedIcon } from './Icons/14pt/PinnedIcon14/PinnedIcon14';
-export * from './Icons/14pt/PinnedIcon14/PinnedIcon14';
+export { default as TelegramIcon } from './Icons/TelegramIcon/TelegramIcon';
+export * from './Icons/TelegramIcon/TelegramIcon';
 
-export { default as PlusIcon } from './Icons/14pt/PlusIcon14/PlusIcon14';
-export * from './Icons/14pt/PlusIcon14/PlusIcon14';
+export { default as VKIcon } from './Icons/VKIcon/VKIcon';
+export * from './Icons/VKIcon/VKIcon';
 
-export { default as ReadIcon } from './Icons/14pt/ReadIcon14/ReadIcon14';
-export * from './Icons/14pt/ReadIcon14/ReadIcon14';
+export { default as WaitIcon } from './Icons/WaitIcon/WaitIcon';
+export * from './Icons/WaitIcon/WaitIcon';
 
-export { default as TelegramIcon } from './Icons/14pt/TelegramIcon14/TelegramIcon14';
-export * from './Icons/14pt/TelegramIcon14/TelegramIcon14';
+export { default as AddInfoIcon } from './Icons/AddInfoIcon/AddInfoIcon';
+export * from './Icons/AddInfoIcon/AddInfoIcon';
 
-export { default as VKIcon } from './Icons/14pt/VKIcon14/VKIcon14';
-export * from './Icons/14pt/VKIcon14/VKIcon14';
+export { default as ArrowLeftIcon } from './Icons/ArrowLeftIcon/ArrowLeftIcon';
+export * from './Icons/ArrowLeftIcon/ArrowLeftIcon';
 
-export { default as WaitIcon } from './Icons/14pt/WaitIcon14/WaitIcon14';
-export * from './Icons/14pt/WaitIcon14/WaitIcon14';
+export { default as BirthdayIcon } from './Icons/BirthdayIcon/BirthdayIcon';
+export * from './Icons/BirthdayIcon/BirthdayIcon';
 
-/**
- *  Icons 18pt
- */
+export { default as CloseInfoIcon } from './Icons/CloseInfoIcon/CloseInfoIcon';
+export * from './Icons/CloseInfoIcon/CloseInfoIcon';
 
-export { default as AcceptIcon } from './Icons/18pt/AcceptIcon18/AcceptIcon18';
-export * from './Icons/18pt/AcceptIcon18/AcceptIcon18';
+export { default as EllipsisIcon } from './Icons/EllipsisIcon/EllipsisIcon';
+export * from './Icons/EllipsisIcon/EllipsisIcon';
 
-export { default as AddInfoIcon } from './Icons/18pt/AddInfoIcon18/AddInfoIcon18';
-export * from './Icons/18pt/AddInfoIcon18/AddInfoIcon18';
+export { default as LocationIcon } from './Icons/LocationIcon/LocationIcon';
+export * from './Icons/LocationIcon/LocationIcon';
 
-export { default as ArrowLeftIcon } from './Icons/18pt/ArrowLeftIcon18/ArrowLeftIcon18';
-export * from './Icons/18pt/ArrowLeftIcon18/ArrowLeftIcon18';
+export { default as MoreInfoIcon } from './Icons/MoreInfoIcon/MoreInfoIcon';
+export * from './Icons/MoreInfoIcon/MoreInfoIcon';
 
-export { default as BirthdayIcon } from './Icons/18pt/BirthdayIcon18/BirthdayIcon18';
-export * from './Icons/18pt/BirthdayIcon18/BirthdayIcon18';
+export { default as PhoneIcon } from './Icons/PhoneIcon/PhoneIcon';
+export * from './Icons/PhoneIcon/PhoneIcon';
 
-export { default as CloseIcon } from './Icons/18pt/CloseIcon18/CloseIcon18';
-export * from './Icons/18pt/CloseIcon18/CloseIcon18';
+export { default as PinnedIcon } from './Icons/PinnedIcon/PinnedIcon';
+export * from './Icons/PinnedIcon/PinnedIcon';
 
-export { default as CloseInfoIcon } from './Icons/18pt/CloseInfoIcon18/CloseInfoIcon18';
-export * from './Icons/18pt/CloseInfoIcon18/CloseInfoIcon18';
+export { default as SendIcon } from './Icons/SendIcon/SendIcon';
+export * from './Icons/SendIcon/SendIcon';
 
-export { default as EllipsisIcon } from './Icons/18pt/EllipsisIcon18/EllipsisIcon18';
-export * from './Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+export { default as SettingsIcon } from './Icons/SettingsIcon/SettingsIcon';
+export * from './Icons/SettingsIcon/SettingsIcon';
 
-export { default as EmailIcon14 } from './Icons/18pt/EmailIcon18/EmailIcon18';
-export * from './Icons/18pt/EmailIcon18/EmailIcon18';
+export { default as ActivityIcon } from './Icons/ActivityIcon/ActivityIcon';
+export * from './Icons/ActivityIcon/ActivityIcon';
 
-export { default as LocationIcon18 } from './Icons/18pt/LocationIcon18/LocationIcon18';
-export * from './Icons/18pt/LocationIcon18/LocationIcon18';
+export { default as AddIcon } from './Icons/PlusIcon/PlusIcon';
+export * from './Icons/PlusIcon/PlusIcon';
 
-export { default as LockIcon18 } from './Icons/18pt/LockIcon18/LockIcon18';
-export * from './Icons/18pt/LockIcon18/LockIcon18';
+export { default as AddToProjectIcon } from './Icons/AddToProjectIcon/AddToProjectIcon';
+export * from './Icons/AddToProjectIcon/AddToProjectIcon';
 
-export { default as MoreInfoIcon18 } from './Icons/18pt/MoreInfoIcon18/MoreInfoIcon18';
-export * from './Icons/18pt/MoreInfoIcon18/MoreInfoIcon18';
+export { default as AddToTeamIcon } from './Icons/AddToTeamIcon/AddToTeamIcon';
+export * from './Icons/AddToTeamIcon/AddToTeamIcon';
 
-export { default as PhoneIcon18 } from './Icons/18pt/PhoneIcon18/PhoneIcon18';
-export * from './Icons/18pt/PhoneIcon18/PhoneIcon18';
+export { default as ArrowBackIcon } from './Icons/ArrowBackIcon/ArrowBackIcon';
+export * from './Icons/ArrowBackIcon/ArrowBackIcon';
 
-export { default as PinnedIcon18 } from './Icons/18pt/PinnedIcon18/PinnedIcon18';
-export * from './Icons/18pt/PinnedIcon18/PinnedIcon18';
+export { default as BellIcon } from './Icons/NotificationIcon/NotificationIcon';
+export * from './Icons/NotificationIcon/NotificationIcon';
 
-export { default as SendIcon18 } from './Icons/18pt/SendIcon18/SendIcon18';
-export * from './Icons/18pt/SendIcon18/SendIcon18';
+export { default as BlockIcon } from './Icons/BlockIcon/BlockIcon';
+export * from './Icons/BlockIcon/BlockIcon';
 
-export { default as SettingsIcon18 } from './Icons/18pt/SettingsIcon18/SettingsIcon18';
-export * from './Icons/18pt/SettingsIcon18/SettingsIcon18';
+export { default as CallIcon } from './Icons/PhoneIcon/PhoneIcon';
+export * from './Icons/PhoneIcon/PhoneIcon';
 
-export { default as ShareIcon18 } from './Icons/18pt/ShareIcon18/ShareIcon18';
-export * from './Icons/18pt/ShareIcon18/ShareIcon18';
+export { default as CameraIcon } from './Icons/CameraIcon/CameraIcon';
+export * from './Icons/CameraIcon/CameraIcon';
 
-/**
- *  Icons 24pt
- */
+export { default as ChatIcon } from './Icons/ChatIcon/ChatIcon';
+export * from './Icons/ChatIcon/ChatIcon';
 
-export { default as ActivityIcon24 } from './Icons/24pt/ActivityIcon24/ActivityIcon24';
-export * from './Icons/24pt/ActivityIcon24/ActivityIcon24';
+export { default as ClipIcon } from './Icons/ClipIcon/ClipIcon';
+export * from './Icons/ClipIcon/ClipIcon';
 
-export { default as AddIcon24 } from './Icons/24pt/AddIcon24/AddIcon24';
-export * from './Icons/24pt/AddIcon24/AddIcon24';
+export { default as CompetencyMapIcon } from './Icons/CompetencyMapIcon/CompetencyMapIcon';
+export * from './Icons/CompetencyMapIcon/CompetencyMapIcon';
 
-export { default as AddToProjectIcon24 } from './Icons/24pt/AddToProjectIcon24/AddToProjectIcon24';
-export * from './Icons/24pt/AddToProjectIcon24/AddToProjectIcon24';
+export { default as CopyIcon } from './Icons/CopyIcon/CopyIcon';
+export * from './Icons/CopyIcon/CopyIcon';
 
-export { default as AddToTeamIcon24 } from './Icons/24pt/AddToTeamIcon24/AddToTeamIcon24';
-export * from './Icons/24pt/AddToTeamIcon24/AddToTeamIcon24';
+export { default as DeleteIcon } from './Icons/DeleteIcon/DeleteIcon';
+export * from './Icons/DeleteIcon/DeleteIcon';
 
-export { default as ArrowBackIcon24 } from './Icons/24pt/ArrowBackIcon24/ArrowBackIcon24';
-export * from './Icons/24pt/ArrowBackIcon24/ArrowBackIcon24';
+export { default as DownloadIcon } from './Icons/DownloadIcon/DownloadIcon';
+export * from './Icons/DownloadIcon/DownloadIcon';
 
-export { default as BellIcon24 } from './Icons/24pt/BellIcon24/BellIcon24';
-export * from './Icons/24pt/BellIcon24/BellIcon24';
+export { default as EditIcon } from './Icons/EditIcon/EditIcon';
+export * from './Icons/EditIcon/EditIcon';
 
-export { default as BlockIcon24 } from './Icons/24pt/BlockIcon24/BlockIcon24';
-export * from './Icons/24pt/BlockIcon24/BlockIcon24';
+export { default as FileIcon } from './Icons/FileIcon/FileIcon';
+export * from './Icons/FileIcon/FileIcon';
 
-export { default as CallIcon24 } from './Icons/24pt/CallIcon24/CallIcon24';
-export * from './Icons/24pt/CallIcon24/CallIcon24';
+export { default as ForwardIcon } from './Icons/ForwardIcon/ForwardIcon';
+export * from './Icons/ForwardIcon/ForwardIcon';
 
-export { default as CameraIcon24 } from './Icons/24pt/CameraIcon24/CameraIcon24';
-export * from './Icons/24pt/CameraIcon24/CameraIcon24';
+export { default as LeaveIcon } from './Icons/LeaveIcon/LeaveIcon';
+export * from './Icons/LeaveIcon/LeaveIcon';
 
-export { default as ChatIcon24 } from './Icons/24pt/ChatIcon24/ChatIcon24';
-export * from './Icons/24pt/ChatIcon24/ChatIcon24';
+export { default as LockIcon } from './Icons/LockIcon/LockIcon';
+export * from './Icons/LockIcon/LockIcon';
 
-export { default as ClipIcon24 } from './Icons/24pt/ClipIcon24/ClipIcon24';
-export * from './Icons/24pt/ClipIcon24/ClipIcon24';
+export { default as MessageIcon } from './Icons/AddMessageIcon/AddMessageIcon';
+export * from './Icons/AddMessageIcon/AddMessageIcon';
 
-export { default as CompetencyMapIcon24 } from './Icons/24pt/CompetencyMapIcon24/CompetencyMapIcon24';
-export * from './Icons/24pt/CompetencyMapIcon24/CompetencyMapIcon24';
+export { default as MessagesIcon } from './Icons/MessagesIcon/MessagesIcon';
+export * from './Icons/MessagesIcon/MessagesIcon';
 
-export { default as CopyIcon24 } from './Icons/24pt/CopyIcon24/CopyIcon24';
-export * from './Icons/24pt/CopyIcon24/CopyIcon24';
+export { default as MuteIcon } from './Icons/MuteIcon/MuteIcon';
+export * from './Icons/MuteIcon/MuteIcon';
 
-export { default as DeleteIcon24 } from './Icons/24pt/DeleteIcon24/DeleteIcon24';
-export * from './Icons/24pt/DeleteIcon24/DeleteIcon24';
+export { default as OpenIcon } from './Icons/OpenIcon/OpenIcon';
+export * from './Icons/OpenIcon/OpenIcon';
 
-export { default as DownloadIcon24 } from './Icons/24pt/DownloadIcon24/DownloadIcon24';
-export * from './Icons/24pt/DownloadIcon24/DownloadIcon24';
+export { default as PhotoIcon } from './Icons/PhotoIcon/PhotoIcon';
+export * from './Icons/PhotoIcon/PhotoIcon';
 
-export { default as EditIcon24 } from './Icons/24pt/EditIcon24/EditIcon24';
-export * from './Icons/24pt/EditIcon24/EditIcon24';
+export { default as ProfileIcon } from './Icons/ProfileIcon/ProfileIcon';
+export * from './Icons/ProfileIcon/ProfileIcon';
 
-export { default as FileIcon24 } from './Icons/24pt/FileIcon24/FileIcon24';
-export * from './Icons/24pt/FileIcon24/FileIcon24';
+export { default as ProjectSettingsIcon } from './Icons/ProjectSettingsIcon/ProjectSettingsIcon';
+export * from './Icons/ProjectSettingsIcon/ProjectSettingsIcon';
 
-export { default as ForwardIcon24 } from './Icons/24pt/ForwardIcon24/ForwardIcon24';
-export * from './Icons/24pt/ForwardIcon24/ForwardIcon24';
+export { default as ReplyIcon } from './Icons/ReplyIcon/ReplyIcon';
+export * from './Icons/ReplyIcon/ReplyIcon';
 
-export { default as LeaveIcon24 } from './Icons/24pt/LeaveIcon24/LeaveIcon24';
-export * from './Icons/24pt/LeaveIcon24/LeaveIcon24';
+export { default as ReportIcon } from './Icons/ReportIcon/ReportIcon';
+export * from './Icons/ReportIcon/ReportIcon';
 
-export { default as LockIcon24 } from './Icons/24pt/LockIcon24/LockIcon24';
-export * from './Icons/24pt/LockIcon24/LockIcon24';
+export { default as CloseIcon } from './Icons/CloseIcon/CloseIcon';
+export * from './Icons/CloseIcon/CloseIcon';
 
-export { default as LoginIcon24 } from './Icons/24pt/LoginIcon24/LoginIcon24';
-export * from './Icons/24pt/LoginIcon24/LoginIcon24';
+export { default as ShareIcon } from './Icons/ShareIcon/ShareIcon';
+export * from './Icons/ShareIcon/ShareIcon';
 
-export { default as MessageIcon24 } from './Icons/24pt/MessageIcon24/MessageIcon24';
-export * from './Icons/24pt/MessageIcon24/MessageIcon24';
+export { default as TakeAPhotoIcon } from './Icons/TakeAPhotoIcon/TakeAPhotoIcon';
+export * from './Icons/TakeAPhotoIcon/TakeAPhotoIcon';
 
-export { default as MessagesIcon24 } from './Icons/24pt/MessagesIcon24/MessagesIcon24';
-export * from './Icons/24pt/MessagesIcon24/MessagesIcon24';
+export { default as TeamSettingsIcon } from './Icons/TeamSettingsIcon/TeamSettingsIcon';
+export * from './Icons/TeamSettingsIcon/TeamSettingsIcon';
 
-export { default as MuteIcon24 } from './Icons/24pt/MuteIcon24/MuteIcon24';
-export * from './Icons/24pt/MuteIcon24/MuteIcon24';
+export { default as UnmuteIcon } from './Icons/UnmuteIcon/UnmuteIcon';
+export * from './Icons/UnmuteIcon/UnmuteIcon';
 
-export { default as MutedIcon24 } from './Icons/24pt/MutedIcon24/MutedIcon24';
-export * from './Icons/24pt/MutedIcon24/MutedIcon24';
+export { default as UnpinIcon } from './Icons/UnpinIcon/UnpinIcon';
+export * from './Icons/UnpinIcon/UnpinIcon';
 
-export { default as OpenIcon24 } from './Icons/24pt/OpenIcon24/OpenIcon24';
-export * from './Icons/24pt/OpenIcon24/OpenIcon24';
+export { default as UserPlusIcon } from './Icons/UserPlusIcon/UserPlusIcon';
+export * from './Icons/UserPlusIcon/UserPlusIcon';
 
-export { default as OpenProfileIcon24 } from './Icons/24pt/OpenProfileIcon24/OpenProfileIcon24';
-export * from './Icons/24pt/OpenProfileIcon24/OpenProfileIcon24';
-
-export { default as OpenSearchIcon24 } from './Icons/24pt/OpenSearchIcon24/OpenSearchIcon24';
-export * from './Icons/24pt/OpenSearchIcon24/OpenSearchIcon24';
-
-export { default as PhotoIcon24 } from './Icons/24pt/PhotoIcon24/PhotoIcon24';
-export * from './Icons/24pt/PhotoIcon24/PhotoIcon24';
-
-export { default as ProfileIcon24 } from './Icons/24pt/ProfileIcon24/ProfileIcon24';
-export * from './Icons/24pt/ProfileIcon24/ProfileIcon24';
-
-export { default as ProjectSettingsIcon24 } from './Icons/24pt/ProjectSettingsIcon24/ProjectSettingsIcon24';
-export * from './Icons/24pt/ProjectSettingsIcon24/ProjectSettingsIcon24';
-
-export { default as ReplyIcon24 } from './Icons/24pt/ReplyIcon24/ReplyIcon24';
-export * from './Icons/24pt/ReplyIcon24/ReplyIcon24';
-
-export { default as ReportIcon24 } from './Icons/24pt/ReportIcon24/ReportIcon24';
-export * from './Icons/24pt/ReportIcon24/ReportIcon24';
-
-export { default as SearchIcon24 } from './Icons/24pt/SearchIcon24/SearchIcon24';
-export * from './Icons/24pt/SearchIcon24/SearchIcon24';
-
-export { default as CloseIcon24 } from './Icons/24pt/CloseIcon24/CloseIcon24';
-export * from './Icons/24pt/CloseIcon24/CloseIcon24';
-
-export { default as ShareIcon24 } from './Icons/24pt/ShareIcon24/ShareIcon24';
-export * from './Icons/24pt/ShareIcon24/ShareIcon24';
-
-export { default as TakeAPhotoIcon24 } from './Icons/24pt/TakeAPhotoIcon24/TakeAPhotoIcon24';
-export * from './Icons/24pt/TakeAPhotoIcon24/TakeAPhotoIcon24';
-
-export { default as TeamSettingsIcon24 } from './Icons/24pt/TeamSettingsIcon24/TeamSettingsIcon24';
-export * from './Icons/24pt/TeamSettingsIcon24/TeamSettingsIcon24';
-
-export { default as UnmuteIcon24 } from './Icons/24pt/UnmuteIcon24/UnmuteIcon24';
-export * from './Icons/24pt/UnmuteIcon24/UnmuteIcon24';
-
-export { default as UnpinIcon24 } from './Icons/24pt/UnpinIcon24/UnpinIcon24';
-export * from './Icons/24pt/UnpinIcon24/UnpinIcon24';
-
-export { default as UserIcon24 } from './Icons/24pt/UserIcon24/UserIcon24';
-export * from './Icons/24pt/UserIcon24/UserIcon24';
-
-export { default as UserSettingsIcon24 } from './Icons/24pt/UserSettingsIcon24/UserSettingsIcon24';
-export * from './Icons/24pt/UserSettingsIcon24/UserSettingsIcon24';
+export { default as UserSettingsIcon } from './Icons/UserSettingsIcon/UserSettingsIcon';
+export * from './Icons/UserSettingsIcon/UserSettingsIcon';

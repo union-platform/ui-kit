@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { UserIcon24 } from '..';
+import { UserPlusIcon } from '../icons';
 
 import CellButton from './CellButton';
 
@@ -21,7 +21,7 @@ export default {
 
 const Template: ComponentStory<typeof CellButton> = (args) => (
   <CellButton {...args}>
-    <UserIcon24 fill="#0DBC44" />
+    <UserPlusIcon size="24px" fill="#0DBC44" />
   </CellButton>
 );
 

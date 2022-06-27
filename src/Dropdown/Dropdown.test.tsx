@@ -9,12 +9,12 @@ import {
 } from '@testing-library/react';
 import Dropdown from './Dropdown';
 import DropdownTrigger from './DropdownTrigger/DropdownTrigger';
-import EllipsisIcon18 from '../Icons/18pt/EllipsisIcon18/EllipsisIcon18';
+import EllipsisIcon from '../Icons/EllipsisIcon/EllipsisIcon';
 import DropdownContent from './DropdownContent/DropdownContent';
 import DropdownItem from './DropdownItem/DropdownItem';
-import AddIcon24 from '../Icons/24pt/AddIcon24/AddIcon24';
+import AddIcon from '../Icons/PlusIcon/PlusIcon';
 import Switch from '../Switch/Switch';
-import DeleteIcon24 from '../Icons/24pt/DeleteIcon24/DeleteIcon24';
+import DeleteIcon from '../Icons/DeleteIcon/DeleteIcon';
 
 const TRIGGER_TESTID = 'test-trigger';
 const CONTENT_TESTID = 'test-content';
@@ -64,11 +64,11 @@ const DropdownTest = (props: React.ComponentProps<typeof Dropdown>) => {
   return (
     <Dropdown {...props}>
       <DropdownTrigger>
-        <EllipsisIcon18 data-testid={TRIGGER_TESTID} />
+        <EllipsisIcon size="18px" data-testid={TRIGGER_TESTID} />
       </DropdownTrigger>
 
       <DropdownContent data-testid={CONTENT_TESTID}>
-        <DropdownItem iconComponent={<AddIcon24 />}>
+        <DropdownItem iconComponent={<AddIcon size="24px" />}>
           New Tab
         </DropdownItem>
         <DropdownItem>New Window</DropdownItem>
@@ -80,7 +80,7 @@ const DropdownTest = (props: React.ComponentProps<typeof Dropdown>) => {
 
         </DropdownItem>
         <DropdownItem disabled>New Private Window</DropdownItem>
-        <DropdownItem negative iconComponent={<DeleteIcon24 />}>
+        <DropdownItem negative iconComponent={<DeleteIcon size="24px" />}>
           New Tab
         </DropdownItem>
       </DropdownContent>

@@ -5,6 +5,11 @@ import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  options: {
+    storySort: {
+      order: ['Union-UI', ["Button", ["TextButton"]], "Colors", "Typography", "Icons", ["ProfileIcon"]],
+    },
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
