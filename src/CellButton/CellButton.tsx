@@ -17,6 +17,10 @@ export interface CellButtonProps {
    */
   disabled?: boolean;
   /**
+   *  Negative (dangerous action, error) state of the text button.
+   */
+  negative?: boolean;
+  /**
    *  When true, icon from children will placed at right from the label.
    */
   iconRight?: boolean;
@@ -46,6 +50,19 @@ const CellButtonContainer = styled('div',
           cursor: 'auto',
         },
       },
+      negative: {
+        true: {
+          '&:hover': {
+            background: `${BrandColors.transparentRed1} radial-gradient(circle, transparent 1%, ${BrandColors.transparentRed1} 1%) center/15000%`,
+          },
+
+          '&:active': {
+            backgroundColor: BrandColors.transparentRed2,
+            backgroundSize: '100%',
+            transition: 'background 0s',
+          },
+        },
+      },
     },
 
     '&:hover': {
@@ -70,12 +87,18 @@ const IconContainer = styled('div', {
  */
 const CellButton = ({
   // eslint-disable-next-line no-unused-vars
-  label, children, iconRight, disabled, onClick, ...props
+  label, children, iconRight, negative, disabled, onClick, ...props
 }: CellButtonProps) => (
   iconRight
     ? (
-      <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
+      <CellButtonContainer
+        negative={negative}
+        {...props}
+        onClick={disabled ? undefined : onClick}
+        disabled={disabled}
+      >
         <Button
+          negative={negative}
           css={{
             '&:hover': {
               background: 'transparent',
@@ -98,11 +121,17 @@ const CellButton = ({
       </CellButtonContainer>
     )
     : (
-      <CellButtonContainer {...props} onClick={disabled ? undefined : onClick} disabled={disabled}>
+      <CellButtonContainer
+        negative={negative}
+        {...props}
+        onClick={disabled ? undefined : onClick}
+        disabled={disabled}
+      >
         <IconContainer>
           {children}
         </IconContainer>
         <Button
+          negative={negative}
           css={{
             '&:hover': {
               background: 'transparent',
@@ -126,6 +155,7 @@ CellButton.defaultProps = {
   iconRight: false,
   disabled: false,
   onClick: undefined,
+  negative: undefined,
 };
 
 export default CellButton;

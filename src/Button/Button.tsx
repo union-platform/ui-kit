@@ -25,6 +25,11 @@ export interface ButtonProps {
    */
   disabled?: boolean;
   /**
+   *  Negative (dangerous action, error) state of the button.
+   *  `Special` variant of the button could't be negative.
+   */
+  negative?: boolean;
+  /**
    *  Optional click handler.
    */
   onClick?: () => void;
@@ -41,6 +46,55 @@ const StyledButton = styled('button', {
   fontFamily: 'Open Sans, sans-serif',
   userSelect: 'none',
   whiteSpace: 'nowrap',
+
+  compoundVariants: [
+    {
+      variant: 'primary',
+      negative: true,
+      css: {
+        backgroundColor: BrandColors.red,
+        backgroundPosition: 'center',
+        transition: 'background 0.8s',
+
+        '&:hover': {
+          background: `${BrandColors.red} radial-gradient(circle, transparent 1%, ${BrandColors.red} 1%) center/15000%`,
+        },
+
+        '&:active': {
+          backgroundColor: 'hsla(11, 100%, 51%, 1)',
+          backgroundSize: '100%',
+          transition: 'background 0s',
+        },
+      },
+    },
+    {
+      variant: 'secondary',
+      negative: true,
+      css: {
+        borderColor: BrandColors.red,
+        color: BrandColors.red,
+      },
+    },
+    {
+      variant: 'text',
+      negative: true,
+      css: {
+        color: BrandColors.red,
+        backgroundPosition: 'center',
+        transition: 'background 0.8s',
+
+        '&:hover': {
+          background: `${BrandColors.transparentRed1} radial-gradient(circle, transparent 1%, ${BrandColors.transparentRed1} 1%) center/15000%`,
+        },
+
+        '&:active': {
+          backgroundColor: BrandColors.transparentRed2,
+          backgroundSize: '100%',
+          transition: 'background 0s',
+        },
+      },
+    },
+  ],
 
   variants: {
     variant: {
@@ -156,6 +210,10 @@ const StyledButton = styled('button', {
         },
       },
     },
+    negative: {
+      true: {
+      },
+    },
   },
 });
 
@@ -163,7 +221,7 @@ const StyledButton = styled('button', {
  *  Main UI-component for user interaction
  */
 const Button = ({
-  fullWidth, children, variant, onClick, disabled, ...props
+  fullWidth, children, variant, negative, onClick, disabled, ...props
 }: ButtonProps) => (
   <StyledButton
     disabled={disabled}
@@ -172,6 +230,7 @@ const Button = ({
     role="button"
     variant={variant}
     onClick={disabled ? undefined : onClick}
+    negative={negative}
     {...props}
   >
     {children}
@@ -180,6 +239,7 @@ const Button = ({
 
 Button.defaultProps = {
   fullWidth: false,
+  negative: false,
   disabled: false,
   onClick: () => {},
 };

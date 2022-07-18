@@ -34,7 +34,7 @@ const Template: ComponentStory<typeof Alert> = (args) => (
         from our servers.
       </AlertDescription>
       <AlertCancel><Button variant="text">Cancel</Button></AlertCancel>
-      <AlertAction><Button variant="primary">Yes, delete account</Button></AlertAction>
+      <AlertAction><Button negative variant="primary">Yes, delete account</Button></AlertAction>
     </AlertContent>
   </Alert>
 );
