@@ -32,6 +32,10 @@ export interface FABSubButtonProps {
    */
    icon?: ReactNode;
   /**
+   *  Negative (dangerous action, error) state of the button.
+   */
+   negative?: boolean;
+  /**
    *  Optional click handler.
    */
   onClick?: () => void;
@@ -71,13 +75,31 @@ const SmallFABButton = styled('button', {
     backgroundSize: '100%',
     transition: 'background 0s',
   },
+
+  variants: {
+    negative: {
+      true: {
+        backgroundColor: BrandColors.red,
+
+        '&:hover': {
+          background: `${BrandColors.red} radial-gradient(circle, transparent 1%, ${BrandColors.red} 1%) center/15000%`,
+        },
+
+        '&:active': {
+          backgroundColor: 'hsla(11, 100%, 51%, 1)',
+          backgroundSize: '100%',
+          transition: 'background 0s',
+        },
+      },
+    },
+  },
 });
 
 /**
  *  Content Item of the FAB.
  */
 const FABSubButton = ({
-  label, icon, onClick, ...props
+  label, icon, onClick, negative, ...props
 }: FABSubButtonProps) => (
   <AnimatePresence>
     <SubContainer
@@ -85,8 +107,8 @@ const FABSubButton = ({
       {...FABSubButtonAnimation}
       {...props}
     >
-      {label && <Button variant="primary">{label}</Button>}
-      {icon && <SmallFABButton>{icon}</SmallFABButton>}
+      {label && <Button negative={negative} variant="primary">{label}</Button>}
+      {icon && <SmallFABButton negative={negative}>{icon}</SmallFABButton>}
     </SubContainer>
   </AnimatePresence>
 );
@@ -94,6 +116,7 @@ const FABSubButton = ({
 FABSubButton.defaultProps = {
   icon: undefined,
   label: undefined,
+  negative: undefined,
   onClick: undefined,
 };
 
