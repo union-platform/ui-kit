@@ -2,12 +2,16 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { styled } from '@stitches/react';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 
 export interface DropdownTriggerProps {
+  /**
+   *  CSS style properties passed to the component
+   */
+   style?: CSSProperties;
   /**
    *  Component which will be trigger the Dropdown to open.
    */
@@ -24,15 +28,16 @@ const StyledTrigger = styled(DropdownMenuPrimitive.Trigger, {
  *  Trigger component, which opens the Dropdown.
  */
 const DropdownTrigger = ({
-  children, ...props
+  children, style, ...props
 }: DropdownTriggerProps) => (
-  <StyledTrigger {...props}>
+  <StyledTrigger style={style} {...props}>
     {children}
   </StyledTrigger>
 );
 
 DropdownTrigger.defaultProps = {
   children: undefined,
+  style: undefined,
 };
 
 export default DropdownTrigger;

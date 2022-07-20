@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { styled } from '@stitches/react';
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import BrandColors from '../../Colors/BrandColors/BrandColors';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
@@ -33,6 +33,10 @@ export interface DropdownItemProps {
    *  Allows to add additional icon. You need to color it by yourself.
    */
    iconComponent?: ReactNode;
+  /**
+   *  CSS style properties passed to the component
+   */
+   style?: CSSProperties;
   /**
    *  Text value of the item.
    */
@@ -93,9 +97,9 @@ const StyledItem = styled(DropdownMenuPrimitive.Item, {
  *  Single item component of the Dropdown.
  */
 const DropdownItem = ({
-  children, disabled, negative, iconComponent, onSelect, controlComponent, ...props
+  children, disabled, negative, style, iconComponent, onSelect, controlComponent, ...props
 }: DropdownItemProps) => (
-  <StyledItem onSelect={onSelect} negative={negative} disabled={disabled} {...props}>
+  <StyledItem style={style} onSelect={onSelect} negative={negative} disabled={disabled} {...props}>
     {iconComponent}
     <StyledText leftMargin={!!iconComponent} weight="regular">
       {children}
@@ -112,6 +116,7 @@ DropdownItem.defaultProps = {
   disabled: undefined,
   negative: undefined,
   onSelect: undefined,
+  style: undefined,
   controlComponent: undefined,
 };
 

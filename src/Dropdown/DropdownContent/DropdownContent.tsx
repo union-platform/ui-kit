@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { keyframes, styled } from '@stitches/react';
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 
@@ -12,6 +12,10 @@ export interface DropdownContentProps {
    *  The distance in pixels from the trigger.
    */
    sideOffset?: number;
+  /**
+   *  CSS style properties passed to the component
+   */
+   style?: CSSProperties;
   /**
    *  Content of the Dropdown
    */
@@ -63,15 +67,16 @@ const StyledContent = styled(DropdownMenuPrimitive.Content, {
  *  Content of the Dropdown
  */
 const DropdownContent = ({
-  children, sideOffset, ...props
+  children, sideOffset, style, ...props
 }: DropdownContentProps) => (
-  <StyledContent loop sideOffset={sideOffset} {...props}>
+  <StyledContent style={style} loop sideOffset={sideOffset} {...props}>
     {children}
   </StyledContent>
 );
 
 DropdownContent.defaultProps = {
   children: undefined,
+  style: undefined,
   sideOffset: 8,
 };
 
