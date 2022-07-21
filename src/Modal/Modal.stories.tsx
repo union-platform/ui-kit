@@ -46,7 +46,7 @@ const Template: ComponentStory<typeof Modal> = (args) => (
         <TextInput fullWidth type="text" placeholder="Your name" />
       </TextInputContainer>
       <Button variant="primary" fullWidth>Save changes</Button>
-      <ModalClose><CloseIcon size="18px" /></ModalClose>
+      <ModalClose><CloseIcon size="24px" /></ModalClose>
     </ModalContent>
   </Modal>
 );

@@ -125,6 +125,7 @@ const Input = styled('input', {
 const Flex = styled('div', { display: 'flex' });
 const InputContainer = styled('div', {
   display: 'flex',
+  textAlign: 'left',
   flexDirection: 'column',
   alignItems: 'flex-end',
   variants: {

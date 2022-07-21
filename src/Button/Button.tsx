@@ -46,6 +46,7 @@ const StyledButton = styled('button', {
   fontFamily: 'Open Sans, sans-serif',
   userSelect: 'none',
   whiteSpace: 'nowrap',
+  textAlign: 'center',
 
   compoundVariants: [
     {
