@@ -122,7 +122,19 @@ const Input = styled('input', {
   },
 });
 
-const Flex = styled('div', { display: 'flex' });
+const Flex = styled('div', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+
+  variants: {
+    fullWidth: {
+      true: {
+        width: '100%',
+      },
+    },
+  },
+});
 const InputContainer = styled('div', {
   display: 'flex',
   textAlign: 'left',
@@ -204,7 +216,7 @@ const TextInput = ({
   }, [currentValue]);
 
   return (
-    <Flex css={{ flexWrap: 'wrap', alignItems: 'center' }}>
+    <Flex fullWidth={fullWidth}>
       <InputContainer fullWidth={fullWidth}>
         <Input
           id={id}
