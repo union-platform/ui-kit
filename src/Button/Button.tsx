@@ -124,12 +124,13 @@ const StyledButton = styled('button', {
       },
       secondary: {
         backgroundColor: GrayShades.white,
-        fontSize: '18px',
+        fontSize: '16px',
         padding: '0 32px 0 32px',
         borderRadius: '5px',
         border: `3px solid ${GrayShades.dark}`,
         color: GrayShades.dark,
-        height: '48px',
+        height: '41px',
+        minWidth: '148px',
       },
       text: {
         backgroundColor: 'transparent',
