@@ -126,6 +126,7 @@ const Flex = styled('div', {
 
 const InputContainer = styled('div', {
   display: 'flex',
+  textAlign: 'left',
   position: 'relative',
   border: `2px solid ${GrayShades.navigationGray}`,
   alignItems: 'center',

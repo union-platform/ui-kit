@@ -50,6 +50,7 @@ const StyledToggle = styled(TogglePrimitive.Root, {
   lineHeight: 1,
   transition: 'background-color 500ms ease',
   alignItems: 'center',
+  textAlign: 'center',
   justifyContent: 'center',
   '&[data-state=on]': {
     backgroundColor: BrandColors.darkGreen,
