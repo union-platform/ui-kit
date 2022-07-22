@@ -13,7 +13,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const TEST_ID = 'test-textinput';
 const COUNTER_TESTID = 'counter';
-const ERROR_TEXT_TESTID = 'error-text';
+const BOTTOM_TEXT_TESTID = 'bottom-text';
 
 /* -------------------------------------------------------------------------------------------------
  * TextInput
@@ -29,7 +29,7 @@ describe('given a default TextInput', () => {
   beforeEach(() => {
     rendered = render(<TextInputTest type="text" data-testid={TEST_ID} onChange={onChange} />);
     counterComponent = rendered.queryByTestId(COUNTER_TESTID);
-    errorTextComponent = rendered.queryByTestId(ERROR_TEXT_TESTID);
+    errorTextComponent = rendered.queryByTestId(BOTTOM_TEXT_TESTID);
     enzymeComponent = Enzyme.mount(<TextInputTest errorText="Some error text" type="text" data-testid={TEST_ID} onChange={onChange} />);
   });
 
@@ -41,7 +41,7 @@ describe('given a default TextInput', () => {
     expect(counterComponent).toBeEmptyDOMElement();
   });
 
-  it('should have no error text', async () => {
+  it('should have no bottom text', async () => {
     expect(errorTextComponent).toBeEmptyDOMElement();
   });
 
@@ -113,7 +113,7 @@ describe('given a TextInput with counter', () => {
     let errorTextComponent: HTMLElement | null;
 
     beforeEach(async () => {
-      errorTextComponent = rendered.queryByTestId(ERROR_TEXT_TESTID);
+      errorTextComponent = rendered.queryByTestId(BOTTOM_TEXT_TESTID);
     });
 
     it('should show error text if defined', () => {

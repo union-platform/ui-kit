@@ -28,6 +28,13 @@ Error.args = {
   errorText: 'Something bad happened',
 };
 
+export const Success = Template.bind({});
+Success.args = {
+  success: true,
+  defaultValue: 'Some success text',
+  successText: 'Something good happened',
+};
+
 export const WithCounter = Template.bind({});
 WithCounter.args = {
   maxSymbols: 12,

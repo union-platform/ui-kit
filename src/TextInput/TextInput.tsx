@@ -17,6 +17,14 @@ export interface TextInputProps {
    */
   error?: boolean;
   /**
+   *  When true, sets as green (filled), input visually indicates success.
+   */
+  success?: boolean;
+  /**
+   *  The text that be showns when `success` prop is true.
+   */
+  successText?: string;
+  /**
    *  The text that be showns when `error` prop is true or `maxSymbols` is exceeds.
    */
   errorText?: string;
@@ -31,39 +39,39 @@ export interface TextInputProps {
   /**
    *  Label, which be placed next to the input.
    */
-   label?: string;
+  label?: string;
   /**
    *  Value of the input.
    */
-   value?: string;
+  value?: string;
   /**
    *  Id attribute of the input.
    */
-   id?: string;
+  id?: string;
   /**
    *  Shows this value on first render.
    */
-   defaultValue?: string;
+  defaultValue?: string;
   /**
    *  Text to help users understand clearly what they need to enter.
    */
-   placeholder?: string;
+  placeholder?: string;
   /**
-   *  When true, prevents the user from interacting with the switch.
+   *  When true, prevents the user from interacting with the TextInput.
    */
-   disabled?: boolean;
+  disabled?: boolean;
   /**
    *  Type of the input
    */
-   type: 'number' | 'text' | 'search' | 'phone';
+  type: 'number' | 'text' | 'search' | 'phone';
   /**
    *  Input change handler.
    */
-   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   /**
    *  Function that been called on error.
    */
-   onError?: () => void;
+  onError?: () => void;
 }
 
 const StyledLabel = styled(LabelPrimitive.Root, {
@@ -92,6 +100,9 @@ const Input = styled('input', {
   transition: 'border-color 600ms ease, color 600ms ease',
   borderBottom: `3px solid ${GrayShades.dark}`,
   '&:focus': { position: 'relative', borderColor: BrandColors.darkGreen },
+  '&:disabled': {
+    opacity: 0.5,
+  },
   '&::placeholder': {
     color: GrayShades.darkGray,
   },
@@ -109,14 +120,15 @@ const Input = styled('input', {
         },
       },
     },
+    success: {
+      true: {
+        color: BrandColors.darkGreen,
+        borderColor: BrandColors.darkGreen,
+      },
+    },
     fullWidth: {
       true: {
         width: '100%',
-      },
-    },
-    disabled: {
-      true: {
-        opacity: 0.5,
       },
     },
   },
@@ -157,11 +169,29 @@ const InputBottomContainer = styled('div', {
   marginTop: '4px',
 });
 
-const ErrorText = styled('span', {
+const BottomText = styled('span', {
   display: 'flex',
   fontSize: '12px',
   fontFamily: 'Open Sans, sans-serif',
-  color: BrandColors.red,
+
+  variants: {
+    error: {
+      true: {
+        color: BrandColors.red,
+      },
+    },
+    success: {
+      true: {
+        color: BrandColors.darkGreen,
+      },
+    },
+    disabled: {
+      true: {
+        userSelect: 'none',
+        opacity: 0.5,
+      },
+    },
+  },
 });
 
 const Counter = styled('span', {
@@ -185,7 +215,7 @@ const Counter = styled('span', {
 const TextInput = ({
   error, maxSymbols, label, id, defaultValue,
   placeholder, type, onChange, fullWidth, errorText, disabled,
-  onError, value, ...props
+  onError, success, successText, value, ...props
 }:TextInputProps) => {
   const [currentValue, setCurrentValue] = useState('');
   const [isValueAboveMax, setIsValueAboveMax] = useState(false);
@@ -215,10 +245,21 @@ const TextInput = ({
     }
   }, [currentValue]);
 
+  const getBottomText = () => {
+    if (error && errorText) {
+      return errorText;
+    }
+    if (success && successText) {
+      return successText;
+    }
+    return '';
+  };
+
   return (
     <Flex fullWidth={fullWidth}>
       <InputContainer fullWidth={fullWidth}>
         <Input
+          success={success}
           id={id}
           fullWidth={fullWidth}
           onChange={disabled ? undefined : handleInputChange}
@@ -231,7 +272,7 @@ const TextInput = ({
           {...props}
         />
         <InputBottomContainer>
-          <ErrorText data-testid="error-text">{error && errorText ? errorText : ''}</ErrorText>
+          <BottomText disabled={disabled} error={error} success={success} data-testid="bottom-text">{getBottomText()}</BottomText>
           <Counter data-testid="counter" error={error || isValueAboveMax}>{maxSymbols ? `${currentValue.length} / ${maxSymbols}` : ''}</Counter>
         </InputBottomContainer>
       </InputContainer>
@@ -252,6 +293,8 @@ TextInput.defaultProps = {
   defaultValue: undefined,
   value: undefined,
   onChange: undefined,
+  success: undefined,
+  successText: undefined,
   onError: null,
   disabled: false,
   placeholder: 'Your Text...',
