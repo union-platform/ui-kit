@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { Title } from '@radix-ui/react-dialog';
 import { ReactNode } from 'react';
 import Heading3 from '../../Typography/Heading3/Heading3';
 
@@ -19,11 +19,11 @@ export interface ModalTitleProps {
 const ModalTitle = ({
   children, ...props
 }: ModalTitleProps) => (
-  <DialogPrimitive.Title {...props}>
+  <Title {...props}>
     <Heading3 weight="bold">
       {children}
     </Heading3>
-  </DialogPrimitive.Title>
+  </Title>
 );
 
 export default ModalTitle;

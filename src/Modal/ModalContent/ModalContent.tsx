@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { Content, Portal } from '@radix-ui/react-dialog';
 import { keyframes, styled } from '@stitches/react';
 import { ReactNode } from 'react';
 import ModalOverlay from '../ModalOverlay/ModalOverlay';
@@ -19,7 +19,7 @@ const contentShow = keyframes({
   '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
 });
 
-const StyledContent = styled(DialogPrimitive.Content, {
+const StyledContent = styled(Content, {
   backgroundColor: 'white',
   textAlign: 'left',
   borderRadius: 6,
@@ -44,12 +44,12 @@ const StyledContent = styled(DialogPrimitive.Content, {
 const ModalContent = ({
   children, ...props
 }: ModalContentProps) => (
-  <DialogPrimitive.Portal>
+  <Portal>
     <ModalOverlay />
     <StyledContent {...props}>
       {children}
     </StyledContent>
-  </DialogPrimitive.Portal>
+  </Portal>
 );
 
 export default ModalContent;

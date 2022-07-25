@@ -4,12 +4,12 @@
 
 import { styled } from '@stitches/react';
 import { CSSProperties, ReactNode } from 'react';
-import { Item } from '@radix-ui/react-dropdown-menu';
+import { Item } from '@radix-ui/react-context-menu';
 import BrandColors from '../../Colors/BrandColors/BrandColors';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 import Text from '../../Typography/Text/Text';
 
-export interface DropdownItemProps {
+export interface ContextMenuItemProps {
   /**
    *  When `true`, prevents the user from interacting with the item.
    */
@@ -19,8 +19,7 @@ export interface DropdownItemProps {
    *  Calling event.preventDefault in this handler will prevent the dropdown
    *  menu from closing when selecting that item.
    */
-   // eslint-disable-next-line no-unused-vars
-   onSelect?: (event: Event) => void;
+   onSelect?: (_a: Event) => void;
   /**
    *  Allows to add additional control component, like `Switch`.
    */
@@ -94,11 +93,11 @@ const StyledItem = styled(Item, {
 });
 
 /**
- *  Single item component of the Dropdown.
+ *  Single item component of the Context Menu.
  */
-const DropdownItem = ({
+const ContextMenuItem = ({
   children, disabled, negative, style, iconComponent, onSelect, controlComponent, ...props
-}: DropdownItemProps) => (
+}: ContextMenuItemProps) => (
   <StyledItem style={style} onSelect={onSelect} negative={negative} disabled={disabled} {...props}>
     {iconComponent}
     <StyledText leftMargin={!!iconComponent} weight="regular">
@@ -110,7 +109,7 @@ const DropdownItem = ({
   </StyledItem>
 );
 
-DropdownItem.defaultProps = {
+ContextMenuItem.defaultProps = {
   children: undefined,
   iconComponent: undefined,
   disabled: undefined,
@@ -120,4 +119,4 @@ DropdownItem.defaultProps = {
   controlComponent: undefined,
 };
 
-export default DropdownItem;
+export default ContextMenuItem;

@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { AlertDialogTrigger } from '@radix-ui/react-alert-dialog';
 import { ReactNode } from 'react';
 
 export interface AlertTriggerProps {
@@ -18,9 +18,9 @@ export interface AlertTriggerProps {
 const AlertTrigger = ({
   children, ...props
 }: AlertTriggerProps) => (
-  <AlertDialogPrimitive.AlertDialogTrigger asChild {...props}>
+  <AlertDialogTrigger asChild {...props}>
     {children}
-  </AlertDialogPrimitive.AlertDialogTrigger>
+  </AlertDialogTrigger>
 );
 
 export default AlertTrigger;

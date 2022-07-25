@@ -96,7 +96,7 @@ const Checkbox = ({
         onClick={onClick}
         {...props}
       >
-        <StyledIndicator data-testid="checkbox-indicator">
+        <StyledIndicator area-aria-label={indicatorAreaLabel} data-testid="checkbox-indicator">
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
