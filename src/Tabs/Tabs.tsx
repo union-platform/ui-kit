@@ -3,10 +3,10 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { styled } from '@stitches/react';
-import * as TabsPrimitive from '@radix-ui/react-tabs';
+import { Root } from '@radix-ui/react-tabs';
 import { ReactNode } from 'react';
 
-const StyledTabs = styled(TabsPrimitive.Root, {
+const StyledTabs = styled(Root, {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',

@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { Root } from '@radix-ui/react-alert-dialog';
 import { ReactNode } from 'react';
 
 export interface AlertProps {
@@ -37,7 +37,7 @@ export interface AlertProps {
 const Alert = ({
   children, open, defaultOpen, onOpenChange, allowPinchZoom, ...props
 }: AlertProps) => (
-  <AlertDialogPrimitive.Root
+  <Root
     open={open}
     defaultOpen={defaultOpen}
     onOpenChange={onOpenChange}
@@ -45,7 +45,7 @@ const Alert = ({
     {...props}
   >
     {children}
-  </AlertDialogPrimitive.Root>
+  </Root>
 );
 
 Alert.defaultProps = {

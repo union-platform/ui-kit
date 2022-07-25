@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { ReactNode } from 'react';
-import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { Root } from '@radix-ui/react-dialog';
 
 export interface ModalProps {
   /**
@@ -18,9 +18,9 @@ export interface ModalProps {
 const Modal = ({
   children, ...props
 }: ModalProps) => (
-  <DialogPrimitive.Root {...props}>
+  <Root {...props}>
     {children}
-  </DialogPrimitive.Root>
+  </Root>
 );
 
 export default Modal;

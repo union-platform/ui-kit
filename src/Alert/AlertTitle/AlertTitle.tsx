@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { AlertDialogTitle } from '@radix-ui/react-alert-dialog';
 import { ReactNode } from 'react';
 import Heading3 from '../../Typography/Heading3/Heading3';
 
@@ -21,11 +21,11 @@ export interface AlertTitleProps {
 const AlertTitle = ({
   children, ...props
 }: AlertTitleProps) => (
-  <AlertDialogPrimitive.AlertDialogTitle {...props}>
+  <AlertDialogTitle {...props}>
     <Heading3 weight="bold">
       {children}
     </Heading3>
-  </AlertDialogPrimitive.AlertDialogTitle>
+  </AlertDialogTitle>
 );
 
 export default AlertTitle;

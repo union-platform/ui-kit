@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { AlertDialogDescription } from '@radix-ui/react-alert-dialog';
 import { ReactNode } from 'react';
 import Text from '../../Typography/Text/Text';
 
@@ -21,11 +21,11 @@ export interface AlertDescriptionProps {
 const AlertDescription = ({
   children, ...props
 }: AlertDescriptionProps) => (
-  <AlertDialogPrimitive.AlertDialogDescription {...props}>
+  <AlertDialogDescription {...props}>
     <Text weight="regular">
       {children}
     </Text>
-  </AlertDialogPrimitive.AlertDialogDescription>
+  </AlertDialogDescription>
 );
 
 export default AlertDescription;

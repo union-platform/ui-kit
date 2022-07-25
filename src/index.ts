@@ -98,6 +98,18 @@ export * from './Dropdown/DropdownContent/DropdownContent';
 export { default as DropdownItem } from './Dropdown/DropdownItem/DropdownItem';
 export * from './Dropdown/DropdownItem/DropdownItem';
 
+export { default as ContextMenu } from './ContextMenu/ContextMenu';
+export * from './ContextMenu/ContextMenu';
+
+export { default as ContextMenuTrigger } from './ContextMenu/ContextMenuTrigger/ContextMenuTrigger';
+export * from './ContextMenu/ContextMenuTrigger/ContextMenuTrigger';
+
+export { default as ContextMenuContent } from './ContextMenu/ContextMenuContent/ContextMenuContent';
+export * from './ContextMenu/ContextMenuContent/ContextMenuContent';
+
+export { default as ContextMenuItem } from './ContextMenu/ContextMenuItem/ContextMenuItem';
+export * from './ContextMenu/ContextMenuItem/ContextMenuItem';
+
 export { default as Tabs } from './Tabs/Tabs';
 export * from './Tabs/Tabs';
 

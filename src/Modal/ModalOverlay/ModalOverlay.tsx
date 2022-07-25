@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { Overlay } from '@radix-ui/react-dialog';
 import { keyframes, styled } from '@stitches/react';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 
@@ -11,7 +11,7 @@ const overlayShow = keyframes({
   '100%': { opacity: 1 },
 });
 
-const StyledOverlay = styled(DialogPrimitive.Overlay, {
+const StyledOverlay = styled(Overlay, {
   backgroundColor: GrayShades.dark,
   position: 'fixed',
   inset: 0,

@@ -94,6 +94,7 @@ const Avatar = ({
     {...props}
   >
     <StyledImage
+      draggable={false}
       src={src}
       alt={alt}
     />

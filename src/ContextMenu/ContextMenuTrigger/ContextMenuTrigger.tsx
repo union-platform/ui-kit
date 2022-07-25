@@ -3,17 +3,17 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 import { CSSProperties, ReactNode } from 'react';
-import { Trigger } from '@radix-ui/react-dropdown-menu';
+import { Trigger } from '@radix-ui/react-context-menu';
 import { styled } from '@stitches/react';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 
-export interface DropdownTriggerProps {
+export interface ContextMenuTriggerProps {
   /**
    *  CSS style properties passed to the component
    */
    style?: CSSProperties;
   /**
-   *  Component which will be trigger the Dropdown to open.
+   *  Component which will be trigger the ContextMenu to open.
    */
    children?: ReactNode;
 }
@@ -25,19 +25,19 @@ const StyledTrigger = styled(Trigger, {
 });
 
 /**
- *  Trigger component, which opens the Dropdown.
+ *  Trigger component, which opens the ContextMenu.
  */
-const DropdownTrigger = ({
+const ContextMenuTrigger = ({
   children, style, ...props
-}: DropdownTriggerProps) => (
+}: ContextMenuTriggerProps) => (
   <StyledTrigger style={style} {...props}>
     {children}
   </StyledTrigger>
 );
 
-DropdownTrigger.defaultProps = {
+ContextMenuTrigger.defaultProps = {
   children: undefined,
   style: undefined,
 };
 
-export default DropdownTrigger;
+export default ContextMenuTrigger;

@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as DialogPrimitive from '@radix-ui/react-dialog';
+import { Close } from '@radix-ui/react-dialog';
 import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
@@ -14,7 +14,7 @@ export interface ModalCloseProps {
    children: ReactNode;
 }
 
-const StyledClose = styled(DialogPrimitive.Close, {
+const StyledClose = styled(Close, {
   backgroundColor: GrayShades.white,
   cursor: 'pointer',
   border: 0,

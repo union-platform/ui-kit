@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { AlertDialogAction } from '@radix-ui/react-alert-dialog';
 import { styled } from '@stitches/react';
 import { ReactNode } from 'react';
 
@@ -13,7 +13,7 @@ export interface AlertActionProps {
    children: ReactNode;
 }
 
-const StyledAction = styled(AlertDialogPrimitive.AlertDialogAction, {
+const StyledAction = styled(AlertDialogAction, {
   backgroundColor: 'white',
   border: 0,
 });

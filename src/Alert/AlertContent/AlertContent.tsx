@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import { Content, Overlay, Portal } from '@radix-ui/react-alert-dialog';
 import { keyframes, styled } from '@stitches/react';
 import { ReactNode } from 'react';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
@@ -24,7 +24,7 @@ const contentShow = keyframes({
   '100%': { opacity: 1, transform: 'translate(-50%, -50%) scale(1)' },
 });
 
-const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
+const StyledOverlay = styled(Overlay, {
   backgroundColor: GrayShades.dark,
   position: 'fixed',
   inset: 0,
@@ -33,7 +33,7 @@ const StyledOverlay = styled(AlertDialogPrimitive.Overlay, {
   },
 });
 
-const StyledContent = styled(AlertDialogPrimitive.Content, {
+const StyledContent = styled(Content, {
   backgroundColor: 'white',
   borderRadius: 15,
   boxShadow: '0px 2px 3px 0px hsla(0, 0%, 0%, 0.1)',
@@ -58,12 +58,12 @@ const StyledContent = styled(AlertDialogPrimitive.Content, {
 const AlertContent = ({
   children, ...props
 }: AlertContentProps) => (
-  <AlertDialogPrimitive.Portal>
+  <Portal>
     <StyledOverlay />
     <StyledContent {...props}>
       {children}
     </StyledContent>
-  </AlertDialogPrimitive.Portal>
+  </Portal>
 );
 
 export default AlertContent;

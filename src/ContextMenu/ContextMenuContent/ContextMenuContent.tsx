@@ -2,12 +2,12 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+import { Content } from '@radix-ui/react-context-menu';
 import { keyframes, styled } from '@stitches/react';
 import { CSSProperties, ReactNode } from 'react';
-import { Content } from '@radix-ui/react-dropdown-menu';
 import GrayShades from '../../Colors/GrayShades/GrayShades';
 
-export interface DropdownContentProps {
+export interface ContextMenuContentProps {
   /**
    *  The distance in pixels from the trigger.
    */
@@ -17,7 +17,7 @@ export interface DropdownContentProps {
    */
    style?: CSSProperties;
   /**
-   *  Content of the Dropdown
+   *  Content of the ContextMenu
    */
    children?: ReactNode;
 }
@@ -64,20 +64,20 @@ const StyledContent = styled(Content, {
 });
 
 /**
- *  Content of the Dropdown
+ *  Content of the Context Menu
  */
-const DropdownContent = ({
+const ContextMenuContent = ({
   children, sideOffset, style, ...props
-}: DropdownContentProps) => (
+}: ContextMenuContentProps) => (
   <StyledContent style={style} loop sideOffset={sideOffset} {...props}>
     {children}
   </StyledContent>
 );
 
-DropdownContent.defaultProps = {
+ContextMenuContent.defaultProps = {
   children: undefined,
   style: undefined,
   sideOffset: 8,
 };
 
-export default DropdownContent;
+export default ContextMenuContent;
