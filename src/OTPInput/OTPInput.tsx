@@ -174,7 +174,7 @@ export function OTPInputComponent(props: OTPInputProps) {
         const updatedOTPValues = [...otpValues];
         updatedOTPValues.forEach((val, index) => {
           if (index >= activeInput) {
-            const changedValue = val;
+            const changedValue = pastedData[index];
             if (changedValue) {
               updatedOTPValues[index] = changedValue;
               nextFocusIndex = index;

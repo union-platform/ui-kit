@@ -134,6 +134,12 @@ export * from './TextInput/TextInput';
 export { default as Layout } from './Layout/Layout';
 export * from './Layout/Layout';
 
+export { default as BottomNav } from './BottomNav/BottomNav';
+export * from './BottomNav/BottomNav';
+
+export { default as BottomNavItem } from './BottomNav/BottomNavItem/BottomNavItem';
+export * from './BottomNav/BottomNavItem/BottomNavItem';
+
 export { default as LinearProgress } from './LinearProgress/LinearProgress';
 export * from './LinearProgress/LinearProgress';
 
