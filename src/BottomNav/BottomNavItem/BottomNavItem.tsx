@@ -12,7 +12,7 @@ import Text from '../../Typography/Text/Text';
 
 export interface BottomNavItemProps {
   /**
-   *  Changes appearance of the item, if true.
+   *  Test id label for testing
    */
    'data-testid'?: string;
   /**

@@ -80,6 +80,15 @@ const IconContainer = styled('div', {
   paddingLeft: 6,
   display: 'flex',
   alignItems: 'center',
+
+  variants: {
+    iconRightPadding: {
+      true: {
+        paddingLeft: 0,
+        paddingRight: 6,
+      },
+    },
+  },
 });
 
 /**
@@ -115,7 +124,7 @@ const CellButton = ({
           {label}
 
         </Button>
-        <IconContainer>
+        <IconContainer iconRightPadding={iconRight}>
           {children}
         </IconContainer>
       </CellButtonContainer>
