@@ -11,6 +11,11 @@ export interface DropdownProps {
    */
   children?: ReactNode;
   /**
+   *  The controlled open state of the dropdown menu.
+   *  Must be used in conjunction with `onOpenChange`.
+   */
+  open?: boolean;
+  /**
    *   Event handler called when the open state of the context menu changes.
   */
   onOpenChange?: (_open: boolean) => void;
@@ -20,9 +25,9 @@ export interface DropdownProps {
  *  Wrapper of other Dropdown components, like `DropdownTrigger` and `DropdownContent`
  */
 const Dropdown = ({
-  children, onOpenChange, ...props
+  children, onOpenChange, open, ...props
 }: DropdownProps) => (
-  <Root onOpenChange={onOpenChange} {...props}>
+  <Root open={open} onOpenChange={onOpenChange} {...props}>
     {children}
   </Root>
 );
@@ -30,6 +35,7 @@ const Dropdown = ({
 Dropdown.defaultProps = {
   children: undefined,
   onOpenChange: undefined,
+  open: undefined,
 };
 
 export default Dropdown;

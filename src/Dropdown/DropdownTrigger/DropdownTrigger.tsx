@@ -5,9 +5,15 @@
 import { CSSProperties, ReactNode } from 'react';
 import { Trigger } from '@radix-ui/react-dropdown-menu';
 import { styled } from '@stitches/react';
-import GrayShades from '../../Colors/GrayShades/GrayShades';
 
 export interface DropdownTriggerProps {
+  /**
+   *  This will merge the original component props with the props
+   *  of the supplied element/component and change the underlying DOM node.
+   *  Usefull for example whe you using button tag as a trigger.
+   *  So no nested button tags would be created
+   */
+   asChild?: boolean;
   /**
    *  CSS style properties passed to the component
    */
@@ -20,7 +26,7 @@ export interface DropdownTriggerProps {
 
 const StyledTrigger = styled(Trigger, {
   border: 0,
-  background: GrayShades.white,
+  backgroundColor: 'transparent',
   cursor: 'pointer',
 });
 
@@ -28,15 +34,16 @@ const StyledTrigger = styled(Trigger, {
  *  Trigger component, which opens the Dropdown.
  */
 const DropdownTrigger = ({
-  children, style, ...props
+  children, style, asChild, ...props
 }: DropdownTriggerProps) => (
-  <StyledTrigger style={style} {...props}>
+  <StyledTrigger asChild={asChild} style={style} {...props}>
     {children}
   </StyledTrigger>
 );
 
 DropdownTrigger.defaultProps = {
   children: undefined,
+  asChild: undefined,
   style: undefined,
 };
 

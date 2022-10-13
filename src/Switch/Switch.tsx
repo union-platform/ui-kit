@@ -78,6 +78,7 @@ const Switch = ({
 }: SwitchProps) => (
   <Flex css={{ alignItems: 'center' }}>
     <StyledSwitch
+      aria-label="switch button"
       onCheckedChange={onCheckedChange}
       disabled={disabled}
       checked={checked}
